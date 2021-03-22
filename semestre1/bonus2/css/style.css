@@ -1,0 +1,150 @@
+body {
+	margin:0px;
+	padding:0px;
+	font-family:open sans, helvetica, arial, sans-serif;
+}
+
+header {
+	width:100%;
+	height:500px;
+	background-color:#83b582;
+	background-image: url(../images/tree.png);
+	background-repeat:no-repeat;
+	box-shadow: 0 0 20px rgba(0,0,0,1);
+}
+
+nav {
+	width:95%;
+	padding-top:30px;
+}
+
+nav ul {
+	margin:0px 0 0 0%;
+	list-style-type:none;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:flex-end;
+	height:350px;
+}
+
+nav ul li {
+	text-transform:lowercase;
+	padding:20px;
+	color:white;
+	letter-spacing:4px;
+	font-weight:bold;
+}
+
+li:nth-child(1) {
+	margin-right:10%;
+}
+
+li:nth-child(2) {
+	margin-right:5%;
+}
+
+li:nth-child(4) {
+	margin-right:8%;
+}
+
+li:nth-child(5) {
+	margin-right:10%;
+}
+
+a {
+	color:white;
+	text-transform:uppercase;
+	text-decoration:none;
+}
+
+a:active {
+	background-color:white;
+	color:#3dd0ac;
+	padding:5px;
+}
+
+a:hover {
+	color:#f34573;
+}
+
+.actif {
+	background-color:white;
+	border-radius:50px;
+	color:#672f2f;
+	padding:7px;
+}
+
+.titre {
+	color:white;
+	text-shadow: 4px 4px 1px #207561;
+	text-transform:uppercase;
+	margin-right:auto;
+	margin-left:auto;
+	text-align:center;
+	margin-top:10px;
+	font-size:45px;
+	font-weight:bold;
+	font-family:Mansalva;
+	border-bottom:4px white solid;
+	box-shadow: 0px 2px 0px #207561;
+	padding-bottom:10px;
+	width:700px;
+	max-width:100%;
+}
+
+.plan {
+	margin:30px;
+}
+
+section {
+	padding:10px;
+	width:660px;
+	margin-right:auto;
+	margin-left:auto;
+	color:#777;
+	margin:40px 0 400 30;
+	text-align:justify;
+	line-height:30px;
+	margin-bottom:7%;
+}
+
+section h1 {
+	letter-spacing:-4px;
+	font-size:45px;
+	text-align:center;
+	font-weight:bold;
+	writing-mode: vertical-rl;
+	text-orientation: sideways;
+	float:right;
+	text-transform:uppercase;
+	color: #589167;
+	margin:20px 0px 14% 50px;
+	font-family:helvetica, arial, sans-serif;
+	display:inline;
+
+}
+
+
+footer {
+	background-color:#a0cc78;
+	width:100%;
+	height:40px;
+	padding:10px;
+	margin-right:auto;
+	margin-left:auto;
+	text-align:center;
+	box-shadow: 0 0 20px rgba(0,0,0,1);
+	position:fixed;
+	bottom:0;
+	color:white;
+	font-size:1.2em;
+}
+
+iframe {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	margin-left:80px;
+	width:100%;
+}
