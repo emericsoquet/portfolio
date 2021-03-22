@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Inscription à la newsletter</title>
+	<link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<div id="msg-inscription">Vous êtes bien inscrit-e chez nous !</div>
+
+	<form action="validation.php" method="post">
+
+		<h1>newsletter</h1>
+
+
+		<fieldset id="letter">
+
+			<div id="shapes-letter"></div>
+			<div id="border-shapes"></div>
+
+			<div class="box"><label>Prénom<abbr title="obligatoire">*</abbr></label><input type="text" name="prenom" id="prenom" required pattern="[A-Za-z]{3,}" title="N'utilisez que des lettres et au moins 3."/></div>
+			<div class="box"><label>E-mail <abbr title="obligatoire">*</abbr></label><input type="email" name="email" id="email" required/></div>
+			<div class="box"><input type="submit" id="submit-input" value="S'inscrire" /></div>
+
+		</fieldset>
+    </form>
+    
+</body>
+
+<script src="jquery-3.5.1.min.js"></script>
+
+	<script>
+
+		$(document).ready(function() {
+
+			$('#msg-inscription').hide();
+
+			$('#submit-input').mouseenter( function() {
+				$('#letter').css('animation', 'rotate-letter 200ms ease-in-out both');
+			})
+
+			$('#submit-input').mouseleave( function() {
+				$('#letter').css('animation', 'rotate-letter-reverse 200ms ease-in-out both');
+			})
+
+
+			function reset() {
+				$('.wrong-entry').remove();
+
+			}
+
+			$('form').submit(function(event) {
+				// console.info('Envoyer');
+				event.preventDefault();
+				reset();
+				envoiFormulaire();
+
+			})
+
+
+			function envoiFormulaire() {
+				console.info('Démarrage de la fonction');
+
+				var postData = $('form').serialize();
+
+				console.info(postData);
+
+				 $.ajax ({
+					 datatype: 'json',
+					 type: 'POST',
+					 url: 'validation.php',
+					 data: postData,
+					 success: function(answer) {
+
+						if (JSON.parse(answer) === true) {
+							console.log('Tout fonctionne');
+							$('#letter').animate( { marginLeft: "4000px"}, 2000 );
+							/* msgValid = "Vous êtes inscrit.e !";
+							$('input').last().after(msgValid); */
+							setTimeout( function() {
+								$('#msg-inscription').fadeIn();
+							}, 1200 )
+						}
+
+						else {
+							$.each(JSON.parse(answer), function(field, error) {
+								console.log('Il y a des erreurs');
+								msgError = '<div class="wrong-entry">' + error + '</div></div>';
+								$('#' + field).addClass('invalid').after(msgError);
+							})
+						}
+					 },
+
+					 error: function() {
+						console.log('Problème de validation');
+					 }
+				 })
+
+
+			}
+
+		});
+
+	</script>
+</html>
