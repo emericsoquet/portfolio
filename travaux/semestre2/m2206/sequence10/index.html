@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Maquette 1</title>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+        <link rel="stylesheet" href="jquery145/jquery.mobile-1.4.5.css" />
+        <link rel="stylesheet" href="jquery145/style.css" />
+
+        <script src="jquery145/jquery-2.2.0.min.js"></script>
+        <script src="jquery145/jquery.mobile-1.4.5.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('body').on('swiperight', allerAinfo);
+            });
+
+            function allerAinfo(event){
+                $.mobile.changePage('#info');
+            }
+
+            $(document).ready(function() {
+                $('body').on('swipeleft', allerAaccueil);
+            });
+
+            function allerAaccueil(event){
+                $.mobile.changePage('#accueil');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div data-role="page" id="accueil">
+
+            <div data-role="panel" id="menugauche" data-position="left" data-display="reveal">
+                <a data-role="button" href="#" data-rel="close">Fermer</a>
+                <p>Britney Jean Spears, née le 2 décembre 1981 à McComb, dans le Mississippi, est une chanteuse, danseuse et actrice américaine, dont l'univers musical est principalement axé sur la musique pop. Elle a vendu un total de 200 millions de disques à travers le monde, dont plus de 33 millions d'albums rien qu'aux États-Unis. Avec deux disques de diamant à son actif pour ses opus ...Baby One More Time et Oops!... I Did It Again, elle est la troisième artiste détenant le plus de disque de diamant aux États-Unis à égalité avec d'autres artistes tels que Michael Jackson, Madonna ou encore Whitney Houston. En mai 2012, Britney Spears est classée sixième du classement Forbes des 100 célébrités mondiales les plus influentes. En 15 ans de carrière, elle s'impose d'abord en tant que figure prééminente des années 2000 puis comme un personnage incontournable de la Culture Pop. Malgré l'étiolement de son image médiatique, sa musique est aujourd'hui encore considérée comme fortement influente dans l'industrie musicale.</p>
+            </div>
+
+            <div data-role="header" data-theme="b">
+                <h1>Ma maquette</h1>
+            </div>
+
+            <div data-role="content">
+                <p class="content-txt">Voici ma première maquette.</p>
+
+                <img src="jquery145/images/britney.jpg" alt="Britney Spears" class="content-img" />
+
+                <a data-role="button" data-icon="bars" data-iconpos="left" href="#menugauche">En voir plus</a>
+            </div>
+
+            <div data-role="footer" date-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a data-theme="b" href="#accueil" data-icon="home">Accueil</a></li>
+                        <li><a data-theme="b" href="#info" data-icon="eye" data-transition="slidedown">Info</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div data-role="page" id="info">
+            <div data-role="header" data-theme="b">
+                <h1>Ma maquette</h1>
+            </div>
+
+            <div data-role="content">
+                <p class="content-txt">Voici ma deuxième maquette.</p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CduA0TULnow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div data-role="footer" date-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a data-theme="b" href="#accueil" data-icon="home" data-transition="pop">Accueil</a></li>
+                        <li><a data-theme="b" href="#info" data-icon="eye">Info</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
