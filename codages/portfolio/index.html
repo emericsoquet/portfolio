@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="media/img/page_logo_hxh.ico"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/slots.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/deck.css" />
+    <link rel="stylesheet" href="css/chatbox.css" />
+    <title>TP Final</title>
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" id="navbar-custom">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Univers
+                    </a>
+                    <div class="dropdown-menu mt-3" id="dropdown-menu-custom" aria-labelledby="navbarDropdown">
+                        <a class="nav-link" href="#preamble">Préambule</a>
+                        <a class="nav-link" href="#deck">Deck de personnages</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Passer l'examen
+                    </a>
+                    <div class="dropdown-menu mt-3" id="dropdown-menu-custom" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#bouncing">Famille Zoldyck</a>
+                      <a class="dropdown-item" href="#slots">Brigade fantôme</a>
+                      <a class="dropdown-item" href="#point">Greed Island</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#chatbox">Site des Hunters</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#form">Obtenir sa licence</a>
+                  </li>
+            </div>
+          </nav>
+    </header>
+
+    <!-- <section id="test"></section> -->
+
+    <section id="preamble">
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" alt="Vidéo immersive : Trailer de HunterxHunter"><source src="media/video_hxh.mp4" type="video/mp4">Votre navigateur ne peut pas lire cette vidéo.</video>
+        <div id="video-mask"></div>
+        <div id="video-text" class="h-100">
+            <h1>Portfolio</h1>
+            <p class="subtitle-headings">Thème HunterxHunter</p>
+        </div>
+        <!-- <div id="video-logo"><img src="media/img/logo_hxh.png" alt="Logo de HunterxHunter" /></div> -->
+    </section>
+
+    <section id="deck">
+        <div id="deck-bg"></div>
+        <div id="deck-container" class="container">
+                <div class="row d-flex pt-5">
+                    <h2 id="deck-title" class="col-lg-7">Deck de personnages</h2>
+                </div>
+
+                <div id="deck-elements" class="row d-flex flex-column align-items-center justify-content-center">
+                    <div id="deck-card">
+                        <div id="deck-card-inner"></div>
+                        <div id="deck-card-reverse">
+                            <div id="deck-card-inner-reverse"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row d-flex justify-content-end">
+                    <p class="text-white text-center col-lg-6 mt-5" id="deck-txt">Dans le jeu de cartes d'Hisoka se cachent plusieurs informations concernant quelques personnages que vous pourrez rencontrer. N'hésitez pas à y jeter un oeil, en cliquant sur ce <a href="../semestre3/m3206/sequence1/cards.html" class="text-warning" target="_blank">lien</a>. </p>
+                </div>
+        </div>
+    </section>
+
+    <section id="bouncing">
+        <div id="bouncing-bg"></div>
+        <div id="bouncing-overlay"></div>
+        <div id="bouncing-container" class="container">
+            <div id="bouncing-content" class="row d-flex align-items-center">
+                <aside id="bouncing-text" class="col-lg-5 text-white d-flex flex-column mt-lg-0 mt-5 mb-lg-0 mb-5">
+                    <h2>Famille Zoldyck</h2>
+
+                    <h3>Contexte</h3>
+                    <p>Killua souhaite s'enfuir du domicile. Néanmoins, son frère, Illumi, cherche à l'en empêcher&nbsp;!</p>
+
+                    <h3>Règles du jeu</h3>
+                    <ul id="bouncing-list-rules">
+                        <li>
+                            Si vous jouez Killua, appuyer sur K pour sauter et éviter Illumi et ses attaques.
+                        </li>
+                        <li>
+                            En tant qu'Illumi, vous pouvez déplacer vos punaises vers le haut avec&nbsp;Q. W pour le&nbsp;bas.
+                        </li>
+                    </ul>
+                </aside>
+                <div id="bouncing-canvas-container" class="col-lg-7 d-flex flex-column align-items-center mb-lg-0 mb-5">
+                    <canvas id="canvas" width="500" height="500">Désolé, votre navigateur ne supporte pas cette application.</canvas>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="slots">
+        <div id="slots-overlay">
+        </div>
+
+        <div id="slots-container" class="container">
+            <div id="slots-content" class="row d-flex flex-lg-row-reverse flex-lg-column align-items-center">
+
+                <aside id="slots-text" class="text-white col-lg-4 text-white d-flex flex-column mt-lg-0 mt-5 mb-lg-0 mb-5 align-items-center justify-content-center h-100">
+                    <h2>Brigade fantôme</h2>
+
+                    <h3>Principe du jeu</h3>
+                    <p>Retrouvez le classement entre les membres de la Brigade Fantôme et vérifier votre réponse avec le bandit manchot.</p>
+
+                    <div id="slots-clues">
+                        <h3>Besoin d'indice ?</h3>
+                        <p>Ce classement se fait à base de <a href="https://www.quotev.com/story/10086224/The-Hunter-x-Hunter-World/104" target="_blank" class="text-warning">bras de fer</a>.</p>
+                    </div>
+                </aside>
+
+                <div id="slots-game" class="col-lg-8 d-flex flex-column mb-lg-0 mb-5 align-items-center">
+                    <div id="columns">
+
+                            <div class="column">
+                                <div id="box1" class="boxes"></div>
+                                <div id="button1" class="buttons">+</div>
+                            </div>
+
+                            <div class="column">
+                                <div id="box2" class="boxes"></div>
+                                <div id="button2" class="buttons">+</div>
+                            </div>
+
+                            <div class="column">
+                                <div id="box3" class="boxes"></div>
+                                <div id="button3" class="buttons">+</div>
+                            </div>
+
+                            <div class="column">
+                                <div id="box4" class="boxes"></div>
+                                <div id="button4" class="buttons">+</div>
+                            </div>
+
+                    </div>
+
+                    <div id="validation" class="mt-5">
+                        <div id="validation-button">Terminé ?</div>
+                    </div>
+
+                    <div id="slots-message">
+                        <div id="msg-win">
+                            Bravo
+                            <div id="subtitle-msg">Vous avez déjoué le code !</div>
+                        </div>
+                        <div id="msg-loose">
+                            Perdu
+                            <div id="subtitle-msg">Retentez votre chance !</div>
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="point">
+        <div id="point-bg"></div>
+        <div id="point-container">
+            <h2>Greed island</h2>
+            <p class="text-white text-center mt-5 w-">Enfin d'obtenir plus d'informations sur ce que contient le jeu que Gon détient, il est bien évident qu'il doit y joueur. Il a la possibilité de le faire dans le salon, à condition de remplir quelques tâches que sa tante Mito lui a demandé, auparavant.</p>
+        </div>
+        <div id="point-button-container">
+            <a href="http://mmi19d13.mmi-troyes.fr/travaux/semestre3/m3206/sequence2/pointclick.html" id="point-button">Lancez<br/>vous!</a>
+        </div>
+    </section>
+
+    <section id="chatbox">
+        <div id="chatbox-bg"></div>
+        <div id="chatbox-container">
+            <div id="global-chat">
+
+                <h2 class="text-white">Site des Hunters</h2>
+    
+                <div id="affiche">
+                    <div id="msg-affiche">Connexion à la ChatBox...</div>
+                </div>
+    
+                <div id="chatbox-form-section">
+    
+                    <form id="chatbox-form" action="dire.php" method="get">
+    
+                        <input type="text" id="pseudo" placeholder="Pseudo" />
+    
+                        <input type="text" id="message" placeholder="Écrivez un message ici" />
+                        <input type="submit" id="send" value="Envoi"  />
+    
+                    </form>
+    
+                </div>
+        </div>
+    </section>
+
+    <section id="form">
+        <div id="form-bg"></div>
+        <div id="form-overlay-valid" class="text-white">
+            <p id="form-valid-title">Merci !</p>
+            <p id="form-valid-msg">Votre licence vous sera envoyée dans les plus brefs délais.</p></div>
+        <div id="form-container">
+            <div id="form-content">
+
+                <form action="validation.php" method="POST">
+
+                    <img src="media/img/logo_association.png" alt="Logo de l'association des Hunters" />
+                    <h2 class="text-white mb-2">Obtenir sa licence</h2>
+            
+                    <p class="text-white-50 text-center form-sub">Maintenant que vous avez passé l'examen, vous êtes en droit de proclamer votre licence de Hunter.</p>
+                    <p class="text-danger text-center form-sub">Veuillez donc nous renseigner toutes vos cordoonnées et n'omettre aucun champ.</p> 
+                    <p class="text-white-50 text-center mb-0 form-sub">Nous ne délivrons, en revanche, pas de nouvelle licence, même en cas de perte ou vol.</p>
+            
+                    <fieldset id="letter">
+            
+                        <div class="box"><label>Prénom<abbr title="obligatoire">*</abbr></label><input type="text" name="prenom" id="prenom" pattern="[A-Za-z]{3,}" title="N'utilisez que des lettres et au moins 3."/></div>
+                        <div class="box"><label>Nom<abbr title="obligatoire">*</abbr></label><input type="text" name="nom" id="nom" pattern="[A-Za-z]{3,}" title="N'utilisez que des lettres et au moins 3."/></div>
+                        <div class="box"><label>Date de naissance<abbr title="obligatoire">*</abbr></label><input type="date" name="date" id="date" pattern="[1-9] {8}" title="Veuillez n'utiliser que des chiffres"/></div>
+                        <div class="box"><label>E-mail <abbr title="obligatoire">*</abbr></label><input type="email" name="email" id="email" title="N'oubliez pas le @ !"/></div>
+                        <div class="box"><input type="submit" id="submit-input" value="S'inscrire" /></div>
+            
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- scripts -->
+<script src="http://code.jquery.com/jquery-3.5.1.js"></script> <!-- jquery -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!-- jquery ui -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="js/scrollto.js"></script>
+<script type="text/javascript">
+
+    scroll1 = 0;
+    scroll2 = 0;
+    scroll3 = 0;
+    scroll4 = 0;
+
+    $(document).ready(function() {
+
+        $('#msg-loose').hide();
+        $('#msg-win').hide();
+        $('#slots-clues').hide();
+
+        $('#button1').click( function() { 
+            scroll1++;
+
+            if (scroll1 == 4) {
+                scroll1 = 0;
+            }
+
+            val1 = -100 * scroll1;
+            $('#box1').animate( { 'background-position-y' : val1 } );
+
+
+        });
+
+        $('#button2').click( function() { 
+            scroll2++;
+
+            if (scroll2 == 4) {
+                scroll2 = 0;
+            }
+
+            val2 = -100 * scroll2;
+            $('#box2').animate( { 'background-position-y' : val2 } );
+
+        });
+
+        $('#button3').click( function() { 
+
+            scroll3++
+
+            if (scroll3 == 4) {
+                scroll3 = 0;
+            }
+
+            val3 = -100 * scroll3;
+            $('#box3').animate( { 'background-position-y' : val3 } );
+            
+
+        });
+
+        $('#button4').click( function() { 
+            scroll4++;
+
+            if (scroll4 == 4) {
+                scroll4 = 0;
+            }
+
+            val4 = -100 * scroll4;
+            $('#box4').animate( { 'background-position-y' : val4 } );
+            
+        });
+
+        $('#validation-button').click(function() { 
+
+            if (scroll1 == 3 & scroll2 == 1 & scroll3 == 0 & scroll4 == 2) {
+                console.log('Réussi !');
+                $('#msg-win').fadeIn(600);
+            }
+
+            else {
+                console.log('Perdu !');
+
+                $('#msg-loose').fadeIn(600);
+                setTimeout( function() {
+                    $('#msg-loose').fadeOut(600)
+                }, 2000);
+
+                setTimeout( function() {
+                    scroll1 = 0;
+                    scroll2 = 0;
+                    scroll3 = 0;
+                    scroll4 = 0;
+                    $("#box1").animate({'background-position-y' : 0})
+                    $("#box2").animate({'background-position-y' : 0})
+                    $("#box3").animate({'background-position-y' : 0})
+                    $("#box4").animate({'background-position-y' : 0})
+                }, 2600);
+
+                setTimeout( function() {
+                    $('#slots-clues').slideDown(600);
+                }, 1000);
+
+            } 
+        });
+    })
+</script>
+
+<script>
+
+    $(document).ready(function() {
+
+    setInterval(function() {
+
+        $.get('affiche.php', function(data) {
+            // console.log('Données chargées' + data)
+            $('#affiche').html(data);
+        })
+    }, 5000)
+
+    function sending() {
+        // console.log('Début de l\'envoi');
+        var Pseudo = $('#pseudo').val();
+        var Message = $('#message').val();
+
+        $.ajax( {
+            url: 'dire.php',
+            data: {pseudo: Pseudo, message: Message},
+            success: function() {
+            $('#pseudo').val('');
+            $('#message').val('');
+            }
+        })
+
+        if (Message == 'wizz') {
+            $('#affiche').css('animation', 'wizz 500ms both');
+            document.getElementById("msn-wizz").play()
+
+            $('#send').css('animation', 'wizz 500ms both');
+
+            setTimeout(function(){
+                $('#affiche').css('animation', '');
+
+            }, 2000);
+
+            setTimeout(function(){
+                $('#send').css('animation', '');
+
+            }, 2000);
+        }
+    }
+
+    $("form").submit(function(e) {
+    // $('#send').click(function() {
+        e.preventDefault();
+        // console.log('clic');
+        sending(); })
+
+
+
+    });
+
+</script>
+
+<script type="text/javascript">
+
+    var x = 250; 
+    var y = 250; 
+
+    var vity = 0; 
+    var vitx = 5; 
+
+    var sauter = 0; 
+    var oldsauter = 0; 
+
+    var xobsr = 470; 
+    var xobsl = 470; 
+    var yobs = 200; 
+    
+    var compteur = 0;
+
+    var upObstacle = 0;
+    var downObstacle = 0;
+
+    var cote = 0;
+
+    $(document).ready(function() {
+
+        $('body').keydown(function(ev){
+            if(ev.keyCode == 75) sauter = 1 ;
+        });
+
+        $('body').keyup(function(ev){
+            if(ev.keyCode == 75) {
+                sauter = 0;
+                oldsauter = 0
+            } ;
+        });
+
+        $('body').keyup(function(ev){
+            if(ev.keyCode == 81) {
+                downObstacle = 0;
+            }
+
+            else if(ev.keyCode == 87) {
+                upObstacle = 0;
+            }
+        });
+
+        $('body').keydown(function(ev){
+            if(ev.keyCode == 81) {
+                downObstacle = 1;
+            }
+
+            else if(ev.keyCode == 87) {
+                upObstacle = 1;
+            }
+        });
+
+
+
+        var canvas1 = document.getElementById('canvas');
+        var context = canvas1.getContext('2d');
+
+        var timer = setInterval(function() {
+
+            /* var gradient = context.createLinearGradient(0 , 0 ,500,500);
+            gradient.addColorStop(0,"#021759");     // Départ
+            gradient.addColorStop(0.5,"#020380"); // Intermédiaire
+            gradient.addColorStop(1,"#021759"); 
+
+            context.fillStyle = gradient; 
+            context.fillRect(0, 0 , 500, 500); */
+
+            var bg = new Image();
+            bg.src="media/img/canvas/kukuroo_mountain.png";
+            context.drawImage(bg, 0, 0);
+
+
+            context.font = "30px montserrat";
+            context.fillStyle = "#fff";
+            context.fillText("SCORE DE KILLUA", 110, 130);
+            context.font = "14px montserrat";
+            context.font = "30px montserrat";
+            context.fillText(compteur, 245, 240); 
+
+
+            var illumi = new Image();
+            illumi.src = "media/img/canvas/illumi2.png";
+            context.drawImage(illumi, 0, 460);
+            var illumi2 = new Image();
+            illumi2.src = "media/img/canvas/illumi2_reversed.png";
+            context.drawImage(illumi2, 0, -9);
+
+            var killua = new Image();
+            killua.src = "media/img/canvas/killua.png";
+            // balloon.onload = function() {
+                context.drawImage(killua, x, y);
+                x += vitx;
+                vity += 0.05;
+                y += vity;
+            // };
+
+            if (cote == 0) {
+                var obstacleRight = new Image();
+                obstacleRight.src = "media/img/canvas/pins_right.png";
+                context.drawImage(obstacleRight, xobsr, yobs);
+            }
+
+            else {
+                var obstacleLeft = new Image();
+                obstacleLeft.src = "media/img/canvas/pins_left.png";
+                context.drawImage(obstacleLeft, xobsl, yobs);
+            }
+
+            if (upObstacle == 1) {
+                    yobs += 10;
+            }
+
+            if (downObstacle == 1) {
+                yobs -= 10;
+            }
+
+            if (x > 440) {
+                vitx = - vitx ;
+                x = 440;
+                cote = 1;
+
+                if(y >= yobs - 49 && y <= yobs + 89) {
+                    compteur = 0;
+                }
+
+                else {
+                    compteur++;
+                }
+
+                xobsl = -15;
+                yobs = Math.round(Math.random()*320)+40;
+                
+            }
+
+            if (x < 0) {
+
+                vitx = - vitx;
+                x = 0;
+                cote = 0;
+
+                if(y >= yobs - 49 && y <= yobs + 89) {
+                    compteur = 0;
+                }
+
+                else {
+                    compteur++;
+                }
+
+                xobsr = 465;
+                yobs = Math.round(Math.random()*320)+40;
+
+            }
+
+            if (y > 400) {
+                vity = - vity * 0.8;
+                y = 400
+
+                compteur = 0;
+            }
+
+            if (y < 35) {
+                vity = - vity * 0.8;
+                y = 35
+
+                compteur = 0;
+            }
+
+            if (sauter == 1 && oldsauter == 0) {
+                oldsauter = 1;
+                vity -= 5;
+            }
+
+        }, 25);
+
+    });
+
+</script>
+<script src="js/jquery.parallax-1.1.3.js"></script>
+<script src="js/form.js"></script>
+    
+</body>
+
+</html>

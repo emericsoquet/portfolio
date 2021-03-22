@@ -1,0 +1,26 @@
+$(document).ready(function(){
+            $('#citationoption').click(function(){
+                $('.citationlist').removeClass('hiddenlist');
+                $('.citationlist').addClass('activelist');
+                $('.turboproplist').removeClass('activelist');
+                $('.pistonlist').removeClass('activelist');
+                $('.turboproplist').addClass('hiddenlist');
+                $('.pistonlist').addClass('hiddenlist');
+            });
+            $('#turbopropoption').click(function(){
+                $('.turboproplist').removeClass('hiddenlist');
+                $('.turboproplist').addClass('activelist');
+                $('.citationlist').removeClass('activelist');
+                $('.pistonlist').removeClass('activelist');
+                $('.citationlist').addClass('hiddenlist');
+                $('.pistonlist').addClass('hiddenlist');
+            });
+            $('#pistonoption').click(function(){
+                $('.pistonlist').removeClass('hiddenlist');
+                $('.pistonlist').addClass('activelist');
+                $('.citationlist').removeClass('activelist');
+                $('.turboproplist').removeClass('activelist');
+                $('.citationlist').addClass('hiddenlist');
+                $('.turboproplist').addClass('hiddenlist');
+            });
+        });

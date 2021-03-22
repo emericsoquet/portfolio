@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/all.css">
+        <link rel="stylesheet" href="../css/avion.css">
+        <link rel="stylesheet" href="../css/bootstrap.css"/> <!-- UTILISÉ POUR LE CARROUSEL -->
+        <script src="../js/avion.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+        <meta name="viewport" content="width=device-width">
+        
+        <title>Custom Air</title>
+        
+        <script src="../js/bootstrap.js"></script> <!-- UTILISÉ POUR LE CARROUSEL -->
+
+            <!-- SCRIPT MENU HAMBURGER. IL PERMET DE DEROULER LE SOUS-MENU AU CLIC SUR L'ICONE HAMBURGER-->
+            <script>
+
+                $(document).ready( function() {
+
+                    $('#picto_menu').on('click', function() {
+
+                        $('#sous_menu_bg').slideToggle(200).addClass( 'open' );
+                        
+
+                    }); 
+
+                    $('.onglet').on('click', function() {
+
+                        $('#second_sous_menu').slideToggle(200).addClass( 'open' );
+
+                    }); 
+
+                });
+
+                $(document).ready(function() {
+
+                $('#fleche img').click(function() {
+
+                        $('html').animate({
+                            scrollTop: 0
+                        }, 'fast');
+                    });
+                });
+            </script>
+
+        </head>
+
+       
+        <body>
+
+            <!-- DANS LE HEADER, ON RETROUVERA LA BARRE NAV, L'ESPACE CONNEXION ET LE LOGO-->
+
+            <header>
+
+                <!-- IL S'AGIT DE LA PARTIE SUPERIEURE DU HEADER. 
+                     BG PERMET DE MODIFIER LES COULEURS ET LA HAUTEUR
+                     INT CONCERNE LA DISPOSITION DU CONTENU : LAYOUT & LARGEUR, PAR EXEMPLE 
+                     ELLES SONT SEPAREES EN DEUX DIV -->
+
+                    <div id="partie_visible_bg"> 
+                        <div id="partie_visible_int"> 
+                            
+
+                            <img src="../img/pictos/hamburger.png" alt="" id="picto_menu" /> <!-- PERMET D'OUVRIR LE PREMIER MENU. IL SERA CACHÉ EN RÉSOLUTION PC-->
+
+                            <a href="index.html" id="logo_container"> <!-- ON IMBRIQUE LE LOGO DANS UNE BALISE A POUR UN RETOUR VERS L'ACCUEIL -->
+                                <img src="../img/logo/custom_air3.svg" alt="Logo de Custom Air" id="logo_header" />
+                            </a>
+
+                            <div id="partie_membres">
+                                <a href="#">
+                                    <p id="upper_text">Log in</p>
+                                </a>
+                                <a href="#">
+                                    <div id="cart_line">
+                                        <img src="../img/pictos/cart.png" alt="" id="picto_cart" />
+                                        <p>Cart</p>
+                                     </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <!-- IL S'AGIT DE LA PARTIE INFÉRIEUR DU HEADER, CACHÉE SOUS MOBILE MAIS DÉCOUVRABLE DEPUIS LE MENU HAMBURGER
+                     BG PERMET DE MODIFIER LES COULEURS ET LA HAUTEUR
+                     INT CONCERNE LA DISPOSITION DU CONTENU : LAYOUT & LARGEUR, PAR EXEMPLE 
+                     ELLES SONT SEPAREES EN DEUX DIV -->
+
+
+                    <div id="sous_menu_bg">
+                        <div id="sous_menu_int">
+                            <div id="partie_aide">
+                                <p><a href="#">Help</a></p>
+                                <form>
+                                    <input type="text" id="search" name="search" placeholder="Search" />
+                                    <input type="submit" id="search_submit" value="" />
+                                </form>
+                            </div>
+
+                            <nav> <!-- SELON LE W3C, IL N'EST PAS POSSIBLE D'INTÉGRER UNE LISTE DANS UNE AUTRE OU D'INTÉGRER UNE DIV DANS UNE LISTE. NOUS AVONS DONC INTÉGRÉ LA LISTE DANS UNE DIV -->
+                                <div id="premier_sous_menu">
+                                    <div class="onglet premier_sous_menu_onglet"><a href="#">Our fleet</a></div>
+                                    <ul id="second_sous_menu">
+                                        <li class="ligne_sous_menu">
+                                            <img src="../img/nav_citation.png" alt="" />
+                                            <p><a href="#">Citation</a></p>
+                                        </li>
+                                        <li class="ligne_sous_menu">
+                                            <img src="../img/nav_turbo.png" alt="" />
+                                            <p><a href="#">Turboprop</a></p>
+                                        </li>
+                                        <li class="ligne_sous_menu">
+                                            <img src="../img/nav_piston.png" alt="" />
+                                            <p><a href="#">Piston</a></p>
+                                        </li>
+                                    </ul>
+                                    <div><a href="#">Book a flight</a></div>
+                                    <div><a href="#">Learn to fly</a></div>
+                                    <div><a href="#">Destinations</a></div>
+                                    <div><a href="#">Contact us</a></div>
+                                </div>    
+                            </nav>
+                        </div>
+                    </div>
+
+            </header>
+
+        <section id="main_avion">
+            <h1 id="titre_page"> Our luxury plane </h1>
+
+            <article id="diapo">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div id="lenght">Length 73 ft 2 in (22.30m)</div>
+                        <img src="../img/diapo1.png" class="d-block w-100" alt="Diapo 1">
+                      </div>
+                      <div class="carousel-item" id="prout">
+                        <div id="height">Height 19 ft 5 in (5.92m)</div>
+                        <img src="../img/diapo2.png" class="d-block w-100" alt="Diapo 2">
+                      </div>
+                      <div class="carousel-item">
+                        <div id="wingspan">Wingspan 68 ft 11 in (21.01)</div>
+                        <img src="../img/diapo3.png" class="d-block w-100" alt="Diapo 3">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+
+                <div id="bouton">
+                    <button class="diese"><a href="#lenght">lenght</a></button>
+                    <button class="diese"><a href="#height">height</a></button>
+                    <button class="diese"><a href="#wingspan">wingspan</a></button>
+                </div>
+            </article>
+
+            <article id="texte_diapo">
+                <h2 id="focus"> Focus on the Citation Longitude </h2>
+
+                <h3 id="citation"> Citation Longitude, the new standard </h3>
+
+                <p id="description">The Cessna Citation Longitude aircraft is the new standard in the super-midsize segment. No other business jet in this class gives you more range, greater payload or higher cruise speed at a lower total ownership cost.</p>
+
+                <div id="fly_plane"><button id="plane" type="button">FLY THIS PLANE</button></div>
+            </article>
+
+        </section>
+
+        <section id="caracteristiques">
+            <div id="colonne1">
+            <article id="dimensions">
+                <div class="en_tete">
+                    <h2 class="titre_tab"> DIMENSIONS </h2>
+                    <div class="plus" id="plus1"></div> <!-- SYMBOLE MOINS PERMETTANT L'AFFICHAGE/LA DISPARITION DU TABLEAU-->
+                </div>
+
+                <div class="separation_tab"></div> <!-- TRAIT DE SEPARATION ENTRE LE TAB ET SON CONTENU -->
+
+                <table class="tab" id="tab1">
+                    <tbody>
+                    <tr class="old">
+                        <td> Lenght </td>
+                        <td> 73 ft 2 in (22.30 m) </td>
+                    </tr>
+
+                    <tr class="new">
+                        <td> Height </td>
+                        <td> 73 ft 2 in (22.30 m) </td>
+                    </tr>
+
+                    <tr class="old">
+                        <td> Wingspan </td>
+                        <td> 19 ft 5 in (5.92 m) </td>
+                    </tr>
+
+                    <tr class="new">
+                        <td> Wing Area </td>
+                        <td> 68 ft 11 in (21.01 m) </td>
+                    </tr>
+                        
+                    <tr class="old">
+                        <td> Wing Sweep </td>
+                        <td> 19 ft 5 in (5.92 m) </td>
+                    </tr>
+
+                    <tr class="new"> 
+                        <td> Wheelbase </td>
+                        <td> 31 ft 7 in (9.63 m)</td>
+                    </tr>
+
+                    <tr class="old">
+                        <td> Tread </td>
+                        <td> 9 ft 8 in (2.95m)</td>
+                    </tr>
+                </tbody>
+                </table>
+            </article>
+
+            <article id="cabin_int">
+                <div class="en_tete">
+                    <h2 class="titre_tab"> CABIN INTERIOR </h2>
+                    <div class="plus" id="plus2"></div>
+                </div>
+
+                <div class="separation_tab"></div>
+                
+                <table class="tab" id="tab2">
+                    <tbody>
+                    <tr class="old">
+                        <td> Height </td>
+                        <td> 72 in (1.83 m) </td>
+                    </tr>
+
+                    <tr class="new">
+                        <td> Width </td>
+                        <td> 77 in (1.96 m) </td>
+                    </tr>
+
+                    <tr class="old">
+                        <td> Lenght </td>
+                        <td> 25 ft 2 in (7.67 m) </td>
+                    </tr>
+                       
+                    <tr class="new">
+                        <td> Maximum Passengers </td>
+                        <td> 12 </td>
+                    </tr>       
+                </tbody>                 
+                </table>
+
+            </article>
+
+            <article id="baggage_capacity">
+                <div class="en_tete">
+                    <h2 class="titre_tab"> BAGGAGE CAPACITY </h2>
+                    <div class="plus" id="plus3"></div>
+                </div>
+
+                <div class="separation_tab"></div>
+
+                <table class="tab" id="tab3">
+                    <tbody>
+                    <tr class="old">
+                        <td> Volume </td>
+                        <td> 1,115 lb (505.8 kg) </td>
+                    </tr>
+
+                    <tr class="new">
+                        <td> Weight </td>
+                        <td> 112 cu ft (3.17 cu m)) </td>
+                    </tr>
+                </tbody>
+                </table>
+
+            </article>
+            </div>
+
+            <div id="colonne2">
+            <article id="performance">
+                <div class="en_tete">
+                    <h2 class="titre_tab"> PERFORMANCE </h2>
+                    <div class="plus" id="plus4"></div>
+                </div>
+
+                <div class="separation_tab"></div>
+
+                <table class="tab" id="tab4">
+                    <tbody>
+                    <tr class="old">
+                        <td> Maximum Cruise Speed </td>
+                        <td> 476 ktas (882 km/h) </td>
+                    </tr>
+
+                    <tr class="new">
+                        <td> 4 Passenger Range </td>
+                        <td> 3,500 nm (6,482 km) </td>
+                    </tr>
+
+                    <tr class="old">
+                        <td> Takeoff Field Lenght </td>
+                        <td> 4,900 ft (1.494 m) </td>
+                    </tr>
+
+                    <tr class="new">
+                        <td> Landing Distance</td>
+                        <td> 3,400 ft (1,036 m)</td>
+                    </tr>
+
+                    <tr class="old">
+                        <td> Maximum Operating Altitude</td>
+                        <td> 45,000 ft (13,716 m)</td>
+                    </tr>
+
+                    <tr class="new">
+                        <td> Maximum Limit Speed</td>
+                        <td> 0.84 Mach (0.84 Mach) </td>
+                    </tr>
+                </tbody>
+                </table>
+
+            </article>
+
+            <article id="powerplant">
+                <div class="en_tete">
+                    <h2 class="titre_tab"> POWERPLANT </h2>
+                    <div class="plus" id="plus5"></div>
+                </div>
+
+                <div class="separation_tab"></div>
+
+                <table class="tab" id="tab5">
+                    <tbody>
+                    <tr class="old">
+                        <td> Manufacturer </td>
+                        <td> Honeywell </td>
+                    </tr>
+
+                    <tr class="new">
+                        <td> Model </td>
+                        <td> HTF7700L </td>
+                    </tr>
+                    
+                    <tr class="old">
+                        <td> Thrust </td>
+                        <td> 7,600 lb (33.81 kN) </td>
+                    </tr>
+                </tbody>
+                </table>
+
+            </article>
+
+            <article id="weights">
+                <div class="en_tete">
+                    <h2 class="titre_tab"> WEIGHTS </h2>
+                    <div class="plus" id="plus6"></div>
+                </div>
+
+                <div class="separation_tab"></div>
+                
+                <table class="tab" id="tab6">
+                    <tbody>
+                    <tr class="old">
+                        <td> Maximum Takeoff Weight </td>
+                        <td> 39,500 lb (17,917 kg) </td>
+                    </tr>
+
+                    <tr class="new">
+                        <td> Maximum Landing Weight </td>
+                        <td> 33,500 lb (15,195 kg) </td>
+                    </tr>
+
+                    <tr class="old">
+                        <td> Full Fuel Playload </td>
+                        <td> 1,600 lb (726 kg) </td>
+                    </tr>
+                </tbody>
+                </table>
+
+            </article>
+            </div>
+        </section>
+
+        <figure id="separateur">
+            <img src="../img/separateur.jpg" alt="Icone de séparation"> <!--SYMBOLE DE SEPARATION ENTRE LES ELEMENTS-->
+        </figure>
+
+
+        <section id="avion">
+            <article id="caravan">
+                <figure class="photos_avion"><img src="../img/avion_cessna_caravan.png"   alt="Avion Cessna Caravan"> 
+                </figure>
+
+                <h3 class="titre_avion"> Cessna Caravan </h3>
+
+                <table class="tableau_avion">
+                    <tbody>
+                        <tr>
+                            <td> Wingspan</td>
+                            <td> 15.87 m</td>
+                        </tr>
+
+                        <tr>
+                            <td> Lenght </td>
+                            <td> 11.46 m </td>
+                        </tr>
+
+                        
+                        <tr>
+                            <td >Height </td>
+                            <td > 4.53 m </td>
+                        </tr>
+
+                        
+                        <tr>
+                            <td> Crew </td>
+                            <td> 2 to 3 </td>
+                        </tr>
+
+                        <tr>
+                            <td> Maximum occupants</td>
+                            <td> 10 - 14 </td>
+                        </tr>
+
+                       
+                        <tr>
+                            <td> Baggage capacity </td>
+                            <td> 147 kg </td>
+                        </tr>
+
+                        
+
+                        <tr>
+                            <td> Maximum speed </td>
+                            <td> 344 km/h </td>
+                        </tr>
+
+                        
+                        <tr>
+                            <td class="none_border"> Maximum range </td>
+                            <td class="none_border"> 1,982 km </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </article>
+            
+            <article id="denali">
+                <figure class="photos_avion"> <img src="../img/avion_cessna_denali.png" alt="Avion Cessna Denali"> </figure>
+
+                <h3 class="titre_avion"> Cessna Denali </h3>
+
+                
+                <table class="tableau_avion">
+                    <tbody>
+                        <tr>
+                            <td> Wingspan</td>
+                            <td> 16.54 m </td>
+                        </tr>
+
+                        <tr>
+                            <td> Lenght </td>
+                            <td> 14.86 m </td>
+                        </tr>
+
+                        <tr>
+                            <td >Height </td>
+                            <td > 4.62 m </td>
+                        </tr>
+
+                        <tr>
+                            <td> Crew </td>
+                            <td> 2 to 3 </td>
+                        </tr>
+
+                        <tr>
+                            <td> Maximum occupants</td>
+                            <td> 8-11 </td>
+                        </tr>
+
+                        <tr>
+                            <td> Baggage capacity </td>
+                            <td> 150 kg </td>
+                        </tr>
+
+                        <tr>
+                            <td> Maximum speed </td>
+                            <td>  519 km/h </td>
+                        </tr>
+
+                        <tr>
+                            <td class="none_border"> Maximum range </td>
+                            <td class="none_border"> 2,963 km </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </article>
+
+            <article id="m2">
+                <figure class="photos_avion"> <img src="../img/avion_citation_m2.png" alt="Avion Citation M2"> </figure>
+
+                <h3 class="titre_avion"> Citation M2 </h3>
+
+                <table class="tableau_avion" >
+                    <tbody>
+                        <tr>
+                            <td> Wingspan</td>
+                            <td> 14.40 m </td>
+                        </tr>
+
+                        <tr>
+                            <td> Lenght </td>
+                            <td> 12.98 m </td>
+                        </tr>
+
+                        <tr>
+                            <td >Height </td>
+                            <td > 4.24 m </td>
+                        </tr>
+
+                        <tr>
+                            <td> Crew </td>
+                            <td> 2 to 3 </td>
+                        </tr>
+
+                        <tr>
+                            <td> Maximum occupants</td>
+                            <td> 7 </td>
+                        </tr>
+
+                        <tr>
+                            <td> Baggage capacity </td>
+                            <td> 328 kg </td>
+                        </tr>
+
+                        <tr>
+                            <td> Maximum speed </td>
+                            <td>  748 km/h </td>
+                        </tr>
+
+                        <tr>
+                            <td class="none_border"> Maximum range </td>
+                            <td class="none_border"> 2,871 km </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </article>
+
+        </section>
+
+        <figure id="fleche"> <!-- FLECHE PERMETTANT DE REMONTER EN HAUT DE LA PAGE-->
+            <img src="../img/footer/fleche.png" alt="Fleche">
+        </figure>
+
+        <footer class="d-flex">
+            <div id="all"> <!-- CONTENEUR QUI PREND TOUT SAUF LES COPYRIGHT-->
+                <div id="right"> <!-- CONTENEUR COLONNE POUR PC -->
+                    <div id="section_logo">
+                        <div id="logo_footer"> <img src="../img/footer/custom.svg" alt="Logo Custom Air"> </div>
+        
+                        <div id="texte_logo">
+                            <p>Constantium, cetera medium principem sed siquid auribus eius huius infudisset.</p>
+                            <div id="tel_logo"> <p> Call: +0800 – 765 - 9898 </p> </div>
+                        </div>
+                    </div>
+                    
+                    <div id="section_rs">
+                        <div id="texte_rs">
+                            <div id="sed"> Sed cautela nimi</div>
+                            <div id="tel_rs"> Call: +0800 – 765 - 9898 </div>
+                        </div>
+        
+                        <div id="reseaux_sociaux">
+                            <figure><img src="../img/footer/facebook_footer.png"  alt="Pictogramme Facebook"></figure>
+                            <figure><img src="../img/footer/twitter_footer.png"   alt="Pictogramme Twitter" ></figure>
+                            <figure><img src="../img/footer/linkedin_footer.png"   alt="Pictogramme Twitter" > </figure>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <div id="section_location">
+                    
+                    <div id="texte_location">
+                        <h2 id="titre_location"> Our location : </h2>
+                        
+                        <div id="location">
+                            <p> Custom air at : </p>
+                            <p> London City airport / Hartmann Rd, </p>
+                            <p> London E16 2PX, </p>
+                            <p> United Kingdom </p>
+        
+                        </div>
+                    </div>
+        
+                    <div id="carte"> <img src="../img/footer/carte_footer.jpg" alt="Carte Custom Air" ></div>
+                </div>
+            </div>
+    
+            <div id="section_fin">
+                <p> Copyright © 2018 custom air inc | Privacy | Terms & conditions </p>
+            </div>
+        </footer>
+
+        <script src="../js/avion.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+
+</html>

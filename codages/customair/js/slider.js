@@ -1,0 +1,18 @@
+$(document).ready(function(){
+    $('.standardbtn').click(function(){
+        $('#standard').addClass('activeslide');
+        $('#standard').removeClass('hiddenslide');
+        $('#forward').addClass('hiddenslide');
+        $('#forward').removeClass('activeslide');
+        $('.standardbtn').addClass('activebtn');
+        $('.forwardbtn').removeClass('activebtn');
+    });
+    $('.forwardbtn').click(function(){
+        $('#standard').addClass('hiddenslide');
+        $('#standard').removeClass('activeslide');
+        $('#forward').addClass('activeslide');
+        $('#forward').removeClass('hiddenslide');
+        $('.standardbtn').removeClass('activebtn');
+        $('.forwardbtn').addClass('activebtn');
+    });
+});

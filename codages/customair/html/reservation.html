@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+        <head>
+
+            <meta charset="utf-8" />
+            <link rel="stylesheet" href="../css/all.css"/>
+            <link rel="stylesheet" href="../css/reservation.css"/>
+            <meta name="viewport" content="width=device-width">
+            <title>Custom Air</title>
+
+            <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+            <script src="../js/avion.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+            <!-- SCRIPT MENU HAMBURGER. IL PERMET DE DEROULER LE SOUS-MENU AU CLIC SUR L'ICONE HAMBURGER-->
+            <script>
+
+                $(document).ready( function() {
+
+                    $('#picto_menu').on('click', function() {
+
+                        $('#sous_menu_bg').slideToggle(200).addClass( 'open' );
+                        
+
+                    }); 
+
+                    $('.onglet').on('click', function() {
+
+                        $('#second_sous_menu').slideToggle(200).addClass( 'open' );
+
+                    }); 
+
+                });
+
+            </script>
+
+        </head>
+
+       
+        <body>
+
+            <!-- DANS LE HEADER, ON RETROUVERA LA BARRE NAV, L'ESPACE CONNEXION ET LE LOGO-->
+
+            <header>
+
+                <!-- IL S'AGIT DE LA PARTIE SUPERIEURE DU HEADER. 
+                     BG PERMET DE MODIFIER LES COULEURS ET LA HAUTEUR
+                     INT CONCERNE LA DISPOSITION DU CONTENU : LAYOUT & LARGEUR, PAR EXEMPLE 
+                     ELLES SONT SEPAREES EN DEUX DIV -->
+
+                    <div id="partie_visible_bg"> 
+                        <div id="partie_visible_int"> 
+                            
+
+                            <img src="../img/pictos/hamburger.png" alt="" id="picto_menu" /> <!-- PERMET D'OUVRIR LE PREMIER MENU. IL SERA CACHÉ EN RÉSOLUTION PC-->
+
+                            <a href="index.html" id="logo_container"> <!-- ON IMBRIQUE LE LOGO DANS UNE BALISE A POUR UN RETOUR VERS L'ACCUEIL -->
+                                <img src="../img/logo/custom_air3.svg" alt="Logo de Custom Air" id="logo_header" />
+                            </a>
+
+                            <div id="partie_membres">
+                                <a href="#">
+                                    <p id="upper_text">Log in</p>
+                                </a>
+                                <a href="#">
+                                    <div id="cart_line">
+                                        <img src="../img/pictos/cart.png" alt="" id="picto_cart" />
+                                        <p>Cart</p>
+                                     </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <!-- IL S'AGIT DE LA PARTIE INFÉRIEUR DU HEADER, CACHÉE SOUS MOBILE MAIS DÉCOUVRABLE DEPUIS LE MENU HAMBURGER
+                     BG PERMET DE MODIFIER LES COULEURS ET LA HAUTEUR
+                     INT CONCERNE LA DISPOSITION DU CONTENU : LAYOUT & LARGEUR, PAR EXEMPLE 
+                     ELLES SONT SEPAREES EN DEUX DIV -->
+
+
+                    <div id="sous_menu_bg">
+                        <div id="sous_menu_int">
+
+                            <div id="partie_aide"> <!-- IL NE S'AGIT PAS DE CONTENUS IMPORTANTS POUR LE RÉFÉRENCEMENT DONC ON CRÉE UNE DIV ET NON UNE SECTION -->
+                                <p><a href="#">Help</a></p>
+                                <form>
+                                    <input type="text" id="search" name="search" placeholder="Search" />
+                                    <input type="submit" id="search_submit" value="" /> <!-- LE SUBMIT N'EST AUTRE QUE LA LOUPE QUI A ÉTÉ MISE EN BACKGROUND-IMG -->
+                                </form>
+                            </div>
+
+                            <nav> <!-- SELON LE W3C, IL N'EST PAS POSSIBLE D'INTÉGRER UNE LISTE DANS UNE AUTRE OU D'INTÉGRER UNE DIV DANS UNE LISTE. NOUS AVONS DONC INTÉGRÉ LA LISTE DANS UNE DIV -->
+                                <div id="premier_sous_menu">
+                                    <div class="onglet premier_sous_menu_onglet"><a href="#">Our fleet</a></div>
+                                    <ul id="second_sous_menu">
+                                        <li class="ligne_sous_menu">
+                                            <img src="../img/nav_citation.png" alt="" />
+                                            <p><a href="#">Citation</a></p>
+                                        </li>
+                                        <li class="ligne_sous_menu">
+                                            <img src="../img/nav_turbo.png" alt="" />
+                                            <p><a href="#">Turboprop</a></p>
+                                        </li>
+                                        <li class="ligne_sous_menu">
+                                            <img src="../img/nav_piston.png" alt="" />
+                                            <p><a href="#">Piston</a></p>
+                                        </li>
+                                    </ul>
+                                    <div><a href="#">Book a flight</a></div>
+                                    <div><a href="#">Learn to fly</a></div>
+                                    <div><a href="#">Destinations</a></div>
+                                    <div><a href="#">Contact us</a></div>
+                                </div>    
+                            </nav>
+                        </div>
+                    </div>
+
+            </header>
+
+	
+
+
+
+    <section id="sectionform"> <!-- Contient les deux formulaires et les place en flex -->
+
+        <div id="form1" > <!-- Premier formulaire -->
+            <h1 class="title"> Reserve your flight </h1>
+
+            <form class="form_reservation">
+                <fieldset>
+                    <legend>Destinations</legend>
+                    <hr>
+
+            				<label for="departing">Departing from:</label>
+            				<input type="text" name="departing" id="departing"><br>
+            				
+                            <label for="arriving">Arriving at:</label>
+            				<input type="text" name="arriving" id="arriving">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dates</legend>
+                    <hr>
+
+                            <label for="departuredate"><img src="../img/pictos/calendar.png" alt="calendrier"> Departure: </label>
+                            <input type="date" name="departuredate" id="departuredate">
+                            <input type="time" name="departuretime" id="departuretime"> <br>
+                            
+                            <label for="departuredate"> <img src="../img/pictos/calendar.png" alt="calendrier"> Return:</label>
+                            <input type="date" name="returndate" id="returndate">
+                            <input type="time" name="returntime" id="returntime">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Passengers</legend>
+                    <hr>
+                            <div id="nbpassenger">
+                            <label for="number" id="label_passenger">Number of passengers</label>
+                            <span class="numpassenger"> 1 </span> <!--  On affiche le nombre -->
+
+                            <button type="button" id="plus"  class="addbutton" onclick="createpassenger();">+</button>  <!-- On appelle une fonction en jquery pour créer de nouvelles listes déroulantes qui apparaissent à la div ayant pour id "newpassenger" (Script createpassenger.js). Un autre script permet d'incrémenter le nombre de passager (Scriptincrease.js)-->
+
+                            <button type="button" id="clearbutton" onclick="removepassenger()">clear</button> <br> <!-- On appelle une fonction en jquery pour supprimer les listes déroulantes ayant pour classe "passenger" (Celle rajouter avec la fonction createpassenger) (Script removepassenger.js).-->
+                            </div>
+
+                            <label for="passenger">Passenger:</label>
+                            <select name="passenger">
+                                <option>Adult (25 years and older)</option>
+                                <option>Young (12 – 24 years)</option>
+                                <option>Child (2 – 11 years)</option>
+                                <option>Snack</option>
+                                <option>Refreshment</option>
+                                <option>Infant (0 – 23 months)</option>
+                            </select> <br>
+                            <div id="newpassenger"></div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Meals</legend>
+                    <hr>
+                            <label id="radio_text">Do you want us to prepare a meal for you ?</label> <br>
+                            <input type="radio" name="meal_radio" value="yes" checked class="radio">
+                            <label for="meal_radio" class="meal_radio">Yes</label>
+
+                            <input type="radio" name="meal_radio" value="no" class="radio">
+                            <label for="meal_radio" class="meal_radio">No</label> <br>
+
+
+                            <label for="meal1">Meal 1:</label>
+                            <select name="meal1">
+                                <option>Breakfast</option>
+                                <option>Lunch</option>
+                                <option>Dinner</option>
+                                <option>Snack</option>
+                                <option>Refreshment</option>
+                                <option>Cocktail</option>
+                            </select> <br>
+
+                            <label for="meal1">Meal 2:</label>
+                            <select name="meal2">
+                                <option>Breakfast</option>
+                                <option>Lunch</option>
+                                <option>Dinner</option>
+                                <option>Snack</option>
+                                <option>Refreshment</option>
+                                <option>Cocktail</option>
+                            </select> <br>
+
+                            <label for="meal1">Meal 3:</label>
+                            <select name="meal3">
+                                <option>Breakfast</option>
+                                <option>Lunch</option>
+                                <option>Dinner</option>
+                                <option>Snack</option>
+                                <option>Refreshment</option>
+                                <option>Cocktail</option>
+                            </select>
+
+                            <div id="newElementId"></div>
+
+                            <div id="addmeal">
+                               <input type="button" class="addbutton" value="+" onclick="createmeal();"/>  <!-- On appelle une fonction en jquery pour créer de nouvelles listes déroulantes qui apparaissent à la div "newElementId. C'est le script createmeal.js -->
+                            </div>
+                </fieldset>
+
+                <input type="submit" value="Submit your reservation" id="submit">
+    		</form>
+        </div>
+        <div id="form2"> <!-- Contient le formulaire "model" aussi que l'image reservation_meal.jpg -->
+            <div id="div_reservation_avion">
+                <h2 class="title">Choose your plane</h2>
+
+                <form class="form_reservation">
+                    <fieldset>
+                        <legend>Model</legend>
+                        <hr>
+                        <label for="model">Model:</label>
+                        <select name="model1" id="model" autocomplete="off">
+                              <option selected disabled hidden>Choose a model</option>
+                            <option value="1" id="citationoption">Citation</option>
+                            <option value="2" id="turbopropoption">Turboprop</option>
+                            <option value="3" id="pistonoption">Piston</option>
+                        </select>
+
+                        <!-- Les listes suivantes sont cachés et affichées au clic grâce au script model.js -->
+                        <label for="citations" class="citationlist hiddenlist">Citations:</label>
+                        <select name="citations" id="citations" class="citationlist hiddenlist">
+                            <option>Hemesphere</option>
+                            <option>Longitude</option>
+                            <option>Sovereign</option>
+                            <option>Latitude</option>
+                            <option>M2</option>
+                        </select>
+
+                        <label for="turboprops" class="turboproplist hiddenlist">Turboprops:</label>
+                        <select name="turboprops" id="turboprops" class="turboproplist hiddenlist">
+                            <option>Cessna denali</option>
+                            <option>grand Caravan Ex</option>
+                            <option>Cassna Caravan</option>
+                        </select>
+
+                        <label for="pistons" class="pistonlist hiddenlist">Pistons:</label>
+                        <select name="pistons" id="pistons" class="pistonlist hiddenlist">
+                            <option>cessna stationair</option>
+                            <option>cessna skylane </option>
+                            <option>cessna skyhawk</option>
+                        </select>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div id="logo"> <img src="../img/separateur.jpg" alt="losange de séparation"> </div>
+            <div id="img_reservation"><img src="../img/reservation_meals.jpg" alt="reservation"></div>
+		</div>
+	</section>
+
+
+
+
+	<section id="section360">
+        <div id="conteneurdiapo"> <!-- Un diaporama est créer pour simuler la visite 360° grâce au script diapo.js. Il permet de faire défiler les images et de mettre pause lorsque la souris survole. -->
+            <div id="diapotexte">
+                <h3>360° tour</h3>
+                <p>Move your mouse over the image to pause</p>
+            </div>
+        </div>
+	</section>
+
+
+	<section id="sectioninterior">
+
+        <h2 class="title"> Interior </h2>
+        <p id="sub_title"> Treat yourself to confort </p>
+
+		<div id="aviondiapo">  <!-- Le script slider.js permet de changer les class des images et des boutons et ainsi changer leur affichage pour les faire appara^tre ou disparaître. -->
+            <div  id="standard" class="slide activeslide">
+                <img src="../img/reservation_interior_1_default.jpg" alt="interior 1">
+                <div class="ctrldiv">
+                    <button class="slidebtn standardbtn activebtn">Standard</button>
+                    <button class="slidebtn forwardbtn">Forward Cabinet</button>
+                </div>
+            </div>
+            <div id="forward" class="slide hiddenslide">
+                <img src="../img/reservation_interior_2.jpg" alt="interior 2">
+                <div class="ctrldiv">
+                    <button class="slidebtn standardbtn activebtn">Standard</button>
+                    <button class="slidebtn forwardbtn">Forward Cabinet</button>
+                </div>
+            </div>
+        </div>
+	</section>
+
+            <figure id="fleche"> <!-- FLECHE PERMETTANT DE REMONTER EN HAUT DE LA PAGE-->
+                <img src="../img/footer/fleche.png" alt="Fleche">
+            </figure>
+            
+            <footer class="d-flex">
+                <div id="all"> <!-- CONTENEUR QUI PREND TOUT SAUF LES COPYRIGHT-->
+                    <div id="right"> <!-- CONTENEUR COLONNE POUR PC -->
+                        <div id="section_logo">
+                            <div id="logo_footer"> <img src="../img/footer/custom.svg" alt="Logo Custom Air"> </div>
+            
+                            <div id="texte_logo">
+                                <p>Constantium, cetera medium principem sed siquid auribus eius huius infudisset.</p>
+                                <div id="tel_logo"> <p> Call: +0800 – 765 - 9898 </p> </div>
+                            </div>
+                        </div>
+                        
+                        <div id="section_rs">
+                            <div id="texte_rs">
+                                <div id="sed"> Sed cautela nimi</div>
+                                <div id="tel_rs"> Call: +0800 – 765 - 9898 </div>
+                            </div>
+            
+                            <div id="reseaux_sociaux">
+                                <figure><img src="../img/footer/facebook_footer.png"  alt="Pictogramme Facebook"></figure>
+                                <figure><img src="../img/footer/twitter_footer.png"   alt="Pictogramme Twitter" ></figure>
+                                <figure><img src="../img/footer/linkedin_footer.png"   alt="Pictogramme Twitter" > </figure>
+                            </div>
+                        </div>
+                    </div>
+            
+            
+                    <div id="section_location">
+                        
+                        <div id="texte_location">
+                            <h2 id="titre_location"> Our location : </h2>
+                            
+                            <div id="location">
+                                <p> Custom air at : </p>
+                                <p> London City airport / Hartmann Rd, </p>
+                                <p> London E16 2PX, </p>
+                                <p> United Kingdom </p>
+            
+                            </div>
+                        </div>
+            
+                        <div id="carte"> <img src="../img/footer/carte_footer.jpg" alt="Carte Custom Air" ></div>
+                    </div>
+                </div>
+            
+                <div id="section_fin">
+                    <p> Copyright © 2018 custom air inc | Privacy | Terms & conditions </p>
+                </div>
+            </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/diapo.js"></script>
+    <script src="../js/createmeal.js"></script>
+    <script src="../js/increase.js"></script>
+    <script src="../js/createpassenger.js"></script>
+    <script src="../js/removepassenger.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/model.js"></script>
+</body>
+</html>

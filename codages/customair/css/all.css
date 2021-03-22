@@ -1,0 +1,805 @@
+
+/* ALL */
+/* LE SITE CONÇU EN MOBILE FIRST, CETTE PREMIERE PARTIE DE CSS CONCERNE DONC LA VERSION MOBILE, EN 360PX */
+
+
+/* HEADER */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
+
+#sous_menu_bg.open, #second_sous_menu.open { 
+    /* ON UTILISE CETTE PROPRIÉTÉ DANS LE CAS OÙ LA BALISE OBTIENT LA CLASSE .OPEN ; 
+    CETTE CLASSE S'OBTIENT VIA LE JAVASCRIPT, LORSQU'ON CLIQUE SUR LE MENU HAMBURGER, OUR FLEET, DANS LA VERSION MOBILE 
+    POUR LA VERSION PC, LES BALISES SONT DÉJÀ EN DISPLAY: VISIBLE, ON LE VERRA ENSUITE */
+    display: visible;
+}
+
+body { /* ENLÈVE LES ESPACEMENTS AUTOMATIQUES DES NAVIGATEURS ET ON DÉTERMINE L'INTERLIGNE SUR MOBILE. LA TAILLE DE POLICE DIFFÈRE BEAUCOUP, DANS LE HEADER, EN REVANCHE. */
+    padding:0;
+    margin:0;
+    line-height:20px;   
+}
+
+header { /* LE HEADER PREND TOUTE LA LARGEUR ET ON APPLIQUE UNE FONT-FAMILY GÉNÉRALE */
+    width: 100%;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    color: white;
+    z-index: 5;
+}
+
+/*-- PARTIE SUPERIEURE DU HEADER --*/
+
+#partie_visible_bg {
+    height:110px;
+    border-bottom: #aa9c6c solid 3px;
+    background-color: #282828;
+
+}
+
+#partie_visible_int { /* ON INSÈRE TOUS LES CONTENUS DANS UNE GRILLE POUR LA DISPOSITION ET ON DÉFINIT UNE LARGEUR DE 80%, APPLIQUABLE UNIQUEMENT AUX CONTENUS ET PAS AU BACKGROUND */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap:10px;
+    grid-row-gap:10px;
+    width:80%;
+    margin:0 auto;
+}
+
+/* COULEURS DES LIENS ET LA TRANSITION QUAND ON PASSE LA SOURIS */
+
+#partie_visible_int a { 
+    color:white;
+    text-decoration: none;
+    transition: 1000ms color;
+}
+
+#partie_visible_int a:hover {
+    color:#f5c938;
+}
+
+/*-- CETTE PARTIE CONCERNE LE PICTOGRAMME HAMBURGER --*/
+
+#picto_menu {
+    width:20px;
+    grid-column: 1;
+    grid-row: 2;
+    align-self:flex-start;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+}
+
+/*-- CETTE PARTIE CONCERNE LE LOGO --*/
+
+#logo_container { /* PLACEMENT SELON LA GRILLE */
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+    height:100%;
+    margin: 0 auto;
+    margin-top:10%;
+}
+
+#logo_container img {
+    height:80px;
+    width: auto;
+}
+
+/* CETTE PARTIE CONCERNE LA COLONNE COMPRENANT LA CONNEXION UTILISATEUR MAIS AUSSI LE PANIER */
+
+#partie_membres { /* PLACEMENT SELON LA GRILLE */
+    grid-column:  4 / 5;
+    grid-row: 1 / 4;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    font-size:14px;
+    text-transform: uppercase;
+}
+
+#picto_cart {
+    width:20px;
+}
+
+#partie_membres div {
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content:space-around;
+    align-items:center;
+}
+
+/* PARTIE INFÉRIEURE DU HEADER, MASQUÉE POUR LA VERSION MOBILE */
+
+#sous_menu_bg {
+    background-color: #282828;
+    display: none;
+}
+
+/* CETTE PARTIE CONCERNE LA LIGNE INTÉGRANT LA BARRE DE RECHERCHE ET UN LIEN REDIRIGEANT VERS UNE PAGE D'AIDE */
+
+#partie_aide { /* ALIGNEMENT VERS LE HAUT */
+    width:80%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content: space-between;
+    padding-top:20px;
+    align-items:flex-start;
+
+}
+
+#partie_aide p {
+    margin-block-start:0; /* ON RETIRE LES ESPACEMENTS DONNÉS PAR LE NAVIGATEUR AUTONMATIQUEMENT */
+    text-transform:uppercase;
+    font-size:14px;
+    margin-right:5%;
+}
+
+header form { /* ON POSITIONNE EN RELATIVE POUR LA LOUPE PUISSE SE POSITIONNER SUR UN AUTRE ÉLÉMENT, L'INPUT SEARCH. SI IL N'Y ÉTAIT PAS, LA LOUPE N'APPARAÎTRAIT PAS */
+    position:relative;
+}
+
+#search { /* LA BARRE DE RECHERCHE, SA LARGEUR. Z-INDEX À & POUR QUE LE SUBMIT (LA LOUPE) SE POSITIONNE AU-DESSUS DE LA BARRE, COMME SI ELLE ÉTAIT À L'INTÉRIEUR */
+    padding: 2px 10px 2px 10px;
+    z-index:1;
+    font-size: 14px;  
+}
+
+#search_submit { /* APPLICATION D'UNE IMAGE POUR À LA PLACE D'UN TEXTE POUR LA VALIDATION */
+    background-image: url(../img/pictos/loupe.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-color:#fff;
+    border: 0 white solid;
+    top:8px;
+    z-index:30;
+    grid-column:2;
+    position:absolute; /* DÉPEND DE LA BARRE DE RECHERCHE, ON POSITIONNE L'ICONE DE LOUPE À L'INTÉRIEUR */
+    right:10px;
+
+}
+
+/*-- CETTE PARTIE CONCERNE LE MENU ET SOUS-MENU --*/
+
+#premier_sous_menu { /* ESPACEMENT DANS LE MENU QU'ON NE POURRAIT PAS FAIRE DANS LA NAV */
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+#premier_sous_menu div {
+    margin-left: 10%;
+    margin-bottom:10px;
+}
+
+/* ON INTERVIENT SUR LA COULEUR ET LA TRANSITION DES LIENS QUAND LA SOURIS SURVOLE LE LIEN (ET QUAND IL EST ACTIF). NOUS N'AVONS PAS INSÉRÉ DE JS POUR D'EN AVOIR TROP DANS CETTE PAGE */
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+#premier_sous_menu > div a {
+    transition: color 500ms;
+}
+
+#premier_sous_menu > div a:hover, #premier_sous_menu > div a:active {
+    color: #f5c938;
+}
+
+#premier_sous_menu > div:first-child a:hover, #premier_sous_menu > div:first-child a:active {
+    color: white;
+}
+
+.onglet a:hover, .onglet a:active {
+    text-decoration: underline #aa9c6c;
+    color: white;
+}
+
+#second_sous_menu { /* SOUS-MENU QUAND ON CLIQUE SUR "OUR FLEET" */
+    background-color: #aa9c6c;
+    padding-inline-start:0; /* ON ÔTE LES ESPACEMENTS DÉFINIS PAR LE NAVIGATEUR */
+    margin: 10px 0 20px 0;
+    display: none; /* MENU NON AFFICHÉ AU DÉPART MAIS LE SERA SI ON CLIQUE SUR "OUR FLEET", GRÂCE À LA CLASS OPEN AJOUTÉ EN JS */
+}
+
+#second_sous_menu li { 
+    height: 50px;
+    letter-spacing: -1px;
+    font-size:13px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* ON CRÉE 4 COLONNES MAIS LES DEUX ÉLÉMENTS (PICTO D'AVION ET TITRE DE LA PAGE) SERONT INSÉRÉS DANS LES DEUX COLONNES CENTRALES. LES 2 COLONNES AU BORD ONT LA MÊME WIDTH QUE LES COLONNES CENTRALES CE POURQUOI ON LES A CRÉÉES. ELLE JOUE AUSSI LE RÔLE D'ESPACEMENT. */
+    grid-template-rows: repeat(3, 1fr); /* CRÉATION DE TROIS LIGNES POUR LES TROIS ÉLÉMENTS, DISPOSÉS LES UNS APRÈS LES AUTRES */
+    grid-column-gap:10px;
+    grid-row-gap:10px;
+    
+}
+
+/* INSERTION DES LI DANS LES LIGNES */
+
+#second_sous_menu li:first-child {
+    grid-row: 1;
+}
+
+#second_sous_menu li:nth-child(2) {
+    grid-row: 2;
+}
+
+#second_sous_menu li:nth-child(3) {
+    grid-row: 3;
+}
+
+/* PLACEMENT DE LICONE D'AVION ET DE SON TITRE DANS LES COLONNES CENTRALES */
+
+#second_sous_menu img {
+    width: 62px;
+    grid-column: 2;
+}
+
+#second_sous_menu p {
+    width: 62px;
+    grid-column: 3;
+}
+
+.ligne_sous_menu { /* ON CENTRE LES ÉLÉMENTS (ICONE ET TITRE) SUR UN MÊME AXE, SOIT, AU CENTRE E LEUR CELLULE */
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    width:80%;
+    text-transform:uppercase;
+    line-height:20px;
+    align-items:center;
+    margin: 0 auto;
+}
+
+.ligne_sous_menu img {
+    width:35%;
+}
+
+
+@media (min-width: 1000px) {
+
+    body header { /* L'INTERLIGNAGE CHANGE */
+        line-height: 30px;
+    }
+
+   header { /* ON CRÉE TROIS LIGNES, UNE POUR LA PARTIE MEMBRE, UNE AUTRE POUR LA PARTIE HELP ET UNE DERNIÈRE POUR LA NAVIGATION ET LA BARRE DE RECHERCHE, QUI FAIT AUSSI PARTIE DE LA PARTIE HELP */
+       display: grid;
+       grid-template-rows: repeat(3, 1fr);
+       height: 310px;
+   }
+
+   #picto_menu {
+       display: none;
+   }
+
+   #partie_visible_bg {
+       border: 0px red solid; /* ON ENLÈVE LA BORDURE DORÉ AFFICHÉE DANS LE HEADER EN MOBILE, MAIS PAS SUR PC */
+       height: 200px;
+   }
+
+   #partie_visible_int { /* AU SEIN DE LA DIV DES CONTENUS, ON CRÉE DES COLONNES, COMME SUR LE GABARIT, ET ON LES PLACERA DE LA MÊME MANIÈRE. 2 LIGNES POUR POUVOIR INTÉGRER LA PARTIE HELP ET MEMBRE SUR DIFFÉRENTS LIGNES */
+        display: grid;
+        grid-template-columns: repeat(24, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap:10px;
+        grid-row-gap:10px;
+        grid-row: 1/ 3;
+        width: 93%;
+        align-items: center;
+    }
+
+    #logo_container { /* LE LOGO PREND, EN REVANCHE, DEUX LIGNES */
+        grid-row: 1 / 3;
+        grid-column: 1 / 6;
+    }
+
+    #logo_container img { /* CHANGEMENT DE LA TAILLE DU LOGO */
+        width: 300px;
+        height: auto;
+    }
+
+    #partie_membres {
+        grid-row: span 1;
+        grid-column: 19 / 25;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-top:15px;
+        font-size: 20px;
+    }
+
+    #picto_cart {
+        width:25px;
+        margin-left:10px;
+        height: auto;
+    }
+
+    #sous_menu_bg { /* SE TROUVE EN DERNIÈRE LIGNE, EN DESSOUS DE LA PARTIE COMPORTANT LE LOGO INTITULÉ "VISIBLE" PUISQUE SEULE PREMIÈRE VISIBLE EN ARRIVANT SUR LA PAGE EN MOBILE */
+        grid-row: 3 / 4;
+        height: 110px;
+        width: 100%;
+        display: block;
+    }
+
+    #sous_menu_int { /* LA BARRE DE NAVIGATION SE TROUVE DÉSORMAIS AVANT LA PARTIE AIDE DONC ON INTERVERTIE LEUR PLACE PAR ROW-REVERSE. ON DÉFINIT UNE WIDTH */
+        display: flex; 
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 93%;
+        margin: auto;
+    }
+
+    #premier_sous_menu { /* DANS LA BARRE DE NAVIGATION, ON CRÉE CINQ COLONNES POUR ÉVIDEMMENT CINQ NOEUDS */
+        display: grid; 
+        grid-template-columns: repeat(5, 20%);
+        font-size: 20px;
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 70px;
+    }
+
+    
+    #premier_sous_menu > div { /* ON EMPÊCHE LE RETOUR À LA LIGNE DES NOEUDS UNIQUEMENT */
+        white-space:nowrap;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    #premier_sous_menu div a { /* ON CRÉE DE L'ESPACEMENT INTERNE UTILE À L'APPARITION DU RECTANGLE DORÉ POUR LE SURVOL */
+        padding-top: 12.5px;
+        padding-bottom: 12.5px;
+        padding-left:30px;
+        padding-right: 30px;
+        
+    }
+
+    .premier_sous_menu_onglet {
+        text-align: left;
+    }
+
+    /* PLACEMENT DES NOEUDS DANS LES COLONNES RESPECTIVES */
+
+    .premier_sous_menu_onglet:first-child {
+        grid-column: 1;
+    }
+
+    .premier_sous_menu_onglet:nth-child(2) {
+        grid-column: 2;
+    }
+
+    .premier_sous_menu_onglet:nth-child(3) {
+        grid-column: 3;
+    }
+
+    .premier_sous_menu_onglet:nth-child(4) {
+        grid-column: 4;
+    }
+
+    .premier_sous_menu_onglet:nth-child(5) {
+        grid-column: 5;
+    }
+     
+    /* ON PLACE LE SOUS-MENU EN ABSOLUTE POUR QU'IL SE POSITIONNE, FINALEMENT, JUSTE EN-DESSOUS DU HEADER */
+
+    #second_sous_menu {
+        position: absolute;
+        display: flex;
+        flex-direction: column; /* ON RANGE LES LIS EN UNE COLONNE */
+        top: 300px;
+        left: 4.75%;
+        width: 330px;
+        height: 270px;
+        display: none;
+        z-index: 99; /* INDICE SUPÉRIEUR POUR POUVOIR PASSER AU-DESSUS DU CARROUSEL OU TOUT AUTRE ÉLÉMENT */
+    }
+
+    #second_sous_menu li { /* LES ÉLÉMENTS DANS LA LI SONT, PAR CONTRE, RANGÉS EN LIGNE */
+        display: flex;
+        flex-direction: row;
+        margin-left: 28px;
+        font-size: 20px;
+        margin-top: 30px;
+        height: 50px;
+        font-size:20px;
+        font-weight: bold;
+        letter-spacing: 0;       
+    }
+
+    #second_sous_menu li img {
+        width: 40%;
+    }
+
+    .onglet a:hover, .onglet a:active { /* DÉFINITION DE LA COULEUR EN BCKGROUND LORSQUE LA SOURIS PASSE SUR LE PREMIER NOEUD DE LA BARRE NAV */
+        background: #aa9c6c;
+        text-decoration: none;
+        
+    }
+
+    #partie_aide { /* ON A TENTÉ D'INTÉGRER LA PARTIE AIDE DANS LES COLONNES MAIS CE LA NE FONCTIONNE PAS TRÈS BIEN */
+        grid-column: 20 / 25;
+        grid-row: 1 / 4;
+        display: flex;
+        flex-direction: column;
+        padding-top:0px;
+    }
+
+    #partie_aide p { /* POUR EMPÊCHER DE "HELP" SOIT SUR LA GAUCHE, NOUS AVONS DÉFINI SON POSITIONNEMENT EN ABSOLUTE ET PLACER SUR LA DROITE, CELA MARCHE ASSEZ BIEN */
+        position: absolute;
+        top: 120px;
+        right: -1%;
+        font-size: 20px;
+        
+    }
+
+    #partie_aide p a {
+        text-align: right;
+    }
+
+    #partie_aide form { /* UNE CERTAINE DIFFICULTÉ À PLACER LA BARRE DE RECHERCHE, POUR ÊTRE HONNÊTE. NOUS L'AVONS DONC PLACER EN ABSOLUTE POUR QU'ELLE PUISSE RESTE À DROITE, ET NON RETOURNER VERS LA GAUCHE */
+        position: absolute;
+        right: 10.5%;
+    }
+
+    header form {
+        position:relative;
+    }
+    
+    #search { /* LES DIMENSIONS DE LA BARRE DE RECHERCHE CHANGENT */
+        width: 100%;
+        padding: 10px 60px 10px 60px;
+        
+    }
+    
+    #search_submit { /* ON AUGMENTE LA TAILLE DE LA LOUPE SUBMIT */
+
+        background-size: 35px;
+        background-color: #fff;
+        border: 0 white solid;
+        z-index: 30;
+        position: absolute;
+        top:2px;
+        right: -100px;
+        height: 35px;
+        width: 35px;
+    
+    }
+
+}
+
+@media (min-width: 1300px) { /* SI LA TAILLE D'ÉCRAN EST TROP PETITE POUR LES FORMATS PC, POUR QUE LA BARRE DE NAVIGATION ÉVITE DE PASSE EN-DESSOUS DE LA ABRRE DE RECHERCHE ET SOIT EN PARTIE MASQUÉE, CETTE PARTIE PERMET DE LA DESCENDRE LÉGÈREMENT */
+
+    header {
+        height: 250px;
+    }
+
+    #premier_sous_menu {
+        margin-top: 10px;
+        margin-left: 28px;
+    }
+
+    #sous_menu_bg {
+        height: 50px;
+        display: block;
+    }
+
+    #second_sous_menu {
+        top: 240px;
+        margin-left: 1%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+
+footer{
+    background-image: url("../img/footer/footer_background.png"); /* Image de fonc pour portable */
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif; 
+    color: white; /*Texte en blanc pour toute le footer */
+    display: flex; 
+    font-size: 12px; /* Police de 12px pour toute le footer */
+    width: 100%; /* Prend toute la largeur de l'écran */
+    flex-direction: column; /* POisitonné en colonne */
+}
+
+#all {
+    width: 100%;
+}
+
+#fleche{
+    background-color: #959595; /* Couleur de fond */
+    width: 66px;
+    height: 50px; /* Taille et hauteur */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Aligner horizontalement et verticalement */
+    float: right; /* Positionné à droite */
+    margin-right: 36px; /* Décalage vers la gauche */
+    margin-bottom: 0; /* Pas d'espace entre le bas de cette éléméent et le prochain élément */
+}
+
+
+
+
+/* LOGO */
+
+
+/* CONTENEUR SECTION */
+#section_logo{
+    display: flex;
+    flex-direction: row; /* Elements positionnés ligne */
+    width: 80%; 
+    margin-right: auto;
+    margin-left: auto; /* Centrer  sur une largeur qui prend 80% de la page */
+    justify-content: space-around; /* Elements espacés equitablement */
+}
+
+
+/* ELEMENTS SECTION */
+#logo_footer{
+    margin-top: 25px; /* Espacement entre le haut du footer et le logo de 25px */
+    width: 500px;
+    height: auto; /* Hauteur proportionnelle à la largeur */
+}
+
+#texte_logo{
+    margin-top: 20px; /* Décalage vers le bas qui donne un espacement */
+    line-height: 20px; /* Hauteur de l'interligne */
+    margin-left: 20px; /* Décalage vers la droite */
+}
+
+#tel_logo{
+    display: none; /* Visibilité caché */
+}
+
+
+
+
+/* RESEAUX SOCIAUX */
+
+
+/* CONTENEUR SECTION */
+#section_rs{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto; /* Centrer  sur une largeur qui prend 80% de la page */
+    margin-top: 49px; /* Décalage vers le bas qui donne un espacement */
+}
+
+
+/* ELEMENTS SECTION */
+
+/* Textes */
+#texte_rs{
+    display: flex;
+    flex-direction: row; /* Elements positionnés ligne */
+    justify-content: space-between; /* Elements espacés equitablement */
+    width: 100%;
+}
+
+#texte_rs p{
+    margin-right: 50px; /* Espacements entre les éléments */
+}
+
+/* Images */
+#reseaux_sociaux{ /* Conteneur image réseaux sociaux */
+    display: flex; 
+    width: 70%; /* prennent toute la largeur disponible */
+    margin-top: 35px;
+    justify-content: flex-start; /* Elément placé au début du conteneur */
+}
+
+#reseaux_sociaux img{
+    width: auto; /* Largeur proportionnelle à la largeur */
+    height: 35px;
+}
+
+
+
+
+
+/* LOCATION */
+
+/* CONTENEUR SECTION */
+#section_location{
+    margin: auto;
+    margin-top: 60px;
+    width: 80%; /* Element centré sur une largeur qui prend 80% de la page */
+}
+
+
+/* ELEMENTS SECTION */
+
+/* Textes */
+#titre_location{
+    margin-bottom: 25px; /* Espacements entre les éléments */
+    font-size: 16px; /* Taille du titre de 16px */
+}
+
+#location p{
+    line-height: 20px; /* Hauteur de l'interligne */
+}
+
+
+/* Images */
+#carte img{
+    width: 100%; /* Prend toute la largeur sur une largeur de 80% */
+    margin-top: 20px;
+    margin-bottom: 20px;  /* Espacements entre les éléments */
+}
+
+
+
+
+/* FIN */
+
+#section_fin{
+    background-color: #CECECE; /* Couleur de fond */
+    color: black; /* Couleur des textes noir */
+    font-size: 9px; /* Taille du texte moindre par rapport à l'ensemlble du footer */
+    height: 25px; 
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrer horizontalement et verticalement */
+}
+
+#section_fin p{
+    margin-top: 15px;
+}
+
+
+
+
+/* RESPONSIVE */
+
+
+
+@media screen and (min-width: 1200px) {
+
+
+    /* ALL */
+
+    footer{
+        font-size: 18px; /* Taille du texte sur tout le footer */
+        background-image: url("../img/footer/footer_back_pc.png"); /* Image de fond format pc */
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center; /* Textes centrés horizontalement et verticalement */
+        width: 100%;
+    }
+
+    #all{
+        display: flex;
+        flex-direction: row; /* Elements positionnés en ligne */
+        width: 100%;
+    }
+
+    #fleche{
+        margin-right: 68px; /* Décalage vers la droite */
+        width: 132px;
+        height: 52px; /* Largeur et hauteur */
+    }
+
+
+
+
+    /* LOGO */
+
+
+    /* CONTENEUR SECTION */
+    #section_logo{
+        margin-top: 110px;
+
+    }
+
+    /* ELEMENTS SECTION */
+    #logo_footer{
+        width: 350px;
+        height: auto; /* Hauteur porportionnelle à la largeur */
+    }
+
+    #texte_logo{
+        line-height: 30px; /* Interligne */
+        width: 30%; /* Largeur */
+    }
+
+    #tel_logo{
+        display: block; /* Pemrmet un retour à la ligne */
+        margin-top: 30px; /* Espacements entre l'éléménet du desus */
+    }
+
+
+
+    /* RESEAUX SOCIAUX */
+
+    /* CONTENEUR SECTION */
+    #section_rs{
+        margin-left: 230px;
+        margin-top: 75px; /* Décalage */
+    }
+
+    /* ELEMENTS SECTION */
+
+    /* Textes */
+    #sed{
+        width: 25%; /* Largeur */
+        text-align: center; /* textes centrés sur une largeur de 25% du footer */
+    }
+
+    #tel_rs{
+        display: none; /* L"élément est masqué */
+    }
+
+    /* Images */
+    #reseaux_sociaux{
+        margin-left: 25px; /* Décalage */
+    }
+    
+    #reseaux_sociaux img{
+        margin-right: 15px; /* Espâcement entre les éléments */
+    }
+
+
+
+    /* LOCATION */
+
+    /* CONTENEUR SECTION */
+    #section_location{
+        display: flex; /* Positionné en ligne */
+        width: 50%;  /* Largeur */
+    }
+
+
+    /* ELEMENTS SECTION */
+
+    /* Textes */
+    #titre_location{
+        font-size: 25px;
+        margin-bottom: 47px;
+    }
+
+    #texte_location{
+        width: 550px; /* Largeur */
+        margin-top: 65px;
+    }
+
+    #texte_location p{
+        line-height: 30px; /* Interligne */
+    }
+
+
+    #carte{
+        margin-right: 66px; /* Décalage */
+        width: 472px;
+        height: 430px; /* Largeur et hauteur du conteneur */
+    }
+
+    /* FIN */
+
+    #section_fin{
+        width: 100%;
+       height: 50px;
+       font-size: 11px;
+       z-index: 15;
+    }
+
+    #section_fin p{
+        margin-top: 15px;
+    }
+
+}

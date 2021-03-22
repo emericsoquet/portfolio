@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+        <head>
+
+            <meta charset="utf-8" />
+            <link rel="stylesheet" href="../css/all.css"/>
+            <link rel="stylesheet" href="../css/index.css"/>
+            <link rel="stylesheet" href="../css/bootstrap.css"/> <!-- UTILISÉ POUR LE CARROUSEL -->
+            <meta name="viewport" content="width=device-width">
+            <title>Custom Air</title>
+
+            <script src="http://code.jquery.com/jquery-3.5.0.min.js"></script>
+            <script src="../js/bootstrap.js"></script> <!-- UTILISÉ POUR LE CARROUSEL -->
+            <script src="../js/avion.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+            <!-- SCRIPT MENU HAMBURGER. IL PERMET DE DEROULER LE SOUS-MENU AU CLIC SUR L'ICONE HAMBURGER-->
+            <script>
+
+                $(document).ready( function() {
+
+                    $('#picto_menu').on('click', function() {
+
+                        $('#sous_menu_bg').slideToggle(200).addClass( 'open' );
+                        
+
+                    }); 
+
+                    $('.onglet').on('click', function() {
+
+                        $('#second_sous_menu').slideToggle(200).addClass( 'open' );
+
+                    }); 
+
+                });
+
+                $(document).ready(function() {
+
+                $('#fleche img').click(function() {
+
+                        $('html').animate({
+                            scrollTop: 0
+                        }, 'fast');
+                    });
+                });
+            </script>
+
+        </head>
+
+       
+        <body>
+
+            <!-- DANS LE HEADER, ON RETROUVERA LA BARRE NAV, L'ESPACE CONNEXION ET LE LOGO-->
+
+            <header>
+
+                <!-- IL S'AGIT DE LA PARTIE SUPERIEURE DU HEADER. 
+                     BG PERMET DE MODIFIER LES COULEURS ET LA HAUTEUR
+                     INT CONCERNE LA DISPOSITION DU CONTENU : LAYOUT & LARGEUR, PAR EXEMPLE 
+                     ELLES SONT SEPAREES EN DEUX DIV -->
+
+                    <div id="partie_visible_bg"> 
+                        <div id="partie_visible_int"> 
+                            
+
+                            <img src="../img/pictos/hamburger.png" alt="" id="picto_menu" /> <!-- PERMET D'OUVRIR LE PREMIER MENU. IL SERA CACHÉ EN RÉSOLUTION PC-->
+
+                            <a href="index.html" id="logo_container"> <!-- ON IMBRIQUE LE LOGO DANS UNE BALISE A POUR UN RETOUR VERS L'ACCUEIL -->
+                                <img src="../img/logo/custom_air3.svg" alt="Logo de Custom Air" id="logo_header" />
+                            </a>
+
+                            <div id="partie_membres">
+                                <a href="#">
+                                    <p id="upper_text">Log in</p>
+                                </a>
+                                <a href="#">
+                                    <div id="cart_line">
+                                        <img src="../img/pictos/cart.png" alt="" id="picto_cart" />
+                                        <p>Cart</p>
+                                     </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <!-- IL S'AGIT DE LA PARTIE INFÉRIEUR DU HEADER, CACHÉE SOUS MOBILE MAIS DÉCOUVRABLE DEPUIS LE MENU HAMBURGER
+                     BG PERMET DE MODIFIER LES COULEURS ET LA HAUTEUR
+                     INT CONCERNE LA DISPOSITION DU CONTENU : LAYOUT & LARGEUR, PAR EXEMPLE 
+                     ELLES SONT SEPAREES EN DEUX DIV -->
+
+
+                    <div id="sous_menu_bg">
+                        <div id="sous_menu_int">
+
+                            <div id="partie_aide"> <!-- IL NE S'AGIT PAS DE CONTENUS IMPORTANTS POUR LE RÉFÉRENCEMENT DONC ON CRÉE UNE DIV ET NON UNE SECTION -->
+                                <p><a href="#">Help</a></p>
+                                <form>
+                                    <input type="text" id="search" name="search" placeholder="Search" />
+                                    <input type="submit" id="search_submit" value="" /> <!-- LE SUBMIT N'EST AUTRE QUE LA LOUPE QUI A ÉTÉ MISE EN BACKGROUND-IMG -->
+                                </form>
+                            </div>
+
+                            <nav> <!-- SELON LE W3C, IL N'EST PAS POSSIBLE D'INTÉGRER UNE LISTE DANS UNE AUTRE OU D'INTÉGRER UNE DIV DANS UNE LISTE. NOUS AVONS DONC INTÉGRÉ LA LISTE DANS UNE DIV -->
+                                <div id="premier_sous_menu">
+                                    <div class="onglet premier_sous_menu_onglet"><a href="#">Our fleet</a></div>
+                                    <ul id="second_sous_menu">
+                                        <li class="ligne_sous_menu">
+                                            <img src="../img/nav_citation.png" alt="" />
+                                            <p><a href="#">Citation</a></p>
+                                        </li>
+                                        <li class="ligne_sous_menu">
+                                            <img src="../img/nav_turbo.png" alt="" />
+                                            <p><a href="#">Turboprop</a></p>
+                                        </li>
+                                        <li class="ligne_sous_menu">
+                                            <img src="../img/nav_piston.png" alt="" />
+                                            <p><a href="#">Piston</a></p>
+                                        </li>
+                                    </ul>
+                                    <div><a href="#">Book a flight</a></div>
+                                    <div><a href="#">Learn to fly</a></div>
+                                    <div><a href="#">Destinations</a></div>
+                                    <div><a href="#">Contact us</a></div>
+                                </div>    
+                            </nav>
+                        </div>
+                    </div>
+
+            </header>
+
+            <!-- LA SECTION SUIVANTE EST DÉDIÉE AU CARROUSEL. UNE PREMIÈRE IMAGE EST AFFICHÉE UNIQUEMENT SOUS PC, L'AUTRE, UNIQUEMENT SOUS MOBILE. 
+                 CHAQUE SLIDE COMPORTE DONC DEUX IMAGES ET CHANGENT SELON LA LARGEUR DE L'ÉCRAN. LES DEUX IMAGES SONT DIFFÉRENTES : 
+                 CELLE POUR PC, PLUS LARGE MAIS MOINS HAUTE ET INVERSEMENT POUR CELLE POUR LES MOBILES.
+                 NOUS AVONS UTILISÉ LE CARROUSEL FOURNI PAR BOOTSTRAP MAIS ADAPTÉ SELON LE SITE. -->
+
+            <section id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+
+                <div id="black-mask-carousel">  <!-- IL S'AGIT D'UN MASQUE QUI EST APPLIQUÉE AU-DESSUS DES IMAGES-->
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100 carousel-1920" src="../img/diapo/diapo0.jpg" alt="Plane preparing itself for the sky">
+                            <img class="d-block w-100 carousel-360" src="../img/diapo/diapo0_360.jpg" alt="Plane preparing itself for the sky">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100 carousel-1920" src="../img/diapo/diapo1.jpg" alt="A plane above the fields">
+                            <img class="d-block w-100 carousel-360" src="../img/diapo/diapo1_360.jpg" alt="A plane above the fields">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100 carousel-1920" src="../img/diapo/diapo2.jpg" alt="Large amount of lugagge prepared to be packed in our luxuous plane">
+                            <img class="d-block w-100 carousel-360" src="../img/diapo/diapo2_360.jpg" alt="Large amount of lugagge prepared to be packed in our luxuous plane">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="captions-carousel"> <!-- NOUS NE POUVIONS PAS METTRE CES ÉLÉMENTS EN FIGCAPTION CAR ILS AURAIENT ÉTÉ RECOUVERTS PAR LE MASQUE -->
+                    <h1>Our experience, your story</h1> <!-- IL S'AGIT DE L'ENTÊTE DE LA PAGE, CE POURQUOI À ELLE SEULE NOUS APPLIQUONS LA BALISE H1 -->
+                    <p>Duis tristique scelerisque nibh, in mattis ipsum porta a. Etiam pharetra aliquet ullamcorper. Donec quis dolor id enim sollicitudin pretium.</p>
+                    <button class="button-book" id="button-carousel" >Book a flight</button> <!-- ON ATTRIBUE ID ET CLASS PUISQUE DES PROPRIÉTÉS SERONT COMMUNES AVEC UN AUTRE BOUTON MAIS SON POSITIONNEMENT, ICI, DÉPENDRA DE SA SECTION ET PAS DANS LE CAS DE L'AUTRE BOUTON DONC ID -->
+                </div> 
+
+
+                <a class="carousel-control-prev carousel-index-control" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next carousel-index-control" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </section>
+
+            <!-- NOUVELLE SECTION POUR L'INTRODUCTION GÉNÉRALE -->
+
+            <section> <!-- SECTION EST UTILISÉE POUR DÉFINIR L'IMAGE D'ARRIÈRE PLAN ET LA HAUTEUR. NOUS N'AVONS PAS UTILISÉ DE BALISE DIV POUR DÉFINIR LA LARGEUR QUE PRENDRAIT LES CONTENUS. DES MARGIN RIGHT ET LEFT SONT PRÉVUS À CET EFFET -->
+
+                    <h2>This is a world of our creation</h2>
+
+                    <p>Nam non purus sed eros aliquet pulvinar. Nam viverra eget enim vel 
+                        fermentum. Duis lectus lacus, 
+                        pellentesque ac consequat ut, 
+                        sodales id risus.</p>
+
+            </section>
+
+            <!-- NOUVELLE SECTION POUR LA PARTIE « NEWS » -->
+
+            <section>
+
+                <h2>Latest blog news</h2>
+
+                <h3>Choose your plane</h3>
+
+                <div id="news-articles"> <!-- ON CRÉE UNE DIV CONTENEUR POUR LES ARTICLES ET LES AGENCER EN LIGNE POUR AFFICHAGE PC (ALORS QUE LES TITRES AU-DESSUS SONT EN COLONNES-->
+
+                    <article>
+                        <img src="../img/news/news_destination.jpg" alt="For any destination, our planes are luxuous and comfy" />
+                        <div> <!-- À NOUVEAU ON CRÉE UNE DIV POUR GROUPER LES ÉLÉMENTS TEXTUELS. ILS AURONT UNE LARGEUR DIFFÉRENTE DE L'IMAGE, QUI PREND TOUTE LA LARGEUR EN MOBILE ET NON PAS LE TEXTE-->
+                            <div class="cat-news">Destination</div>
+                            <h4>All destinations</h4>
+                            <p>In cursus orci id auctor tempor. Ut suscipit in lacus et eleifend. Quisque elementum id metus a gravida.</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <img src="../img/news/news_travel.jpg" alt="How you will be treat during your travel" />
+                        <div>
+                            <div class="cat-news">Travel</div>
+                            <h4>Flight from Moscow</h4>
+                            <p>Etiam vehicula, ligula eu porttitor lobortis, nulla tellus lobortis ex, quis eleifend nibh risus eget magna.</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <img src="../img/news/news_booking.jpg" class="img-news-mobile" alt="Possible plane you can book" />
+                        <div>
+                            <div class="cat-news">Booking</div>
+                            <h4>Brussels - Athens</h4>
+                            <p>Vivamus vulputate, leo elementum scelerisque commodo, urna nulla mattis nisl, at viverra tortor sed libero. </p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- NOUVELLE SECTION POUR LA VIDEO DE LA PARTIE « FLIGHTS » -->
+
+            <section>
+
+                <div> <!-- NOUS AVONS BESOIN D'UNE DIV POUR DÉFINIR LA LARGEUR QUE PRENDRONT LES CONTENUS, INDÉPENDANTE DE LA LARGEUR DU FOND-->
+                    <h2>Luxury flights</h2>
+                    <img src="../img/flights/flights_video.jpg" alt="Discover a typical travel in our lines" />
+                    <h3>the leading alternative to fractional and jet cards</h3>
+                    <button class="button-book" id="button-video">Book a flight</button>
+                </div>
+
+            </section>
+
+            <!-- NOUVELLE SECTION POUR LA DEUXIÈME PARTIE DE « FLIGHTS », NOUS LES AVONS DIVISÉS EN DEUX POUR PLUS DE CLARTÉ DANS LE CODE -->
+
+            <section>
+
+                <article>
+                    <img src="../img/flights/flights_quality_services.png" alt="Get all the confort you need on board" />
+                    <div> <!-- ON CRÉE UNE DIV QUI JOUERA LE RÔLE DE CONTENEUR POUR NOS TEXTES ET NOUS PERMETTRA DE JOUER SUR L'AGENCEMENT DE L'ARTICLE AVEC FLEXBOX -->
+                        <h2>Quality services</h4> <!-- ON PLACE DES TITRES DE NIVEAU TITRE CAR PRÉCÉDEMMENT, POUR LA SECTION VIDÉO QUI, FINALEMENT, FAIT PARTIE DE LA SECTION FLIGHTS, ON A DÉJÀ UTILISÉ LES NIVEAUX 2 ET 3 -->
+                        <p>Vivamus sed odio velit accumsan sagittis.</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="../img/flights/flights_booking_services.png" alt="It is easy to book your ticket, everywhere, by online payment" />
+                    <div> <!-- ON CRÉE UNE DIV QUI JOUERA LE RÔLE DE CONTENEUR POUR NOS TEXTES ET NOUS PERMETTRA DE JOUER SUR L'AGENCEMENT DE L'ARTICLE AVEC FLEXBOX -->
+                        <h2>Booking services</h4>
+                        <p>Quisque orci ex, vehicula eu erat vitae.</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="../img/flights/flights_luxury_jets.png" alt="Our plane drivers are the best qualified" />
+                    <div> <!-- ON CRÉE UNE DIV QUI JOUERA LE RÔLE DE CONTENEUR POUR NOS TEXTES ET NOUS PERMETTRA DE JOUER SUR L'AGENCEMENT DE L'ARTICLE AVEC FLEXBOX -->
+                        <h2>Luxury jets</h4>
+                        <p>Morbi diam neque, ornare maximus vitae.</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="../img/flights/flights_online_checkin.png" alt="You can settle directly if you check your ticket online" />
+                    <div> <!-- ON CRÉE UNE DIV QUI JOUERA LE RÔLE DE CONTENEUR POUR NOS TEXTES ET NOUS PERMETTRA DE JOUER SUR L'AGENCEMENT DE L'ARTICLE AVEC FLEXBOX -->
+                        <h2>Online check-in</h4>
+                        <p>Nunc dapibus ex arcu, eget tincidunt purus.</p>
+                    </div>
+                </article>
+
+            </section>
+
+            <section>
+                <article> <!-- L'ARTICLE EST CRÉÉ AFIN D'APPORTER UNE LARGEUR DIFFÉRENTE AUX CONTENUS, DIFFÉRENTE DU BACKGROUND DÉJÀ INSÉRÉ DANS SECTION-->
+                    <h2>Choose your destination</h2>
+                    <p>Vestibulum vel lacus dapibus enim mollis maximus quis sed felis. Suspendisse sit amet sem ut libero ultrices sollicitudin. Curabitur convallis. </p>
+                    <img src="../img/destination/destination_1.jpg" alt="" />
+                </article>
+            </section>
+
+            <section>
+                <h2>Our fleet</h2>
+                <h3>Choose your plane</h3>
+
+                <div>
+
+                    <article>
+                
+                        <img src="../img/fleet/fleet_1.jpg" alt="Citation sovereign plane" />
+                
+                        <h4>Citation sovereign</h4>
+                
+                        <table class="tableau_avion">
+                            <tbody>
+                                <tr>
+                                    <td>Engines</td>
+                                    <td>Pratt & Whitney PW306D</td>
+                                </tr>
+                                <tr>
+                                    <td>Thrust per engine</td>
+                                    <td>5,907 lb</td>
+                                </tr>
+                                <tr>
+                                    <td>Wingspan</td>
+                                    <td>22.04 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Length</td>
+                                    <td>19.35 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Height</td>
+                                    <td>4.60 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Crew</td>
+                                    <td>2 to 4</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum occupants</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>Baggage capacity</td>
+                                    <td>650 kg</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum speed</td>
+                                    <td>852 km/h</td>
+                                </tr>
+                                <tr>
+                                    <td class="none_border">Maximum range</td>
+                                    <td class="none_border">5.926 km</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                
+                    </article>
+                    
+                    <article>
+                
+                        <img src="../img/fleet/fleet_2.jpg" alt="Cessna caravan plane" />
+                
+                        <h4>Cessna caravan</h4>
+                
+                        <table class="tableau_avion">
+                            <tbody>
+                                <tr>
+                                    <td>Engines</td>
+                                    <td>Pratt & Whitney PT6A-140</td>
+                                </tr>
+                                <tr>
+                                    <td>Thrust per engine</td>
+                                    <td>867 shp</td>
+                                </tr>
+                                <tr>
+                                    <td>Wingspan</td>
+                                    <td>15.87 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Length</td>
+                                    <td>12.67 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Height</td>
+                                    <td>4.60 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Crew</td>
+                                    <td>2 to 3</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum occupants</td>
+                                    <td>10 - 14</td>
+                                </tr>
+                                <tr>
+                                    <td>Baggage capacity</td>
+                                    <td>145 kg</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum speed</td>
+                                    <td>361 km/h</td>
+                                </tr>
+                                <tr>
+                                    <td class="none_border">Maximum range</td>
+                                    <td class="none_border">1.785 km</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                
+                    </article>
+                
+                    <article>
+                
+                        <img src="../img/fleet/fleet_1.jpg" alt="Cessna skylane plane" />
+                
+                        <h4>Cessna skylane</h4>
+                
+                        <table class="tableau_avion">
+                            <tbody>
+                                <tr>
+                                    <td>Engines</td>
+                                    <td>Lycoming IO-540-AB1A5</td>
+                                </tr>
+                                <tr>
+                                    <td>Thrust per engine</td>
+                                    <td>230 hp</td>
+                                </tr>
+                                <tr>
+                                    <td>Wingspan</td>
+                                    <td>10.97 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Length</td>
+                                    <td>8.84 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Height</td>
+                                    <td>2.84 m</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum occupants</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Baggage capacity</td>
+                                    <td>90 kg</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum speed</td>
+                                    <td>269 km/h</td>
+                                </tr>
+                                <tr>
+                                    <td class="none_border">Maximum range</td>
+                                    <td class="none_border">1.965 km</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                
+                    </article>
+
+                </div>
+                
+            </section>
+
+            <figure id="fleche"> <!-- FLECHE PERMETTANT DE REMONTER EN HAUT DE LA PAGE-->
+                <img src="../img/footer/fleche.png" alt="Fleche">
+            </figure>
+            
+            <footer class="d-flex">
+                <div id="all"> <!-- CONTENEUR QUI PREND TOUT SAUF LES COPYRIGHT-->
+                    <div id="right"> <!-- CONTENEUR COLONNE POUR PC -->
+                        <div id="section_logo">
+                            <div id="logo_footer"> <img src="../img/footer/custom.svg" alt="Logo Custom Air"> </div>
+            
+                            <div id="texte_logo">
+                                <p>Constantium, cetera medium principem sed siquid auribus eius huius infudisset.</p>
+                                <div id="tel_logo"> <p> Call: +0800 – 765 - 9898 </p> </div>
+                            </div>
+                        </div>
+                        
+                        <div id="section_rs">
+                            <div id="texte_rs">
+                                <div id="sed"> Sed cautela nimi</div>
+                                <div id="tel_rs"> Call: +0800 – 765 - 9898 </div>
+                            </div>
+            
+                            <div id="reseaux_sociaux">
+                                <figure><img src="../img/footer/facebook_footer.png"  alt="Pictogramme Facebook"></figure>
+                                <figure><img src="../img/footer/twitter_footer.png"   alt="Pictogramme Twitter" ></figure>
+                                <figure><img src="../img/footer/linkedin_footer.png"   alt="Pictogramme Twitter" > </figure>
+                            </div>
+                        </div>
+                    </div>
+            
+            
+                    <div id="section_location">
+                        
+                        <div id="texte_location">
+                            <h2 id="titre_location"> Our location : </h2>
+                            
+                            <div id="location">
+                                <p> Custom air at : </p>
+                                <p> London City airport / Hartmann Rd, </p>
+                                <p> London E16 2PX, </p>
+                                <p> United Kingdom </p>
+            
+                            </div>
+                        </div>
+            
+                        <div id="carte"> <img src="../img/footer/carte_footer.jpg" alt="Carte Custom Air" ></div>
+                    </div>
+                </div>
+            
+                <div id="section_fin">
+                    <p> Copyright © 2018 custom air inc | Privacy | Terms & conditions </p>
+                </div>
+            </footer>
+
+    
+        </body>
+    </html>
+

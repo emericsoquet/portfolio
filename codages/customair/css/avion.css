@@ -1,0 +1,598 @@
+/* ALL */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif; /* Polices des textes */
+    font-size: 12px; /* Taille des textes */
+    line-height: 20px;
+
+}
+
+
+
+/* TITRE */
+
+#titre_page{ /* TITRE H1  */
+    font-family: 'Playfair Display', serif; /* Police des titres */
+    font-size: 35px; /* Taille de la police */
+    text-align: center; /* Titre centré */
+    margin-bottom: 50px;
+    margin-top: 40px; /* Espacements entre les différents éléments */
+}
+
+.titre_tab{ /* TITRE DES CARACTERISTIQUES, BALISE H2 */
+    font-family: 'Playfair Display', serif;
+    margin-top: 21px;
+    font-weight: bold; /* Gras */
+    font-size: 20px;
+}
+
+.titre_avion{ /* TITRE DES AVIONS, BALISE H3*/
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+/* SECTION MAIN AVION : DIAPO + DESCRIPTION */
+
+
+/* CONTENEUR SECTION */
+
+#main_avion{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto; /* On centre sur une une largeur qui prend 80 % de la page */
+}
+
+#lenght, #height, #wingspan{
+    font-size: 16px;
+    text-decoration: underline; /* Texte est surligné */
+    display: relative;
+    font-family: 'Playfair Display', serif;
+}
+
+#lenght{
+    margin-left: 85px; /* Décalage vers la droite */
+}
+
+#wingspan{
+    text-align: center; /* L'élément est centré */
+}
+
+
+
+/* DIAPO */
+
+.carousel-control-next,
+.carousel-control-prev{
+    display: inline-block;
+    background: no-repeat 50% / 100% 100%;
+    filter: invert(50%); /* Fleche blanche devient grise */
+}
+
+
+
+/* BOUTON DE SLIDE */
+
+#bouton{ /* Conteneur des buttons */
+    font-size: 12px;
+    display: flex; /* Disposé horizontalement */
+    justify-content: space-around; /* Espacés équitablement */
+    margin-top: 10px;
+}
+
+.diese{ /* Class des buttons */
+    border: 0px; /* On enlève les bordures par défaut */
+    width: 70px;
+    height: 22px; /* On définit la hauteur et largeur des éléments */
+    background-color: #dadada; /* Couleur de fond */
+    text-align: center;
+}
+
+.diese a { /* Lien des boutons */
+    color: black; /* Couleur des liens noirs */
+    text-decoration: none; /* Enl_ve le surlignement */
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* DESCRIPTION SECTION */
+
+/* Texte */
+#focus{ /* Mini titre */
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold; /* Gras */
+    margin-top: 38px;
+}
+
+#citation{ /* Mini titre */
+    font-size: 16px;
+    font-family: 'Montserrat', serif;
+    margin-left: 10px; /* Décalage a droite */
+    margin-top: 30px;
+}
+
+#description{ /* Pargaraphe de la scetion */
+    font-size: 12px;
+    margin-top: 31px;
+}
+
+
+/* Bouton */
+#fly_plane{
+    display: flex; /* Placés horizontalement */
+    justify-content: center; /* Centre le conteneur de l'élément button */
+}
+
+#plane{ /* Bouton pour réserver */
+    background-color: #5b5b5b; /* Couleur de fond */
+    border: 0px; /* On enlève les bordures par défaut */
+    color: #fff; /* Couleur du texte blanc */
+    padding: 5px; /* Marges intérieures */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 76px; /* Espace après le porchain élémnt (indiqué sur lmes gabarits) */
+    font-size: 18px;
+    width: 138px;
+    height: 53px; /* Largeur et hauteur du bouton */
+    line-height: 20px; /* Hauter des lignes de */
+}
+
+
+
+
+/* SECTION CARACTERISTIQUES */
+
+/* En-tête*/
+.en_tete{ /* Conteneur titre + trait */
+    width: 80%;
+    display: flex;
+    justify-content: space-between; /*Alignement */
+    margin: auto; /* Centre */
+
+}
+
+.plus{
+    width: 15px; /* Largeur */
+    border-bottom: 3px solid black; /* Epaisseur de 3px, couleur noir */
+    margin-bottom: 12px; /* Espace après le prochain élément (trait de séparation) */
+}
+
+
+/* Ligne séparatrice */
+.separation_tab{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; /* L'élément est centré horizontalement sur 80% de la page */
+    margin-top: 18px;
+    margin-bottom: 17px; /* Espace après le prochain élément */
+    border-bottom: 1px solid black; /* Cractéristiques du trait */
+}
+
+
+/* Tableau */
+table{
+    border-collapse: collapse; /* Les bordures sont fusionnés */
+    width: 80%;
+    margin: auto;
+    
+}
+
+.tab tr{
+    display: flex;
+    justify-content: space-between; /* Elements sur les bord du conteneur */
+    font-size: 11px; /* Taille de la police */
+}
+
+.old{ /* Couleur gris foncé pour les tableaux */
+    background-color: #cccccc;
+}
+
+.new{ /* Couleur gris clair pour les tableaux */
+    background-color: #e8e6e6;
+}
+
+
+
+
+/* SECTION CARACTERISTIQUES */
+
+
+/* CONTENEUR SECTION */
+
+#avion{
+    margin-top: 50px;
+}
+
+/* PHOTOS */
+.photos_avion{
+    margin-top: 50px; /* Espace avant le prochain élément */
+    width: 80%;
+    margin: auto;
+    display: flex; 
+}
+
+.photos_avion img{
+    width: 100%; /* Elment prennent toute la largeur dispo du conteneur */
+}
+
+
+/* TABLEAUX */
+.tableau_avion{ /* Les tableaux */
+    margin-bottom: 50px;
+    font-size: 12px;
+}
+
+.tableau_avion td{ /* Cellule des tableaux */
+    padding-top: 10px;
+    padding-bottom: 2px; /* Espace du dessus et du dessous */
+    border-bottom: 1px solid black; /* Trait */
+}
+
+.tableau_avion .none_border{
+    border-bottom: none; /* Enlève la bordure pour les éléménets situés à la fin */
+}
+
+
+
+
+/* ICONE DE SEPARATION */
+#separateur{
+    display: flex;
+    justify-content: center; /* Centre */
+    margin-top: 50px;
+}
+
+
+
+
+/* HOVER */
+
+/* Hover section MAIN AVION */
+.diese:hover{ /* Bouton diapo */
+    color: #fff; 
+    background-color: #000; /* Quand on passe, le texte devient blanc et le fond devient noir */
+    transition: all 0.7s ease-in-out; /* L'effet se déroule en 0.7 secondes à vitesse lente */
+}
+
+.diese a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#plane:hover{ /* Bouton de réservation */
+    color: #5b5b5b;
+    background-color: #fff;  /* Quand on passe, le texte devient gris et le fond devient blanc */
+    border: 1px solid #5b5b5b; /* La bordure devient grise */
+    box-shadow: 5px 5px 5px #5b5b5b; /* Ajout d'une ombre à la boite du button */
+    transition: all 0.5s ease-in-out; /* L'effet se déroule en 0.7 secondes à vitesse lente */
+}
+
+
+
+/* RESPONSIVE */
+
+
+@media screen and (min-width: 360px) {
+
+    /* TITRE */
+
+    #titre_page{ /* TITRE H1  */
+        font-family: 'Playfair Display', serif; /* Police des titres */
+        font-size: 45px; /* Taille de la police */
+        text-align: center; /* Titre centré */
+        margin-bottom: 50px;
+        margin-top: 40px; /* Espacements entre les différents éléments */
+    }
+    
+    .titre_tab{ /* TITRE DES CARACTERISTIQUES, BALISE H2 */
+        font-family: 'Playfair Display', serif;
+        margin-top: 21px;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+
+    /* SECTION CARACTERISTIQUES */
+    table{
+        border-collapse: collapse;
+        margin: auto;
+        width: 325px; /* Agrandissment de la taille du tableau */
+        margin-top: 18px;
+        margin-bottom: 75px;
+    }
+
+    .tab td{
+        font-size: 18px; /* Augmentation de la taille de la police */
+    }
+    
+}
+
+@media screen and (min-width: 480px) {
+
+
+    /* TITRE */
+
+    #titre_page{ /* TITRE H1  */
+        font-family: 'Playfair Display', serif; /* Police des titres */
+        font-size: 60px; /* Taille de la police */
+        text-align: center; /* Titre centré */
+        margin-bottom: 50px;
+        margin-top: 40px; /* Espacements entre les différents éléments */
+    }
+
+    .titre_tab{ /* TITRE DES CARACTERISTIQUES, BALISE H2 */
+        font-family: 'Playfair Display', serif;
+        margin-top: 21px;
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+
+
+    /* SECTION CARACTERISTIQUES */
+    table{
+        border-collapse: collapse;
+        margin: auto;
+        width: 550px; /* Agrandissment de la taille des lignes du tableau */
+        margin-top: 18px;
+        margin-bottom: 75px;
+    }
+
+    .tab td{
+        font-size: 20px; /* Augmentation de la taille de la police */
+    }
+
+    .old{  /* Couleur gris foncé pour les tableaux */
+        background-color: #cccccc;
+        height: 60px; /* Hauteur de la ligne */
+    }
+    
+    .new{ /* Couleur gris clair pour les tableaux */
+        background-color: #e8e6e6;
+        height: 60px; /* Hauteur de la ligne */
+    }
+}
+
+@media screen and (min-width: 740px) {
+
+    .titre_tab{ /* TITRE DES CARACTERISTIQUES, BALISE H2 */
+        font-family: 'Playfair Display', serif;
+        margin-top: 21px;
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+    .titre_avion{ /* TITRE DES AVIONS, BALISE H3*/
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+
+    #lenght, #height, #wingspan{ /* Propriétés pour les 3 éléments */
+        font-size: 35px;
+        text-decoration: underline;
+        position: relative;
+        font-family: 'Playfair Display', serif;
+    }
+
+
+    #focus{ /* Titre H2 */
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 40px; /* Augmentation de la taille de la police */
+        font-weight: bold;
+        margin-top: 105px; /* Espace entre les éléments */
+    }
+
+    #citation, #description{
+        width: 85%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #citation{  /* TITRE H3 */
+        font-size: 35px; /* Augmentation de la taille de la police */
+        font-style: italic;
+    }
+
+    #description{
+        font-size: 25px; /* Augmentation de la taille de la police */
+    }
+
+    /* Bouton */
+    #plane{ /* Bouton pour réserver */
+        width: 510px;
+        height: 97px; /* Augmentation de la largeur et de la hauteur des éléments */
+        margin-top: 25px;
+        font-size: 50px; /* Augmentation de la taille de la police */
+    }
+
+
+
+
+    /* SECTION CARACTERISTIQUES */
+
+
+    /* CONTENEUR SECTION */
+
+    #caracteristiques{
+        display: flex;
+        justify-content: space-around; /* Les deux colonnes sont espacées équitablement */
+        flex-wrap: wrap;
+    }
+
+    /* En-tête*/
+    .en_tete{
+        width: 100%;
+    }
+
+    .plus{
+        display: none; /*On masque l'élément */
+    }
+
+    /* Ligne séparatrice */
+    .separation_tab{
+        width: 432px;
+        margin-left: 0;
+        border-bottom: 1px solid black;
+    }
+
+
+    /* Tableau */
+    table{
+        border-collapse: collapse;
+        margin: auto;
+        width: 584px;
+        margin-top: 18px;
+        margin-bottom: 75px;
+    }
+
+    .tab td{
+        font-size: 18px; /* Augmentation de la taille de la police */
+        width: 80%; /* Largeur de 80 % du conteneur */
+        display: flex;
+        margin-left: 50px; /* Décalage vers la droite */
+        align-items: center; /* Centrer verticalement */
+    }
+
+
+    .old{  /* Couleur gris foncé pour les tableaux */
+        background-color: #cccccc;
+        height: 60px; /* Hauteur de la ligne */
+    }
+    
+    .new{ /* Couleur gris clair pour les tableaux */
+        background-color: #e8e6e6;
+        height: 60px; /* Hauteur de la ligne */
+    }
+
+    #cabin_int{
+        margin-top: 105px;
+        margin-bottom: 105px; /* Espacement entre les éléments */
+    }
+
+    #powerplant{
+        margin-top: 156px;
+        margin-bottom: 106px; /* Espacement entre les éléments */
+    }
+    
+
+
+
+    /* SECTION CARACTERISTIQUES */
+
+
+    /* CONTENEUR SECTION */
+
+    #avion{
+        font-size: 20px; /* Augmentation de la taille de la police */
+        display:flex;
+        justify-content: center; /* On centre les éléments */
+        flex-wrap: wrap;
+    }
+
+
+    /* PHOTOS */
+    .photos_avion{
+        margin-top: 50px;
+        width: 98%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* TABLEAUX */
+    .tableau_avion{ /* Les tableaux */
+        width: 95%;
+        margin: auto;
+        font-size: 20px;
+        margin-bottom: 295px;
+    }
+
+    .tableau_avion td{  /* Cellule des tableaux */
+        border-bottom: 1px solid black;
+        padding-left: 80px;
+    }
+
+
+}
+
+@media screen and (min-width: 1300px) {
+
+     /* TITRE */
+
+        #titre_page{  /* TITRE H1  */
+        font-family: 'Playfair Display', serif;
+        font-size: 100px; /* Augmentation de la taille de la police */
+        text-align: center;
+        margin-bottom: 180px;
+        margin-top: 120px;
+    }
+
+    /* SECTION MAIN AVION : DIAPO + DESCRIPTION */
+
+    /* CONTENEUR SECTION */
+
+    #main_avion{
+        width: 100%; /* Le conteneur prend toute la largeur de la page */
+    }
+
+    /* Bouton de slide */
+
+    #lenght, #height, #wingspan{ /* Propriétés pour les 3 éléments */
+        font-size: 50px;
+        text-decoration: underline;
+        position: relative;
+        font-family: 'Playfair Display', serif;
+    }
+
+    #lenght{
+        margin-left: 600px; /* Décalage vers la droite */
+    }
+
+    #height{
+        margin-left: 85px; /* Décalage vers la gauche */
+    }
+
+    #wingspan{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+
+    /* BOUTON DE SLIDE */
+    #bouton{
+        font-size: 24px; /* Augmentation de la taille de la police */
+        justify-content: center; /* On centre les buttons */
+    }
+    
+    .diese{ /* Class des buttons */
+        width: 208px;
+        height: 43px; /* Augmentation de la largeur et de la hauteur des éléments */
+        background-color: #dadada; /* Couleur de fond */
+        margin-right: 93px; /* Espacemen entre les boutons */
+        border-radius: 10px; /* Bord ronds */
+    }
+
+
+    }
+
+    @media (min-width: 480px) {
+
+        body {
+            line-height: 40px;
+        }
+    }

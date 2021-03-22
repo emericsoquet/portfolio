@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+
+/*SECTION FORM*/
+
+
+#sectionform{  /*Placé en flex pour aligner les deux formulaires qu'il contient*/
+	width: 100%;
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+}
+
+/*Chaque formulaire prend 50% de la largeur*/
+#form1{
+	width: 50%;
+}
+#form2{  
+	width: 50%;
+}
+
+fieldset{
+	border: none;
+	margin: 20px 0;
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#img_reservation{
+	width: 100%;
+	text-align: center;
+}
+
+#img_reservation img{
+	width: 80%;
+}
+
+.form_reservation{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 35px;
+}
+
+.title{
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	margin: 50px;
+	font-size: 40px;
+}
+
+#logo{
+	width: 100%;
+	text-align: center;
+}
+
+#logo img{
+	margin: 50px;
+	width: 60px;
+}
+
+legend{
+	font-family: 'Playfair Display', serif;
+	font-size: 20px;
+}
+
+hr{
+	width: 70%;
+	margin-bottom: 10px;
+}
+
+label{
+	width: 30%;
+	display: inline-block;
+}
+input, select{
+	width: 60%;
+	background-color: #e8e6e6;
+	border: none;
+}
+
+#submit{
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 6px 10px;
+	background-color: #aa9c6c;
+	font-family: 'Playfair Display', serif;
+	font-size: 16px;
+	display: block;
+	margin-top: 30px;
+}
+
+
+#departuredate, #returndate {
+	width: 40%;
+}
+
+#departuretime, #returntime{
+	width: 19%;
+}
+
+.meal_radio{
+	width: 10%
+}
+#radio_text{
+	width: 80%;
+}
+.radio{
+	width: 10px;
+}
+
+label img{
+	width: 20px;
+}
+
+#label_passenger{
+	width: 49%;
+}
+
+.addbutton{
+	width: 20px;
+	height: 20px;
+	border:solid 1px black;
+	border-radius: 10px;
+	font-size: 14px;
+	margin: 10px;
+}
+
+#clearbutton{
+	padding: 2px 6px;
+	background-color: #aa9c6c;
+	font-size: 15px;
+	border: none;
+}
+
+/*On définie les classes pour cacher ou non les listes déroulantes de second niveau grâce au script model.js*/
+.activelist{
+    display: inline;
+}
+
+.hiddenlist{
+    display: none;
+}
+
+@media screen and (max-width: 904px) {
+	#sectionform{ /*On dispose en colonne les deux div de formulaires form1 et form2*/
+		flex-direction: column;
+	}
+
+	#form1 , #form2{ /*Maintenant qu'ils sont en colonnes, ils peuvent prendre toute la largeur*/
+		width: 100%;
+	}
+	fieldset{
+		width: 100%;
+	}
+
+	.form_reservation{
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.title{
+		margin: 50px 20px;
+	}
+	#form2{ /*On inverse la dispostion de l'image et du formulaire*/
+		display: flex;
+		flex-direction: column-reverse;
+		margin-top: 30px;
+	}
+	#logo{ /*On n'affiche plus le logo */
+		display: none;
+	}
+
+	
+}	
+
+
+/*SECTION360*/
+
+#section360{
+	width: 100%;
+	margin-top: 70px;
+	background-image: url(../img/diapo/reservation_360_bg.jpg);
+}
+
+#conteneurdiapo{
+	position: relative;
+	width: 100%;
+}
+
+#conteneurdiapo img{
+	width: 100%;
+}
+#diapotexte{ /*On centre le texte verticalement et horizontalement au dessus du diaporama*/
+	position: absolute; /*Le texte est au dessus du diaporama*/
+	height:50%;
+	width: 100%;
+	display: flex; /*On centre le texte horizontalement et verticalement*/
+	justify-content: center;
+	align-items: center;
+	flex-direction: column; /*On place le titre et le paragraphe l'un en dessous de l'autre*/
+}
+
+#diapotexte h3{
+	font-family: 'Playfair Display', serif;
+	font-size: 30px;
+	font-weight: 700;
+	margin-bottom: 60px;
+	color: black;
+}
+
+#diapotexte p{
+	font-size: 20px;
+	color: black;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+@media screen and (max-width: 904px) {
+	#section360{
+		height: 400px;
+	}
+
+	#conteneurdiapo{
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#diapotexte p{
+		text-align: center;
+	}
+}
+
+/*SECTION INTERIOR*/
+
+.slide{
+    position: relative;
+}
+
+.ctrldiv{
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slidebtn{
+    cursor: pointer;
+    margin:20px;
+	padding: 6px 10px;
+	background-color: #aa9c6c;
+	font-family: 'Playfair Display', serif;
+	font-size: 16px;
+	display: block;
+	margin-top: 30px;
+	border: none;
+}
+
+.slidebtn:nth-child(2){
+    margin-left: 10px;
+}
+
+
+/*On affiche ou non l'image selon le bouton activé (script slide.js)*/
+.hiddenslide{
+    display: none;
+}
+
+.activeslide{
+    display: block;
+}
+
+.activebtn{
+    background-color:#282828;
+    cursor: default;
+    color: white;
+}
+
+#sectioninteriot{
+	width: 100%;
+	margin: 50px;
+}
+
+#aviondiapo, #forward{
+	text-align: center;
+}
+
+#aviondiapo img , #forward img{
+	width: 70%;
+	margin-bottom: 50px;
+}
+
+#sub_title{
+	font-size: 20px;
+	text-align: center;
+	margin: 20px;
+	font-family: 'Montserrat', sans-serif;
+}
+
