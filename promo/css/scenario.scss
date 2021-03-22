@@ -1,0 +1,195 @@
+@import '_vars.scss';
+
+$width-scenario: 830px;
+
+h2 {
+    font-family: $title-font;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.125em;
+    color: $chocolate;
+    line-height: 60px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    @media (min-width: $width-scenario) {
+        font-size: 3.125em;
+        text-align: left;
+    }
+}
+
+h3 {
+    font-family: $title-font;
+    font-size: 1.625em;
+    line-height: 30px;
+    font-weight: 300;
+    font-style: italic;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+$without-hamburger: 905px;
+
+#scenario {
+    background: url(../img/wood-bg.jpg);
+    height: auto;
+    display: flex;
+    padding: 90px 0 170px 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .transition-black {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        height: 100px;
+        background: rgb(38,2,2);
+        background: -moz-linear-gradient(180deg, rgba(38,2,2,0) 0%, rgba(0,0,0,1) 40%);
+        background: -webkit-linear-gradient(180deg, rgba(38,2,2,0) 0%, rgba(0,0,0,1) 40%);
+        background: linear-gradient(180deg, rgba(38,2,2,0) 0%, rgba(0,0,0,1) 40%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#260202",endColorstr="#000000",GradientType=1);
+    }
+
+    #scenario-bg-frame {
+        width: 100%;
+        height: auto;
+        background: $cream;
+        position: relative;
+        height: 90%;
+        padding: 70px 0 70px 0;
+
+
+        @media (min-width: $width-scenario) {
+            width: 87.3%;
+            border-radius: 10px;
+        }
+
+        #scenario-margins {
+
+            margin: auto;
+            width: 65%;
+
+            @media (min-width: 550px) {
+                width: 75%;
+            }
+
+            @media (min-width: $width-scenario) {
+                width: 87.3%;
+                display: grid;
+                grid-template-columns: 36.1% 56.1%;
+                column-gap: 7.8%;
+            }
+
+            a {
+                margin: 0 auto;
+                text-align: center;
+                font-family: $title-font;
+                color: white;
+                background: $red;
+                border-radius: 10px;
+                border: none;
+                padding: 15px 20px;
+                font-size: 1.25em;
+                box-shadow: #6b6b6b 0 3px 4px;
+                transition: background 200ms ease-in-out;
+                text-decoration: none;
+                width: 60%;
+
+                &:hover, &:focus {
+                    background: $chocolate;
+                    outline: none;
+                }
+            }
+
+            #scenario-part {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @media (min-width: $width-scenario) {
+                    align-items: flex-start;
+                }
+
+                h2 {
+                    margin-bottom: 30px;
+                }
+                h3 {
+                    margin-bottom: 10px;
+                    @media (min-width: $width-scenario) {
+                        font-size: 1.875em;
+                        text-align: left;
+                        margin-bottom: 30px;
+                    }
+                }
+                p {
+                    margin-top: 30px;
+                    text-align: justify;
+                    @media (min-width: $width-scenario) {
+                        font-size: 1em;
+                        margin-top: 0px;
+
+                        &:first-child {
+                            margin-top: 0px;
+                        }
+                    }
+                }
+
+                a {
+                    margin-top: 40px;
+                }
+
+                @media (min-width: $width-scenario) {
+                    grid-column: 2;
+                    grid-row: 1;
+                }
+            }
+
+            #shop-part {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                .game-packaging {
+                    width: 100%;
+
+                    @media (min-width: 550px) {
+                        width: 65%;
+                    }
+
+                    @media (min-width: $width-scenario) {
+                        width: 100%;
+                    }
+
+                    @media (min-width: 1305px) {
+                        width: 75%;
+                    }
+
+                    @media (min-width: 1450px) {
+                        width: 50%;
+                    }
+                }
+
+
+                @media (min-width: $width-scenario) {
+                    grid-column: 1;
+                    grid-row: 1;
+                }
+            }
+
+
+        }
+
+    }
+    
+}
+
+#deskgame {
+    background: black;
+    height: 80vh;
+    width: 100vw;
+}
+

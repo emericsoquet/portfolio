@@ -1,0 +1,245 @@
+body {
+  overflow-x: hidden;
+}
+body #newsletter {
+  width: 100%;
+  height: auto;
+  background: #9F323D;
+  margin: auto;
+  position: relative;
+  padding-bottom: 50px;
+}
+body #newsletter #newsletter-top-borders .newsletter-border {
+  box-sizing: border-box;
+  clip-path: ellipse(80% 80% at 50% 100%);
+  display: block;
+  width: 100%;
+  position: absolute;
+}
+body #newsletter #newsletter-top-borders .newsletter-border:first-child {
+  background: #9F323D;
+  top: -45px;
+  z-index: 2;
+  height: 10vh;
+}
+body #newsletter #newsletter-top-borders #newsletter-border-contours {
+  background: #C54754;
+  top: -60px;
+  z-index: 1;
+  height: 10vh;
+}
+body #newsletter #newsletter-top-borders #newsletter-banner {
+  width: 100%;
+  height: 190px;
+  position: relative;
+  margin: auto;
+  position: absolute;
+  z-index: 3;
+  top: -130px;
+  display: flex;
+  justify-content: center;
+}
+body #newsletter #newsletter-top-borders #newsletter-banner h2 {
+  color: #2D0D0D;
+  font-size: 1.6em;
+  position: absolute;
+  margin-top: 45px;
+  text-shadow: 0 4px 4px rgba(38, 38, 38, 0.4);
+}
+body #newsletter #newsletter-top-borders #newsletter-banner img {
+  height: 100%;
+  position: absolute;
+}
+@media (min-width: 460px) {
+  body #newsletter #newsletter-top-borders #newsletter-banner {
+    height: 240px;
+    top: -160px;
+  }
+  body #newsletter #newsletter-top-borders #newsletter-banner h2 {
+    margin-top: 65px;
+  }
+}
+@media (min-width: 760px) {
+  body #newsletter #newsletter-top-borders .newsletter-border {
+    clip-path: ellipse(54% 100% at 50% 100%);
+  }
+  body #newsletter #newsletter-top-borders .newsletter-border:first-child {
+    background: #9F323D;
+    top: -45px;
+    z-index: 2;
+    height: 80px;
+  }
+  body #newsletter #newsletter-top-borders #newsletter-banner {
+    height: 240px;
+    top: -175px;
+  }
+  body #newsletter #newsletter-top-borders #newsletter-banner h2 {
+    margin-top: 65px;
+  }
+}
+@media (min-width: 925px) {
+  body #newsletter #newsletter-top-borders #newsletter-banner {
+    height: 350px;
+    top: -230px;
+  }
+  body #newsletter #newsletter-top-borders #newsletter-banner h2 {
+    margin-top: 110px;
+    font-size: 3.125em;
+  }
+}
+@media (min-width: 1300px) {
+  body #newsletter #newsletter-top-borders .newsletter-border {
+    clip-path: ellipse(60% 100% at 50% 100%);
+  }
+  body #newsletter #newsletter-top-borders .newsletter-border:first-child {
+    background: #9F323D;
+    top: -25px;
+    z-index: 2;
+    height: 10vh;
+  }
+  body #newsletter #newsletter-top-borders .newsletter-border #newsletter-border-contours {
+    top: -60px;
+  }
+  body #newsletter #newsletter-top-borders #newsletter-banner {
+    height: 450px;
+    top: -270px;
+  }
+  body #newsletter #newsletter-top-borders #newsletter-banner h2 {
+    margin-top: 150px;
+    font-size: 3.125em;
+  }
+}
+@media (min-width: 1300px) {
+  body #newsletter #newsletter-top-borders .newsletter-border {
+    clip-path: ellipse(60% 100% at 50% 100%);
+  }
+  body #newsletter #newsletter-top-borders .newsletter-border:first-child {
+    background: #9F323D;
+    top: -25px;
+    z-index: 2;
+    height: 10vh;
+  }
+  body #newsletter #newsletter-top-borders .newsletter-border #newsletter-border-contours {
+    top: -60px;
+  }
+  body #newsletter #newsletter-top-borders #newsletter-banner {
+    height: 450px;
+    top: -270px;
+  }
+  body #newsletter #newsletter-top-borders #newsletter-banner h2 {
+    margin-top: 150px;
+    font-size: 3.125em;
+  }
+}
+@media (min-width: 1375px) {
+  body #newsletter #newsletter-top-borders .newsletter-border {
+    clip-path: ellipse(60% 100% at 50% 100%);
+  }
+  body #newsletter #newsletter-top-borders .newsletter-border:first-child {
+    background: #9F323D;
+    top: -25px;
+    z-index: 2;
+    height: 10vh;
+  }
+  body #newsletter #newsletter-top-borders .newsletter-border #newsletter-border-contours {
+    top: -60px;
+  }
+  body #newsletter #newsletter-top-borders #newsletter-banner {
+    height: 500px;
+    top: -295px;
+  }
+  body #newsletter #newsletter-top-borders #newsletter-banner h2 {
+    margin-top: 165px;
+    font-size: 3.125em;
+  }
+}
+body #newsletter #newsletter-content {
+  z-index: 1;
+  padding-top: 30px;
+  width: 80%;
+  margin: auto;
+}
+body #newsletter #newsletter-content p {
+  color: #e5e5e5;
+  text-align: center;
+  font-family: "Lora", "Times New Roman", serif;
+}
+@media (min-width: 925px) {
+  body #newsletter #newsletter-content {
+    padding-top: 60px;
+  }
+}
+@media (min-width: 1300px) {
+  body #newsletter #newsletter-content {
+    padding-top: 100px;
+  }
+}
+body #newsletter #newsletter-content form {
+  margin-top: 50px;
+}
+body #newsletter #newsletter-content form fieldset {
+  border: none;
+}
+@media (min-width: 790px) {
+  body #newsletter #newsletter-content form fieldset {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  body #newsletter #newsletter-content form fieldset .box {
+    width: 40%;
+  }
+  body #newsletter #newsletter-content form fieldset .box input[type=submit] {
+    margin: auto;
+    width: 40%;
+  }
+  body #newsletter #newsletter-content form fieldset #box-mail, body #newsletter #newsletter-content form fieldset #box-submit {
+    width: 100%;
+  }
+}
+body #newsletter #newsletter-content form fieldset .box {
+  display: flex;
+  flex-direction: column;
+}
+body #newsletter #newsletter-content form fieldset .box label {
+  color: #e5e5e5;
+  text-transform: uppercase;
+  font-family: "Playfair Display", "Times New Roman", serif;
+  letter-spacing: 0.5px;
+  padding-left: 5px;
+}
+body #newsletter #newsletter-content form fieldset .box label abbr {
+  text-decoration: none;
+  padding-left: 5px;
+}
+body #newsletter #newsletter-content form fieldset .box input {
+  margin-top: 5px;
+  margin-bottom: 50px;
+  border: none;
+}
+body #newsletter #newsletter-content form fieldset .box input:focus {
+  outline: rgba(159, 187, 193, 0.9) 2px solid;
+}
+body #newsletter #newsletter-content form fieldset .box input[type=text], body #newsletter #newsletter-content form fieldset .box input[type=email] {
+  height: 20px;
+  padding: 10px;
+  font-family: "Lora", "Times New Roman", serif;
+  color: #260202;
+  background: #e7e7c5;
+  background: -moz-linear-gradient(90deg, #e7e7c5 0%, #dcc58b 100%);
+  background: -webkit-linear-gradient(90deg, #e7e7c5 0%, #dcc58b 100%);
+  background: linear-gradient(90deg, #e7e7c5 0%, #dcc58b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e7e7c5",endColorstr="#dcc58b",GradientType=1);
+}
+body #newsletter #newsletter-content form fieldset .box input[type=submit] {
+  margin-top: 30px;
+  background: #dcc58b;
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  height: 40px;
+  box-shadow: rgba(38, 2, 2, 0.7) 0 4px 4px;
+}
+
+/*# sourceMappingURL=newsletter.css.map */

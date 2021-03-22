@@ -1,0 +1,218 @@
+$red: #9F323D;
+$dark-brown: #260202;
+$chocolate: #7E3D39;
+$gold: #DCC58B;
+
+$body-font: 'Lora', 'Times New Roman', serif;
+$title-font: 'Playfair Display', 'Times New Roman', serif;
+
+$without-hamburger: 905px;
+
+body {
+    padding: 0;
+    margin: 0;
+
+    header {
+
+        background: $dark-brown;
+        width: 100%;
+        height: 173px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 5.3%;
+        position: fixed;
+
+        @media (min-width: $without-hamburger) {
+            grid-template-columns: repeat(16, 1fr);
+            column-gap: 1.45%;
+            height: 208px;
+        }
+
+        #nav-logo {
+            margin: 0;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            background-image: url('../img/logo-treasure.png');
+            background-size: 75%;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            grid-column: span 4;
+
+            @media (min-width: 560px) {
+                background-size: 50%;
+                background-position: 30% center;
+            }
+
+            @media (min-width: 905px) {
+                grid-column: 2/4;
+                background-size: 100%;
+                height: 100%;
+            }
+        }
+
+        nav {
+            text-transform: uppercase;
+            color: $gold;
+            font-family: $title-font;
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background: $dark-brown;
+            grid-column: 1 / 6;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 5.3%;
+            grid-template-rows: repeat(5, 1fr);
+            row-gap: 3%;
+
+            @media (min-width: $without-hamburger) {
+                display: flex;
+                position: static;
+                background: none;
+                grid-column: 5 / 16;
+                height: 100%;
+                width: auto;
+                display: grid;
+                grid-template-columns: repeat(11, 1fr);
+                grid-template-rows: 1fr;
+                column-gap: 2.14%;
+                row-gap: 0;
+            }
+
+
+            ul {
+                grid-column: 2 / 4;
+                grid-row: 2 / 5;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                list-style-type: none;
+                margin-inline-start: 0;
+                margin-block-end: 0;
+                margin-block-start: 0;
+                padding-inline-start: 0;
+                font-size: 1.5em;
+                line-height: 40px;
+                margin: 60px auto;
+
+                @media (min-width: $without-hamburger) {
+                    // display: grid;
+                    // grid-template-columns: repeat(3, 1fr);
+                    column-gap: 15.7%;
+                    font-size: 1em;
+                    grid-row: 1;
+                    grid-column: 1 / 9;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin: 0;
+            }
+
+                @media (min-width: 978px) {
+                    font-size: 1.1em;
+            }
+
+                @media (min-width: 1300px) {
+                    font-size: 1.5em;
+            }
+
+                li {
+                    text-align: center;
+                    a {
+                        color: $gold;
+                        text-decoration: none;
+                    }
+
+                    @media (min-width: $without-hamburger) {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                }
+                }
+            }
+
+            #nav-language-switch {
+                font-size: 1.5em;
+                grid-column: 1;
+                grid-row: 5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media (min-width: $without-hamburger) {
+                    font-size: 1em;
+                    grid-row: 1;
+                    grid-column: 11;
+            }
+
+                @media (min-width: 978px) {
+                    font-size: 1.1em;
+            }
+
+                @media (min-width: 1300px) {
+                    font-size: 1.5em;
+            }
+            }
+
+            #nav-cross-closure {
+                background-image: url('../img/cross.png');
+                background-size: 40%;
+                background-repeat: no-repeat;
+                background-position: center;
+                grid-column: 4;
+                grid-row: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media (min-width: $without-hamburger) {
+                    display: none;
+            }
+            }
+
+        }
+
+        #nav-button-hamburger {
+            height: 100%;
+            background-image: url('../img/hamburger.png');
+            background-size: 40%;
+            background-repeat: no-repeat;
+            background-position: center;
+            grid-column: span 2;
+            cursor: pointer;
+
+            @media (min-width: 560px) {
+                background-size: 30%;
+            }
+
+            @media (min-width: $without-hamburger) {
+                display: none;
+                grid-row: 1;
+            }
+        }
+
+        #nav-cart {
+            height: 100%;
+            background-image: url('../img/cart.png');
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+            grid-column: 4;
+            grid-row: 5;
+
+            @media (min-width: $without-hamburger) {
+                display: flex;
+                grid-row: 1;
+                grid-column: 10;
+            }
+        }
+    }
+
+    .content {
+        height: 900vh;
+        width: 100%;
+        background: red;
+    }
+}

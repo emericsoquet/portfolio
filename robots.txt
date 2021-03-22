@@ -1,0 +1,5 @@
+User-agent: * 
+Disallow: /sequence1/membres.html
+Disallow: /sequence1/comptes_rendus.html
+
+http://mmi19d13.mmi-troyes.fr/sequence1/index.html
