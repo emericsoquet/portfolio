@@ -1,0 +1,200 @@
+.dataTables_wrapper {
+    margin-top: 100px;
+    font-size: 1.1em;
+    font-family: 'manrope', Arial, Helvetica, sans-serif
+}
+
+th.sorting, th.sorting_asc {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    background: #C81E2B;
+    color: white;
+    border-bottom: #C81E2B 1px solid;
+    transition: filter 200ms;
+}
+
+th.sorting:hover, th.sorting_asc:hover {
+    filter: grayscale(100%);
+}
+
+table.dataTable thead th {
+    border-bottom: 0px;
+}
+
+th.sorting_desc {
+    background-color: #2b2b28;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: white;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    float: left;
+    text-align: left;
+    margin-left: 5%;
+    margin-bottom: 10px;
+}
+
+.dataTables_wrapper .dataTables_length {
+    float: right;
+    margin-right: 5%;
+    margin-bottom: 10px;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    border: 2px solid #d63447;
+    height: 30px;
+    padding: 5px 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 1.1em;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+    color: #404040;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border: 2px solid #d63447;
+    height: 30px;
+    padding: 5px 15px;
+    font-size: 1.1em;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #999;
+    border-radius: 4px;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus, .dataTables_wrapper .dataTables_length select:focus {
+    outline: #f73155 auto 5px;
+}
+
+
+table.dataTable tbody .odd {
+    background-color: rgba(128, 12, 22, 0.2);
+}
+
+table.dataTable tbody .even {
+    background-color: rgba(128, 12, 22, 0.3);
+}
+
+table.dataTable tbody a {
+    color: #2b2b28;
+    text-decoration: underline;
+}
+
+.dataTables_wrapper .dataTables_info {
+    margin-left:1%;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    margin-right:1%;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+    background: linear-gradient(to bottom, #585858 0%, #111 100%);
+    color: white !important;
+    border: 1px solid black;
+}
+
+/* DUTAF 2 */
+
+
+.content-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.table-dutaf {
+    border-collapse: collapse;
+    margin: auto;
+    width: 90%;
+}
+
+.table-dutaf th {
+    background-color: #c81e2b;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+}
+
+.table-dutaf tr:nth-child(2) {
+    border-top: #282828 1px solid;
+}
+
+.table-dutaf tr:last-child td:first-child {
+    text-align: left;
+}
+
+.table-dutaf tr:not(first-child):not(last-child) {
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+}
+
+.table-dutaf tr:not(first-child) td:first-child, .table-dutaf tr:not(first-child) td:nth-child(2) {
+    padding-left: 20px;
+    text-align: left;
+}
+
+.table-dutaf tr:last-child td:nth-child(2) {
+    padding-left: 0;
+    text-align: center;
+}
+
+.table-dutaf tr td {
+    text-align: center;
+}
+
+.table-dutaf a {
+    color: #c81e2b;
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.table-dutaf tr:nth-child(odd) {
+    background-color: rgba(128, 12, 22, 0.2);
+}
+
+.table-dutaf tr:nth-child(even) {
+    background-color: rgba(128, 12, 22, 0.3);
+}
+
+.table-dutaf tr:last-child {
+    box-shadow: 5px 5px 5px rgba(128, 12, 22, 0.2);
+    filter:grayscale(100%);
+    background-color: #d63447;
+    color: white;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+form input[type="submit"] {
+    background: rgb(128, 12, 22);
+    border: none;
+    color: #dddbd8;
+    font-size: 1.3em;
+    padding: 10px 20px;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    filter: grayscale(100%);
+    width: 40%;
+    margin-top: 60px;
+    transition: transform 400ms;
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    transition: 100ms ease-in-out filter transform;
+}
+
+form input[type="submit"]:hover, form input[type="submit"]:focus {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}

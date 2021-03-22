@@ -1,0 +1,173 @@
+/* PREMIÈRE SECTION */
+
+section:nth-child(2) {
+    background-color: #C81E2B;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 90px 10%;
+}
+
+#bg-admin {
+    background-image: url('../img/batman.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 90px 10%;
+}
+
+#bg-index {
+    background-image: url('../img/harley.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 90px 10%;
+}
+
+h1 {
+    text-align: right;
+
+}
+
+#intro-dutaf {
+    margin-top: 50px;
+    padding-top: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#width-img {
+    width: 30%;
+    height: auto;
+}
+
+#intro-dutaf img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    border: outset #d63447 5px;
+}
+
+#text-intro {
+    color: #f9f6f2;
+    font-family: 'manrope';
+    width: 70%;
+    text-shadow: 1px 1px 2px black;
+}
+
+
+@media (max-width: 700px) {
+
+    #intro-dutaf {
+        margin-top: 0px;
+    }
+
+    #text-intro {
+        width: 100%;
+    }
+
+    section:nth-child(2) h1 {
+        font-size: 50px;
+    }
+}
+
+/* DEUXIEME SECTION */
+
+
+section:nth-child(3) {
+    padding-top: 70px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section:nth-child(3) article {
+    width: 25%;
+    min-width: 200px;
+    border: 1px #dddbd8 solid;
+    border-radius: 3px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section:nth-child(3) article p {
+    font-size: 1.0em;
+    margin-top: 30px;
+}
+
+.border-article {
+    width: 80%;
+    height: 2px;
+    background: rgba(40, 40, 40, 0.1);
+    margin-top: 10px;
+}
+
+.button-link {
+    padding: 15px 10px;;
+    background-color: #e44053;
+    filter: grayscale(100%);
+    width: 50%;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgba(128, 12, 22, 0.2); 
+    transition: 200ms filter;
+    align-self: flex-end;
+}
+
+.button-link a {
+    color: white;
+    font-family: 'manrope';
+    font-weight: 700;
+    margin: auto;
+    text-transform: uppercase;
+}
+
+.button-link:hover {
+    filter: grayscale(0);
+}
+
+@media (max-width: 910px) {
+
+    section:nth-child(3) {
+        justify-content: center;
+    }
+
+    section:nth-child(3) article {
+        width: 40%;
+    }
+
+    section:nth-child(3) article:nth-child(even) {
+        margin-left: 5%;
+    }
+
+    section:nth-child(3) article:nth-child(3) {
+        margin-top: 5%;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    section:nth-child(3) {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    section:nth-child(3) article:nth-child(even) {
+        margin-top: 5%;
+        margin-left: auto;
+    }
+
+    section:nth-child(3) article {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+
+}

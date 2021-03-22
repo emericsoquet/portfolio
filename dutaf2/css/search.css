@@ -1,0 +1,277 @@
+
+
+section:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 70px;
+}
+
+section:nth-child(2) h1 {
+    font-size: 55px;
+}
+
+.title-center {
+    text-align: center;
+    margin: auto;
+}
+
+section:nth-child(2) article:nth-child(2), section:nth-child(2) article:nth-child(3) {
+    width: 80%;
+    height: 50px;
+    background-color: #d63447;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(128, 12, 22, 0.2);
+    filter:grayscale(100%);
+    transition: 200ms filter;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+section:nth-child(2) article:nth-child(2):hover, section:nth-child(2) article:nth-child(3):hover {
+    filter:grayscale(0%);
+}
+
+section:nth-child(2) article:first-child {
+    background-color: #C81E2B;
+    width: 80%;
+    color: white;
+    padding: 20px;
+    margin:auto;
+}
+
+section:nth-child(2) article:first-child p {
+    margin-top: 50px;
+}
+
+section:nth-child(2) article:first-child form {
+    padding: 0 50px 50px 50px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+section:nth-child(2) article:first-child form label {
+    font-family: 'bebas neue', display;
+    letter-spacing: 3px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+section:nth-child(2) article:first-child form input[type="text"], section:nth-child(2) article:first-child form input[type="password"], section:nth-child(2) article:first-child form input[type="email"] {
+    width: 70%;
+    border: 2px solid #d63447;
+    height: 30px;
+    padding: 5px 15px;
+    font-size: 1.1em;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+section:nth-child(2) article:first-child form input[type="password"] {
+    font-style: normal;
+}
+
+section:nth-child(2) article:first-child form select {
+    width: 70%;
+    border: 2px solid #d63447;
+    height: 30px;
+    padding: 5px 15px;
+    font-size: 1.1em;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+    color: #404040;
+    margin-bottom: 20px;
+}
+
+section:nth-child(2) article:first-child form input[type="text"]:focus, section:nth-child(2) article:first-child form select:focus {
+    outline: #f73155 auto 5px;
+}
+
+section:nth-child(2) article:first-child form input[type="submit"] {
+    background: rgb(128, 12, 22);
+    border: none;
+    color: #dddbd8;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 40%;
+    margin-top: 60px;
+    transition: transform 400ms;
+    align-self: flex-end;
+    color: white;
+}
+
+section:nth-child(2) article:first-child form input[type="submit"]:hover {
+    transform: scale(1.2);
+}
+
+
+section:nth-child(2) article:nth-child(2) a, section:nth-child(2) article:nth-child(3) a, .erreur {
+    color: white;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+
+
+    section:nth-child(2) h1 {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    section:nth-child(2) h1 {
+        font-size: 35px;
+    }
+
+    section:nth-child(2) article:first-child form {
+        padding: 0;
+    }
+
+}
+
+
+/* TABLES */
+
+
+.content-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.table-dutaf {
+    border-collapse: collapse;
+    margin: auto;
+    width: 90%;
+}
+
+.table-dutaf th {
+    background-color: #c81e2b;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+}
+
+.table-dutaf tr:nth-child(2) {
+    border-top: #282828 1px solid;
+}
+
+.table-dutaf tr:last-child td:first-child {
+    text-align: left;
+}
+
+.table-dutaf tr:not(first-child):not(last-child) {
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+}
+
+.table-dutaf tr:not(first-child) td:first-child, .table-dutaf tr:not(first-child) td:nth-child(2) {
+    padding-left: 20px;
+    text-align: left;
+}
+
+.table-dutaf tr:last-child td:nth-child(2) {
+    padding-left: 0;
+    text-align: center;
+}
+
+.table-dutaf tr td {
+    text-align: center;
+}
+
+.table-dutaf a {
+    color: #c81e2b;
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.table-dutaf tr:nth-child(odd) {
+    background-color: rgba(128, 12, 22, 0.2);
+}
+
+.table-dutaf tr:nth-child(even) {
+    background-color: rgba(128, 12, 22, 0.3);
+}
+
+.table-dutaf tr:last-child {
+    box-shadow: 5px 5px 5px rgba(128, 12, 22, 0.2);
+    filter:grayscale(100%);
+    background-color: #d63447;
+    color: white;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+form input[type="submit"] {
+    background: rgb(128, 12, 22);
+    border: none;
+    color: #dddbd8;
+    font-size: 1.3em;
+    padding: 10px 20px;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    filter: grayscale(100%);
+    width: 40%;
+    margin-top: 60px;
+    transition: transform 400ms;
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    transition: 100ms ease-in-out filter transform;
+}
+
+form input[type="submit"]:hover, form input[type="submit"]:focus {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.table-dutaf {
+    margin-top: 70px;
+}
+
+.th-cmd {
+    filter: grayscale(100%);
+}
+
+#genre {
+    width: 100px;
+    height: 40px;
+}
+
+.line-subscribe {
+    display: flex;
+    flex-direction: row;
+}
+
+.divide-sub {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#location-cat, #tel-cat, #mail-cat {
+    margin-top: 40px;
+}

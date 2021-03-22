@@ -1,0 +1,473 @@
+/* TOUTES LES POLICES */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Paytone+One&family=Manrope:wght@300;700&display=swap');
+
+
+/* HEADER */
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header {
+    background: #2b2b28;
+    width: 100%;
+    z-index: 4;
+}
+
+#width-top {
+    width: 80%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+.logo {
+    font-family: 'Paytone One', display;
+    text-transform: uppercase;
+    border: 10px inset #d63447;
+    background-color: #C81E2B;
+    width: 370px;
+    height: 150px;
+}
+
+.logo a {
+    width: 100%;
+    height: 40px;
+    font-size: 100px;
+    margin-block-start: 0;
+    text-align: center;
+    color: #f9f6f2;
+    text-decoration: none;
+
+}
+
+#logo-header {
+    display: flex;
+    justify-content: center;
+}
+
+#slogan {
+    font-family: 'bebas neue';
+    font-style: italic;
+    font-size: 50px;
+    color: #f9f6f2;
+    letter-spacing: 2px;
+    font-weight: 200;
+    align-self: center;
+    line-height: 50px;
+}
+
+@media (max-width: 1250px) {
+
+    #width-top {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        padding: 60px;
+        height: 300px;
+    }
+
+    #slogan {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 742px) {
+    #width-top {
+        height: 350px;
+    }
+}
+
+@media (max-width: 500px) {
+    #width-top {
+        height: 270px;
+    }
+
+    #logo-header {
+        width: 259px;
+        height: 105px;
+    
+    }
+
+    #logo-header a {
+        font-size: 70px;
+    }
+
+    #slogan {
+        font-size: 35px;
+    }
+}
+
+
+/* NAV */
+
+#first-part-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 90%;
+    margin-right: 30px;
+}
+
+#nb_panier {
+    font-family: 'Paytone One', display;
+    color: white;
+    margin-right: 50px;
+}
+
+#logo-nav {
+    width: 10%;
+    height: 60px;
+    background: none;
+    border: none;
+    display: block;
+    margin-left: 20px;
+    margin-top: 0;
+}
+
+#logo-nav a {
+    font-size: 40px;
+    letter-spacing: 0;
+}
+
+nav {
+    background-color: #2b2b28;
+    width: 100%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    margin: auto;
+    align-items: center;
+    height: 210px;
+    border-top: 6px rgb(54, 54, 54) solid;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    list-style-type: none;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+nav ul li a {
+    color: #f9f6f2;
+    font-family: 'bebas neue';
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 30px;
+    transition: color 400ms;
+}
+
+nav ul li a:hover, #members a p:hover {
+    color: #f73155;
+}
+
+#members {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 89%;
+    margin-top: 20px;
+}
+
+#members a img {
+    width: 40px;
+    margin-right: 40px;
+}
+
+#members p {
+    color: white;
+    font-family: 'bebas neue';
+    text-transform: uppercase;
+    font-size: 30px;
+    transition: color 400ms;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+#members a p {
+    font-size: 30px;
+}
+
+#connexion {
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+}
+
+nav ul li:first-child {
+    display:none;
+}
+
+.deco {
+    background-color: #585858;
+    padding: 2px 10px;
+}
+
+#connexion a {
+    color: white;
+    transition: 400ms color;
+}
+
+#connexion a:hover {
+    color: #f73155;
+}
+
+#profil-link, #cont-obl {
+    font-style: oblique;
+}
+
+@media (max-width: 770px) {
+
+    nav ul li:first-child {
+        display:block;
+    }
+
+    #logo-nav {
+        display: none;
+        margin-right: 0;
+    }
+
+    nav {
+        width: 100%;
+        margin-bottom: 0px;
+        flex-direction: column-reverse;
+        height: 300px;
+        padding-top: 40px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        width: 100%;
+        margin-right: 0px;
+        padding-inline-start: 0;
+        margin-left: 0px;
+    }
+
+    nav ul li:nth-child(odd) {
+        background-color: rgb(54, 54, 54);
+        width: 100%;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+
+    #members {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #connexion {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #members a p {
+        font-size: 30px;
+        margin-left: 30px;
+    }
+
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #2b2b28;
+    margin-top: 80px;
+    padding: 50px 10%;
+}
+
+#width-first-part-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 70%;
+}
+
+footer h2 {
+    color: #f9f6f2;
+}
+
+footer img {
+    width: 20px;
+}
+
+footer ul {
+    margin-top: 30px;
+}
+
+footer ul li {
+    margin-top: 5px;
+}
+
+footer a {
+    color: #f9f6f2;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+}
+
+.border-footer {
+    height: 2px;
+    background-color: #404040;
+    width: 80%;
+    margin-top: 10px;
+
+}
+
+@media (max-width: 1000px) {
+
+    #width-first-part-footer {
+        width: 80%;
+    } 
+
+}
+
+@media (max-width: 850px) {
+
+    #width-first-part-footer {
+        width: 100%;
+    }
+
+    footer ul {
+        margin-top: 10px;
+    }
+
+    .border-footer {
+        width: 40%;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    #width-first-part-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+        
+    footer article:not(:first-child) {
+        margin-top: 60px;
+    }
+}
+
+/* ÉLÉMENTS COMMUNS */
+
+ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    list-style-type: none;
+}
+
+body p {
+    font-family: 'manrope';
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+section:nth-child(2) {
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'paytone one';
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 80px;
+    letter-spacing: 5px;
+    color: #f9f6f2;
+    text-shadow: -4px 4px 0 rgb(128, 12, 22);
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+h2 {
+    font-family: 'manrope';
+    font-weight: 700;
+    text-transform: lowercase;
+    color: #282828;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* POUR DUTAF 2 */
+
+.if-empty {
+    color: white;
+    font-size: 20px;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.title-others {
+    text-transform : lowercase;
+    color: #282828;
+    text-shadow: none;
+    font-style: normal;
+    font-size: 90px;
+    font-spacing: 0px;
+    font-family: 'paytone one', Arial, Helvetica, sans-serif;
+    padding-bottom: 30px;
+    margin-bottom: -60px;
+}
+
+#profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.profile-txt {
+    width: 45%;
+    font-family: 'manrope', Arial, Helvetica, sans-serif;
+}
+
+.title-profile {
+    color: white;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+
+.profile-txt:first-child p {
+    font-size: 25px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-top: 0;
+}
+
+.erreur_sub {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: 'paytone one';
+}
