@@ -1,0 +1,198 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Damion|Sintony&display=swap');
+
+body {
+  background: #eee;
+  margin:0;
+  padding:0;
+}
+
+#zonecentrale {
+	background: #EEE;
+	width:900px;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:sintony, helvetica, arial, sans-serif;
+}
+
+header {
+
+}
+
+hr {
+clear: both;
+}
+
+#titre_principal {
+	height: 150px;
+	float:left;	
+	width:282px;
+	margin-left:12px;
+	background-image: url(images/monlogo.png);
+	background-repeat:no-repeat;
+	position:relative;
+}
+
+.johndoe {
+	margin-left:70px;
+	margin-top:15px;
+	font-family:damion,cursive;
+	font-size:45px;
+}
+
+.statut {
+	margin-bottom:25px;
+	position:absolute;
+	bottom:0;
+	font-size:26px;
+}
+
+nav {  
+   height:150px; 
+   width:580px;
+   margin-right:12px;
+   float:right;
+   position:relative;
+}
+
+nav ul {
+	position:absolute;
+	right:0px;
+	margin-top:100px;
+}
+
+nav ul li {
+	display:inline;
+	text-transform:uppercase;
+	padding-left:10px;
+	font-size:20px;
+}
+
+nav ul li:hover {
+	color:darkred;
+	text-decoration:underline;
+}
+
+#banniere_image {
+    height: 200px;   
+	background-image: url(images/batiment.jpg);
+	border-radius:10px;
+	position:relative;
+	margin-left:12px;
+	margin-right:12px;
+	width:876px;
+	color: rgba(0,0,0,0);
+}
+
+#banniere_description {
+    height: 53px;      
+    background-color: rgba(24,24,24,0.8);
+    color:white;  
+    position:absolute;
+    bottom:0;
+    width:100%; 
+    border-radius:0 0 10px 10px;   
+}
+
+#third_panel {
+	position:relative;
+}
+
+#bulle {
+	position:absolute;
+	margin-left:593px;
+	margin-top:115px;
+}
+
+article {
+	height: 500px;
+	width:580px;
+	float:left;
+	margin-left:12px;
+	text-align:justify;
+}
+
+article h1 {
+	text-transform:uppercase;
+}
+
+
+aside {
+	position:relative;
+    background-color: #666;
+    height: 500px;
+    width:264px;
+    float:right;
+    margin:20px 12px 15px 0;
+    color:white;
+    text-align:justify;
+    border-radius:10px;
+    padding:10px;
+}
+
+aside h1 {
+	text-transform:uppercase;
+	font-size:20px;
+}
+
+aside #illustration {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	border: black solid 1px;
+}
+
+#rsx img {
+	padding-left:6px;
+}
+
+footer {
+   background-color:#DDD; 
+}
+
+#tweet {
+	background-color:#ddd;
+	border-radius:10px;
+	box-shadow:1px 1px 7px black;
+	height:125px;	
+	width:284px;
+	float:left;
+	margin-left:12px;
+	margin-right:12px;
+}
+
+#mes_photos {
+	background-color:#ddd;
+	border-radius:10px;
+	box-shadow:1px 1px 7px black;
+	height:125px;
+	width:284px;
+	float:left;
+}
+
+#mes_liens {
+	background-color:#ddd;
+	border-radius:10px;
+	box-shadow:1px 1px 7px black;
+	height:125px;
+	width:284px;
+	float:right;
+	margin-right:12px;
+}
+
+.cases h1 {
+	text-transform:uppercase;
+	font-size:16px;
+	margin-left:10px;
+}
+
+.cases img {
+	margin-top:5px;
+	margin-left:10px;
+	border: 1px black solid;
+}
+
+.cases a {
+	text-decoration:none;
+	color:darkred;
+}
