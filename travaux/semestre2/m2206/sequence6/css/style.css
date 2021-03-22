@@ -1,0 +1,8 @@
+:-webkit-any(article,aside,nav,section) h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h1, .h1 {
+    margin-bottom: 0;
+}
