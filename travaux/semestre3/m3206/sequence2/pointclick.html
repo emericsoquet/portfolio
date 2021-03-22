@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Scène</title>
+        <meta charset="utf-8" />
+
+        <link rel="stylesheet" href="pointclick.css" />
+    
+    </head>
+
+    <body>
+
+        <div id="launch">
+            <div id="launch-button">Jouer !</div>
+        </div>
+
+        <div id="final">
+            <div id="final-message">Bravo, vous avez pu lancer le jeu !</div>
+        </div>
+
+        <div id="bg-game" class="bg-no-light">
+
+            <div id="background-notes">
+                <img src="elements/notes-inside.png" id="notes-inside" />
+                <a href="#" id="close-notes">x</a>
+            </div>
+
+            <img id="monbouton" src="elements/button.png" />
+            <img id="button-reverse" src="elements/button-reverse.png" />
+            <img id="macible" src="elements/painting-before.png" />
+            <img id="notes" src="elements/notes.png" />
+
+            <audio  id="switch-sound" preload>  <source src="sons/switch.mp3" type="audio/mpeg">    </audio>
+            <audio  id="glass-sound" preload>  <source src="sons/glass-break.mp3" type="audio/mpeg">    </audio>
+            <audio  id="paper-flip" preload>  <source src="sons/paper-flip.mp3" type="audio/mpeg">    </audio>
+            <audio  id="ambiance" preload>  <source src="sons/ambiance.mp3" type="audio/mpeg">    </audio>
+
+            <img id="slippers-dark" src="elements/slippers-dark.png" /> 
+            <img id="slippers" src="elements/slippers.png" /> 
+            <img id="sneakers" src="elements/sneakers.png" /> 
+            <img id="remote" src="elements/remote.png" /> 
+            <img id="television" src="elements/television.gif" /> 
+
+            <!-- <div id="test-drag"></div> -->
+
+            <div id="list-clues">
+                <div id="button-clues">?</div>
+                <div id="close-clues">x</div>
+                <div id="reveal-clues">
+                    <ol>
+                        <li id="p-clue">Tante Mito a dû laisser un mot mais difficile de le trouver.</li>
+                        <li id="d-clue">La puissance de Gon est telle qu'il a frappé le mur. Mais au moins, il a trouvé un mot. Bizarre qu'il soit ici.</li>
+                        <li id="t-lue">Gon devrait d'abord changer de paire.</li>
+                        <li id="q-clue">Elles se rangent tout simplement avec les autres.</li>
+                        <li id="c-clue">Gon peut maintenant accéder à la télévision maintenant qu'il l'a trouvée.</li>
+                    </ol>
+                </div> 
+            </div>
+            
+        </div>
+
+    </body>
+
+
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    
+    <script>
+
+        $(document).ready(function() {
+
+           $('#button-reverse').hide();
+           $('#background-notes').hide();
+           $('#slippers').hide();
+           $('#sneakers').hide();
+           $('#reveal-clues').hide();
+           $('#close-clues').hide();
+           $('#remote').hide();
+           $('#television').hide();
+           $('#button-clues').hide;
+           $('#final').hide();
+
+           $('#launch-button').click(function() {
+                $('#launch').hide();
+                document.getElementById("ambiance").play();
+                $("#bg-game").css("filter", "blur(0)");
+
+                $('#button-clues').click(function()  {
+                    $('#button-clues').css("animation", "help-up 600ms both");
+                    $('#close-clues').css("animation", "help-up 600ms both");
+                    $('#reveal-clues').fadeIn();
+                    $('#reveal-clues').css("animation", "help-open 600ms both");
+                    $('#close-clues').fadeIn();
+                });
+
+                $('#close-clues').click(function() {
+                    $('#button-clues').css("animation", "help-down 600ms both");
+                    $('#close-clues').css("animation", "help-down 600ms both");
+                    $('#reveal-clues').css("animation", "help-close 600ms both");
+                        setTimeout(function(){
+                            $('#reveal-clues').fadeOut();
+                        }, 200);
+                    $('#close-clues').fadeOut();
+                });
+
+
+
+                $("#monbouton").click(function() {
+                    document.getElementById("switch-sound").play();
+                    var imageUrl = "scenery/scenery_light_no_element.png"; 
+                    $("#bg-game").css("background-image", "url(" + imageUrl + ")"); 
+                    $('#button-reverse').show();
+                    $('#slippers-dark').hide();
+                    $('#slippers').show();
+                    $("#macible").attr("src", "elements/painting-after.png");
+                    $('#macible').delay(800).fadeTo("slow", 0);
+                    $("#macible").css("animation", "chute 600ms 700ms both");
+
+                    setTimeout(function(){
+                        document.getElementById("glass-sound").play();
+            
+                    }, 1000);
+
+                    $('#notes').click(function() {
+                        document.getElementById("paper-flip").play();
+                        $('#background-notes').show();
+
+                        $('#close-notes').on('click', function()  {
+                            document.getElementById("paper-flip").play();
+				            $('#background-notes').hide();
+			            });
+
+                        $('#slippers').on('click', function()  {
+                            $('#slippers').fadeOut();
+				            $('#sneakers').delay(200).fadeIn();
+
+                            $('#sneakers').draggable( {
+                                stop: function(e, ui) {
+                                    console.log(ui.position.top); console.log(ui.position.left);
+                                    if (ui.position.top>290 && ui.position.top<362 && ui.position.left>538 && ui.position.left<659) {
+                                        $('#sneakers').fadeOut();
+                                        $('#remote').fadeIn();
+
+                                        $('#remote').on('click', function()  {
+                                            $('#television').show();
+                                            setTimeout(function(){
+                                                // $('#final').fadeIn();
+                                                $("#bg-game").css("animation", "filter-background 3000ms both");
+                                                $("#final").fadeIn();
+                                                $("#final").css("animation", "txt-final-up 2000ms both");
+                                            }, 2000);
+                                        });
+                                    }
+                                }
+                            });
+                        
+
+                        });
+
+
+                    });
+
+
+                });
+           });
+
+            
+
+        });
+
+    </script>  
+    
+
+
+<!-- // $( function() {
+    $("#objet").draggable({
+       stop: function(e, ui) {
+           if (ui.position.top>340 && ui.position.top<410 && ui.position.left>20 && ui.position.left<100) {
+                console.log("boom");
+             $('#creeper').hide();
+              explosion.play();
+           }
+       }
+   })
+}) -->
+
+
+
+</html>

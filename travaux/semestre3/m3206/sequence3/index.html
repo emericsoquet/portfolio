@@ -1,0 +1,105 @@
+<html>
+    <head>
+
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat jQuery</title>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <script>
+
+            $(document).ready(function() {
+
+                setInterval(function() {
+
+                    $.get('affiche.php', function(data) {
+                        // console.log('Données chargées' + data)
+                        $('#affiche').html(data);
+                    })
+                }, 5000)
+
+                function sending() {
+                    // console.log('Début de l\'envoi');
+                    var Pseudo = $('#pseudo').val();
+                    var Message = $('#message').val();
+
+                    $.ajax( {
+                        url: 'dire.php',
+                        data: {pseudo: Pseudo, message: Message},
+                        success: function() {
+                        $('#pseudo').val('');
+                        $('#message').val('');
+                        }
+                    })
+
+                    if (Message == 'wizz') {
+                        $('#affiche').css('animation', 'wizz 500ms both');
+                        document.getElementById("msn-wizz").play()
+
+                        $('#send').css('animation', 'wizz 500ms both');
+
+                        setTimeout(function(){
+                            $('#affiche').css('animation', '');
+
+                        }, 2000);
+
+                        setTimeout(function(){
+                            $('#send').css('animation', '');
+
+                        }, 2000);
+                    }
+                }
+
+                $("form").submit(function(e) {
+                // $('#send').click(function() {
+                    e.preventDefault();
+                    // console.log('clic');
+                    sending(); })
+
+
+
+            });
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <audio  id="msn-wizz" preload><source src="msn-wizz.mp3" type="audio/mpeg"></audio>
+
+        <div id="global-chat">
+
+            <h1>La boîte à chats</h1>
+
+            <div id="affiche">
+                <div id="msg-affiche">Connexion à la ChatBox...</div>
+            </div>
+
+            <div id="form-section">
+
+                <form action="dire.php" method="get">
+
+                    <input type="text" id="pseudo" placeholder="Pseudo" />
+
+                    <input type="text" id="message" placeholder="Écrivez un message ici" />
+                    <input type="submit" id="send" value="miauler"  />
+
+                </form>
+
+                <div id="cat-bottom">
+                    <div id="cat-bubble">Merci de ne pas prendre cette ChatBox pour votre litière.</div>
+                    <img id="cat-img" src="img/cat_bottom.png" alt="Chat en bas de la page" />
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+    </body>
+</html>

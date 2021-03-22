@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jeu javascript</title>
+        <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>    
+    </head>
+
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+            width: 100%;
+            background: #2f3842; }
+
+        h1 {
+            font-family: 'montserrat', Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            font-size: 3em;
+            color: #f4f4f4;
+        }
+
+    </style>
+    <script type="text/javascript">
+
+        var x = 250; 
+        var y = 250; 
+
+        var vity = 0; 
+        var vitx = 5; 
+
+        var sauter = 0; 
+        var oldsauter = 0; 
+
+        var xobs = 470; 
+        var yobs = 200; 
+        
+        var compteur = 0;
+
+        var upObstacle = 0;
+        var downObstacle = 0;
+
+        $(document).ready(function() {
+
+            $('body').keydown(function(ev){
+                if(ev.keyCode == 32) sauter = 1 ;
+            });
+
+            $('body').keyup(function(ev){
+                if(ev.keyCode == 32) {
+                    sauter = 0;
+                    oldsauter = 0
+                } ;
+            });
+
+            $('body').keyup(function(ev){
+                if(ev.keyCode == 38) {
+                    downObstacle = 0;
+                }
+
+                else if(ev.keyCode == 40) {
+                    upObstacle = 0;
+                }
+            });
+
+            $('body').keydown(function(ev){
+                if(ev.keyCode == 38) {
+                    downObstacle = 1;
+                }
+
+                else if(ev.keyCode == 40) {
+                    upObstacle = 1;
+                }
+            });
+
+
+
+            var canvas1 = document.getElementById('canvas');
+            var context = canvas1.getContext('2d');
+
+            var timer = setInterval(function() {
+
+                /* var gradient = context.createLinearGradient(0 , 0 ,500,500);
+                gradient.addColorStop(0,"#021759");     // Départ
+                gradient.addColorStop(0.5,"#020380"); // Intermédiaire
+                gradient.addColorStop(1,"#021759"); 
+
+                context.fillStyle = gradient; 
+                context.fillRect(0, 0 , 500, 500); */
+
+                var bg = new Image();
+                bg.src="bg_space.png";
+                context.drawImage(bg, 0, 0);
+
+
+                context.font = "50px montserrat";
+                context.fillStyle = "#ccc";
+                context.fillText("INVADERS", 120, 130);
+                context.font = "14px montserrat";
+                context.fillText("Joueur 1, sauver la Terre avec la touche espace !", 87, 180);
+                context.fillText("Joueur 2, bouger les trous noirs", 150, 230);
+                context.fillText("avec les flèches ⇧ et ⇩ pour l'anéantir !", 125, 255);
+                context.font = "30px montserrat";
+                context.fillText(compteur, 245, 330);
+
+
+                var aliens = new Image();
+                aliens.src = "aliens.png";
+                context.drawImage(aliens, -3, 450);
+                var aliens2 = new Image();
+                aliens2.src = "aliens_reversed.png";
+                context.drawImage(aliens2, -3, -5);
+
+                var earth = new Image();
+                earth.src = "earth.png";
+                // balloon.onload = function() {
+                    context.drawImage(earth, x, y);
+                    x += vitx;
+                    vity += 0.05;
+                    y += vity;
+                // };
+
+                var obstacle = new Image();
+                obstacle.src = "black_hole.png";
+                context.drawImage(obstacle, xobs, yobs);
+
+                if (upObstacle == 1) {
+                        yobs += 10;
+                }
+
+                if (downObstacle == 1) {
+                    yobs -= 10;
+                }
+
+                if (x > 440) {
+                    vitx = - vitx ;
+                    x = 440;
+
+                    if(y >= yobs - 49 && y <= yobs + 89) {
+                        compteur = 0;
+                    }
+
+                    else {
+                        compteur++;
+                    }
+
+                    xobs = -20;
+                    yobs = Math.round(Math.random()*320)+40;
+                    
+                }
+
+                if (x < 0) {
+                    vitx = - vitx;
+                    x = 0;
+
+                    if(y >= yobs - 49 && y <= yobs + 89) {
+                        compteur = 0;
+                    }
+
+                    else {
+                        compteur++;
+                    }
+
+                    xobs = 470;
+                    yobs = Math.round(Math.random()*320)+40;
+
+                }
+
+                if (y > 395) {
+                    vity = - vity * 0.8;
+                    y = 395
+
+                    compteur = 0;
+                }
+
+                if (y < 40) {
+                    vity = - vity * 0.8;
+                    y = 40
+
+                    compteur = 0;
+                }
+
+                if (sauter == 1 && oldsauter == 0) {
+                    oldsauter = 1;
+                    vity -= 5;
+                }
+
+            }, 25);
+
+        });
+
+    </script>
+
+    <body>
+        <canvas id="canvas" width="500" height="500">Désolé, votre navigateur ne supporte pas cette application.</canvas>
+    </body>
+
+</html>

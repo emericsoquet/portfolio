@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BANDIT MANCHOT</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+
+        <div id="msg-win">
+            Bravo
+            <div id="subtitle-msg">Vous avez déjoué le code !</div>
+        </div>
+        <div id="msg-loose">
+            Perdu
+            <div id="subtitle-msg">Retentez votre chance !</div>
+        </div> 
+
+        <div id="title-sup">tentez votre chance au</div>
+        <h1>bandit manchot</h1>
+
+        <div id="columns">
+
+            <div class="column">
+                <div id="box1" class="boxes"></div>
+                <div id="button1" class="buttons">+</div>
+            </div>
+
+            <div class="column">
+                <div id="box2" class="boxes"></div>
+                <div id="button2" class="buttons">+</div>
+            </div>
+
+            <div class="column">
+                <div id="box3" class="boxes"></div>
+                <div id="button3" class="buttons">+</div>
+            </div>
+
+            <div class="column">
+                <div id="box4" class="boxes"></div>
+                <div id="button4" class="buttons">+</div>
+            </div>
+
+        </div>
+
+        <div id="validation">
+            <div id="validation-button">Valider</div>
+        </div>
+        
+    </body>
+
+    <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+
+        scroll1 = 0;
+        scroll2 = 0;
+        scroll3 = 0;
+        scroll4 = 0;
+
+        $(document).ready( function() {
+
+            $('#msg-loose').hide();
+            $('#msg-win').hide();
+
+            $('#button1').click( function() { 
+                scroll1++;
+
+                if (scroll1 == 4) {
+                    scroll1 = 0;
+                }
+
+                val1 = -100 * scroll1;
+                $('#box1').animate( { 'background-position-y' : val1 } );
+
+
+            });
+
+            $('#button2').click( function() { 
+                scroll2++;
+
+                if (scroll2 == 4) {
+                    scroll2 = 0;
+                }
+
+                val2 = -100 * scroll2;
+                $('#box2').animate( { 'background-position-y' : val2 } );
+
+            });
+
+            $('#button3').click( function() { 
+
+                scroll3++
+
+                if (scroll3 == 4) {
+                    scroll3 = 0;
+                }
+
+                val3 = -100 * scroll3;
+                $('#box3').animate( { 'background-position-y' : val3 } );
+                
+
+            });
+
+            $('#button4').click( function() { 
+                scroll4++;
+
+                if (scroll4 == 4) {
+                    scroll4 = 0;
+                }
+
+                val4 = -100 * scroll4;
+                $('#box4').animate( { 'background-position-y' : val4 } );
+                
+            });
+
+            $('#validation-button').click( function() { 
+
+                if (scroll1 == 3 & scroll2 == 1 & scroll3 == 0 & scroll4 == 2) {
+                    console.log('Réussi !');
+                    $('#msg-win').fadeIn(600);
+                }
+
+                else {
+                    console.log('Perdu !');
+
+                    $('#msg-loose').slideDown(600);
+                    setTimeout( function() {
+                        $('#msg-loose').slideUp(600)
+                    }, 2000);
+
+                    setTimeout( function() {
+                        scroll1 = 0;
+                        scroll2 = 0;
+                        scroll3 = 0;
+                        scroll4 = 0;
+                        $("#box1").animate({'background-position-y' : 0})
+                        $("#box2").animate({'background-position-y' : 0})
+                        $("#box3").animate({'background-position-y' : 0})
+                        $("#box4").animate({'background-position-y' : 0})
+                    }, 2600);
+
+                }
+            });
+        })
+    </script>
+
+</html>

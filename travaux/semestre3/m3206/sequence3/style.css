@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Press+Start+2P&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(0deg, rgba(173,217,241,1) 0%, rgba(232,255,252,1) 100%);
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    height: 700px;
+}
+
+#global-chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+#affiche {
+    background: #eee;
+    margin-bottom: 40px;
+    height: 300px;
+    border-radius: 4px;
+    width: 80%;
+    min-width: 200px;
+    max-width: 700px;
+    border: rgba(255, 183, 109, 0.86) 3px solid;
+    overflow-y: scroll;
+}
+
+#msg-affiche {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'press start 2p', monospace;
+    font-size: 30px;
+    text-align: center;
+    height: 100%;
+    background: url('img/tv.gif');
+    color: black;
+    animation: screen-off 600ms 4500ms both;
+}
+
+@keyframes screen-off {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#affiche::-webkit-scrollbar {
+    width: 10px;
+    height: auto;
+}
+
+#affiche::-webkit-scrollbar-thumb {
+    background: #ffdc82;
+    border-radius: 0px;
+}
+
+#affiche::-webkit-scrollbar-track, #affiche::-webkit-scrollbar-track-piece  {
+    background: none;
+    border-radius: 0px;
+}
+
+#affiche p:first-child {
+    margin-block-start: 0;
+}
+
+#form-section {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 80%;
+    min-width: 200px;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 130px;
+}
+
+#cat-bottom {
+    z-index: -4;
+    height: 130px;
+    width: 200px;
+    position: absolute;
+}
+
+#cat-img {
+    width: 100px;
+    transform-origin: bottom;
+    opacity: 0;
+    animation: cat-up 2000ms 4000ms both;
+    margin-left: 20px;
+}
+
+#cat-bubble {
+    font-family: 'cousine', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    background: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 100px;
+    margin-left: 100px;
+    animation: cat-bubble-appears 1000ms 6500ms both;
+    transform-origin: left;
+}
+
+
+@keyframes cat-up {
+    0% {
+        transform: translateY(500px);
+        opacity: 0;
+    }
+
+    65% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+@keyframes cat-bubble-appears {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes wizz {
+    0% {
+        transform: translateX(-1vw) rotate(-3deg);
+    }
+    10% {
+        transform: translateX(1vw) rotate(0deg);
+    }
+    20% {
+        transform: translateX(-1vw) rotate(3deg);
+    }
+    30% {
+        transform: translateX(1vw) rotate(0deg);
+    }
+    40% {
+        transform: translateX(-1vw) rotate(-3deg);
+    }
+    50% {
+        transform: translateX(1vw) rotate(0deg);
+    }
+    60% {
+        transform: translateX(-1vw) rotate(3deg);
+    }
+    70% {
+        transform: translateX(1vw) rotate(0deg);
+    }
+    80% {
+        transform: translateX(-1vw) rotate(3deg);
+    }
+    90% {
+        transform: translateX(1vw) rotate(0deg);
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+.record-line {
+    padding: 10px 40px;
+}
+
+.record-line:nth-child(odd) {
+    background: #eee;
+}
+
+.record-line:nth-child(even) {
+    background: #bbb;
+}
+
+.record-datas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.record-pseudo {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'cousine', monospace;
+    color: #282828;
+    text-transform: uppercase;
+}
+
+.record-heure {
+    font-size: 10px;
+    font-weight: 300;
+    font-family: 'cousine', monospace;
+    color: #484848;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.record—message {
+    font-size: 12px;
+    color: #424242;
+}
+
+
+h1 {
+    text-transform: uppercase;
+    color: #ff8036;
+    font-size: 38px;
+    font-family: 'press start 2p', Helvetica, Arial, sans-serif;
+    letter-spacing: 5px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    animation: bouncing-title 2000ms both infinite;
+}
+
+@keyframes bouncing-title {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+input {
+    border: rgba(110, 184, 255, 0) solid 2px;
+    border-radius: 2px;
+    padding: 5px 10px;
+    font-family: 'open sans', Helvetica, Arial, sans-serif;
+}
+
+#pseudo {
+    width: 20%;
+}
+
+#message {
+    width: 60%;
+}
+
+#send {
+    width: 12%;
+    /* font-family: 'cousine', monospace; */
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    background: rgba(255, 132, 9, 1);
+    opacity: 0.5;
+    color: #eee;
+    font-weight: 900;
+    transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+}
+
+#send:hover, #send:active {
+    transform: scale(1.3);
+    opacity: 0.8;
+}
+
+

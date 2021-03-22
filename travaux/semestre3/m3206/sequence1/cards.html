@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deck HxH</title>
+    <link rel="stylesheet" href="css/cards.css" />
+</head>
+
+<body>
+    <div id="card-container">
+    </div>
+
+
+    <script type="text/javascript">
+
+        fetch('datastory.json')
+
+        .then(function(launch) {
+            console.log('La table a bien été chargée.');
+            return launch.json();
+        }
+        )
+
+        .then(function(table) {
+
+            table.forEach(function(element) { 
+
+            document.getElementById('card-container').innerHTML += `
+            <!-- début de carte -->
+                <div class="toy-card">
+
+                    <div class="toy-card-inner">
+                        <div class="toy-card__image">
+                            <!-- l'image png -->
+                            <img src=`+ element.photo +` />
+                        </div>
+                        <div class="toy-card__name">`+ element.nom +`</div>
+                        <div class="toy-card__description">
+                            <!-- La description -->
+                            <p>`+ element.info +`</p>
+                        </div>
+                        <div class="toy-card__unit-stats">
+                            <!-- Les caractéristiques -->
+                            <div class="one-third">
+                                <div class="stat">`+ element.attaque +`</div>
+                                <div class="stat-value">Attaque</div>
+                            </div>
+                            <div class="one-third">
+                                <div class="stat">`+ element.defense +`</div>
+                                <div class="stat-value">Défense</div>
+                            </div>
+                            <div class="one-third">
+                                <div class="stat">`+ element.vitesse +`</div>
+                                <div class="stat-value">Vitesse</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="toy-card-reverse">
+                        <div class="toy-card-inner-reverse"></div>
+                    </div>
+                </div>
+
+            <!-- /Fin de la carte -->
+            `
+
+
+            });
+
+        });
+    
+    </script>
+
+
+
+</body>
+
+</html>

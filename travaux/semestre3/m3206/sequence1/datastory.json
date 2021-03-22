@@ -1,0 +1,14 @@
+[
+
+    { "nom": "Gon Freecs", "attaque": "78", "defense": "34", "vitesse": "37", "photo": "media/img/cards/gon.png", "info": "Téméraire et intrépide, Gon est à la recherche de son père, ce pourquoi il est devenu Hunter." },
+
+    { "nom": "Killua Zoldyck", "attaque": "61", "defense": "12", "vitesse": "88", "photo": "media/img/cards/killua.png", "info": "Très confiant, Killua est aussi très mature et cherche son indépendance." },
+
+    { "nom": "Hisoka Morow", "attaque": "72", "defense": "71", "vitesse": "56", "photo": "media/img/cards/hisoka.png", "info": "Toujours à la recherche d'adversaires à sa hauteur, Hisoka fait ce qui lui plaît." },
+
+    { "nom": "Kurapika", "attaque": "71", "defense": "40", "vitesse": "45", "photo": "media/img/cards/kurapika.png", "info": "Bien que tendre, on ne s'approche pas facilement de lui. Kurapika cherche, d'ailleurs, à assouvir sa vengeance." },
+
+    { "nom": "Leorio Paradinight", "attaque": "22", "defense": "80", "vitesse": "17", "photo": "media/img/cards/leorio.png", "info": "Devenu Hunter pour « l'argent », Leorio souhaite surtout pouvoir devenir médecin." },
+
+    { "nom": "Chrollo Lucifer", "attaque": "46", "defense": "79", "vitesse": "75", "photo": "media/img/cards/chrollo.png", "info": "On sait peu de choses sur lui hormis le fait qu'il est le chef de la Brigade Fantôme, un groupe de grands voleurs prêts à se salir les mains." }
+]
