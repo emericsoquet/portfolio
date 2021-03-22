@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital@0;1&family=Inter:wght@100;200;300;400;500;600;700;800;900&Roboto:wght@100;300;400;500;700;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+#dove-structure {
+  width: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#dove-sidebar {
+  background: none;
+  transition: transform 400ms ease-in-out;
+}
+
+#dove-visible-panel {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    background: #292929;
+    border-radius: 3px;
+}
+
+#dove-invisible-panel {
+    height: 120px;
+    width: 550px;
+    transform: scaleY(0);
+    z-index: 3333;
+    background: #292929;
+    position: absolute;
+    transform-origin: top;
+    transition: all 300ms;
+    margin-top: -10px;
+    border-radius: 0 0 3px 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+#dove-main {
+  background: #f6f6f6;
+  height: 570px;  
+}
+
+#dove-title {
+  font-size: 45px;
+  font-family: 'montserrat', helvetica, arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #f6f6f6;
+  align-self: center;
+  letter-spacing: -3px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  transition: text-decoration 400ms ease-in-out;
+}
+
+#dove-icon {
+  width: 110px;
+  height: 110px;
+  border-radius: 110px;
+  background: #292929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  bottom: 40px;
+  left: 20px;
+}
+
+#dove-icon img {
+  width: 90px;
+  height: 90px;
+  border-radius: 80px;
+  filter: grayscale(100%);
+  transition: all 300ms ease-in-out;
+}
+
+#dove-arrow {
+  background: #f6f6f6;
+  height: 50px; 
+  width: 50px;
+  z-index: 55555;
+  clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+  position: absolute;
+  margin-left: 480px;
+  margin-top: -25px;
+  transition: background 400ms ease-in-out;
+}
+
+#dove-main-text {
+  font-family: 'inter', helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 40px;
+  font-weight: 200;
+  overflow-y: auto;
+  height: 480px;
+  text-align: justify;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  transition: height 400ms ease-in-out;
+}
+
+.dove-dialogue {
+  font-weight: 200;
+  color: #d91c66;
+  margin-left: 20px;
+  margin-bottom: -24px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 40px;
+}
+
+.dove-dialogue::before {
+  content: "— ";
+  margin-right: 40px;
+}
+
+#dove-description {
+    color: #f6f6f6;
+    font-family: 'cousine', monospace;
+    text-transform: uppercase;
+    font-size: 10px;
+    width: 80%;
+    margin: 10px auto 0 auto;
+    overflow-y: auto;
+    height: 56px;
+    opacity: 0;
+    text-align: justify;
+    transform-origin: top;
+    line-height: 12px;
+}
+
+#dove-extras {
+    height: 20px;
+    font-size: 10px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+
+}
+
+.dove-extra {
+    background: #e3c51e;
+    color: #292929;
+    height: 20px;
+    width: 100px;
+    font-family: 'cousine', monospace;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+#dove-sidebar:hover > #dove-visible-panel #dove-icon img {
+  filter: grayscale(0);
+}
+
+#dove-sidebar:hover {
+  transform: translateY(-80px);
+}
+
+#dove-sidebar:hover > #dove-invisible-panel {
+    transform: scaleY(1);
+}
+
+#dove-sidebar:hover > #dove-invisible-panel #dove-description,
+#dove-sidebar:hover > #dove-invisible-panel #dove-extras {
+    animation: apparition-desc 200ms 600ms both ease-in-out;
+}
+
+#dove-sidebar:hover > #dove-visible-panel #dove-arrow {
+    transform: rotate(180deg);
+    background: #292929;
+    z-index: -4;
+}
+
+#dove-sidebar:not(:hover) > #dove-invisible-panel #dove-description,
+#dove-sidebar:not(:hover) > #dove-invisible-panel #dove-extras {
+    animation: disparition-desc 100ms both ease-in-out;
+}
+
+#dove-sidebar:hover ~ #dove-main #dove-main-text {
+    height: 390px;
+}
+
+#dove-main ::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+#dove-main ::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, .5);
+  }
+
+@keyframes apparition-desc {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes disparition-desc {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

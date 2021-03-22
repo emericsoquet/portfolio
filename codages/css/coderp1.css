@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Teko:wght@300;400;500;600;700&display=swap');
+
+#misfortune-body {
+    height: 600px;
+    width: 500px;
+    margin: auto;
+    position: relative;
+    /* background: rgb(31,30,35); */
+    background: #1a1c1d;
+}
+
+
+#misfortune-bg-img {
+        background: url('https://i.pinimg.com/originals/6e/9b/c3/6e9bc3e7fe89953d3a074cf9f19cdb5b.gif');
+    background-size: 60%;
+    height: 600px;
+    width: 500px;
+    opacity: 0;
+    background-position-y: bottom;
+    background-position-x: 200px;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+#misfortune-bg-img2 {
+        background: url('https://i.pinimg.com/originals/a2/0b/fc/a20bfc9ac1617dac0472d80a6cdc2d1b.gif');
+    background-size: 35%;
+    height: 600px;
+    width: 500px;
+    opacity: 0;
+    transform: rotate(180deg);
+    background-position-x : right;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+#misfortune-bg-img3 {
+    background: url('https://i.imgur.com/FXYBnMT.gif');
+    background-size: 30%;
+    height: 600px;
+    width: 500px;
+    opacity: 1;
+    background-position-x : 10px;
+    background-position-y: 320px;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+#misfortune-mask {
+    background: rgba(23,27,32,1);
+    position: absolute;
+    height: 600px;
+    width: 500px;
+    opacity: 0.1;
+}
+
+
+#misfortune-txt-bg {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    position: absolute;
+    top: 70px;
+    height: 100%;
+    width: 100%;
+}
+
+#misfortune-txt {
+    height: 300px;
+    width: 370px;
+    color: #d4d4d4;
+    font-family: 'nunito sans';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    overflow-y: auto;
+    text-align: justify;
+}
+
+#misfortune-txt b {
+    font-weight: 300;
+    color: #5394EA;
+}
+
+#misfortune-infos-bg {
+    height: 180px;
+    width: 340px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* background: orange; */
+}
+
+#misfortune-title {
+    /* background: red; */
+    color: #f1f1f1;
+    font-family: 'fugaz one';
+    font-size: 40px;
+    letter-spacing: -2px;
+    line-height: 30px;
+    padding: 10px 20px 0 20px;
+    text-transform: uppercase;
+    height: 125px;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+#misfortune-button-visible-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+#misfortune-button-visible-container img {
+    width: 40px;
+}

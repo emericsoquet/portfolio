@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="efr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE RP 1</title>
+    <link rel="stylesheet" href="css/coderp1.css" />
+</head>
+<body>
+  <div id="misfortune-body">
+    
+    <div id="misfortune-visual-bg">
+       <div id="misfortune-bg-img3"></div>
+        <div id="misfortune-mask"></div>
+    </div>
+
+    <div id="misfortune-txt-bg">
+        <div id="misfortune-txt">Um, yeah well I might have sort of ran into my parents. What do you mean you've seen this, it's brand new. You know, Doc, you left your equipment on all week. Doc, you gotta help me. you were the only one who knows how your time machine works. <b>Hey I'm talking to you, McFly, you Irish bug.</b>
+
+Roads? Where we're going we don't need roads. I'm sure that in 1985, plutonium is available at every corner drug store, but in 1955, it's a little hard to come by. Marty, I'm sorry, but I'm afraid you're stuck here. Of course, from a group of Libyan Nationalists. They wanted me to build them a bomb, so I took their plutonium and in turn gave them a shiny bomb case full of used pinball machine parts. whoa, whoa Doc, stuck here, I can't be stuck here, I got a life in 1985. I got a girl. 1955? You're my ma- you're my ma.
+
+I know, and all I could say is I'm sorry. My god, do you know what this means? It means that this damn thing doesn't work at all. Hey, hey listen guys. Look, I don't wanna mess with no reefer addicts, okay? You got a real attitude problem, McFly. You're a slacker. You remind me of you father when he went her, he was a slacker too. Right, George. Well, good luck you guys. Oh, one other thing, if you guys ever have kids and one of them when he's eight years old, accidentally sets fire to the living room rug, be easy on him.
+
+George. George. Yeah. C'mon man, let's do something that really cooks. George. Yeah okay.
+
+Okay. Marty, that was very interesting music. We never would have fallen in love. Yeah well, you shouldn't drink. Marty, such a nice name.
+
+Uh, Doc. Will you take care of that? The hell you doing to my car? yes, Joey just loves being in his playpen. he cries whenever we take him out so we just leave him in there all the time. Well Marty, I hope you like meatloaf. No no no this sucker's electrical, but I need a nuclear reaction to generate the one point twenty-one gigawatts of electricity-
+
+Stop it. That's good advice, Marty. What? Right. That's Calvin Klein, oh my god, he's a dream.
+
+What you got under here? Uh, stories, science fiction stories, about visitors coming down to Earth from another planet. Jennifer, oh are you a sight for sore eyes. Let me look at you. Do you mind if we park for a while? Will you take care of that?
+</div>
+    </div>
+
+<div id="misfortune-infos-bg">
+    <div id="misforturne-visible-part">
+        <div id="misfortune-title">
+            UN TITRE POUR PRÉSENTER LE TOUT
+        </div>
+        <div id="misfortune-button-visible-container">
+            <img src="https://i.imgur.com/Op9mhBe.png" />
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
+
+
+

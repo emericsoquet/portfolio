@@ -1,0 +1,233 @@
+#bg-seq1-s1 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/golf.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq2-s1 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/onigiri.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq3-s1 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/arbres.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq4-s1 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/iut.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq5-s1 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/citrouilles.jpg') ;
+    background-size: cover;
+}
+
+#bg-bon2-s1 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/flowers.jpg') ;
+    background-size: cover;
+}
+
+
+#bg-seq0-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/lait_meuh.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq1-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/responsive.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq2-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/parallaxe.jpeg') ;
+    background-size: cover;
+}
+
+#bg-seq3-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/hony_tawk.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq4-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/wordpress.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq5-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/jquery.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq6-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/lotus2.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq7-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/toques.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq8-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/waves.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq9-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/wow.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq10-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/phone.jpg') ;
+    background-size: cover;
+}
+
+#bg-bon1-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/monopoly.jpg') ;
+    background-size: cover;
+}
+
+#bg-reservation-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/reservation.jpg') ;
+    background-size: cover;
+}
+
+#bg-avions-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/avion.jpg') ;
+    background-size: cover;
+}
+
+#bg-accueil-s2 {
+    background:  linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/accueil.jpg') ;
+    background-size: cover;
+}
+
+#dutaf {
+    background:  url('../img/dutaf2.png') ;
+    background-size: cover;
+}
+
+#dutaf2 {
+    background:  url('../img/dutaf.png') ;
+    background-size: cover;
+}
+
+#algo-s2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/image_first_content.gif') ;
+    background-size: cover;
+}
+
+#troyes4a {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/epf.jpg') ;
+    background-size: cover;
+}
+
+#clearanthem {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/clear_anthem.png') ;
+    background-size: cover;
+}
+
+#dconcept {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/dc.png') ;
+    background-size: cover;
+}
+
+#champollion {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/musee.jpg') ;
+    background-size: cover;
+}
+
+#captures-wp {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/plage.jpg') ;
+    background-size: cover;
+}
+
+#wp1 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/surf.jpg') ;
+    background-size: cover;
+}
+
+#lait-meuh {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/vache2.jpg') ;
+    background-size: cover;
+}
+
+#captures-lm {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/vache1.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq0-s3 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/cards.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq1-s3 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/cards2.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq2-s3 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/pikachu.png') ;
+    background-size: cover;
+}
+
+#bg-seq3-s3 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/cats.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq4-s3 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/vessels.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq5-s3 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/letters.jpg') ;
+    background-size: cover;
+}
+
+#bg-seq6-s3 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.5) 100%), url('../img/eggs.jpg') ;
+    background-size: cover;
+}
+
+#bg-port-1 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.8) 0%, rgba(45,45,45,0.8) 100%), url('../img/chrono.png') ;
+    background-size: cover;
+    background-position: center;
+}
+
+#bg-port-2 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.8) 0%, rgba(45,45,45,0.8) 100%), url('../img/pres.png') ;
+    background-size: cover;
+    background-position: right;
+}
+
+#bg-cours-1 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.6) 0%, rgba(45,45,45,0.6) 100%), url('../img/hunter.png') ;
+    background-size: cover;
+    background-position: center;
+}
+
+#bg-port-3 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.8) 0%, rgba(45,45,45,0.8) 100%), url('../img/alumette.gif') ;
+    background-size: 100%;
+    background-position: center;
+}
+
+#bg-port-4 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.8) 0%, rgba(45,45,45,0.8) 100%), url('../img/sweetie.png') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#bg-port-5 {
+    background: linear-gradient(180deg, rgba(45,45,45,0.8) 0%, rgba(45,45,45,0.8) 100%), url('../img/stan.png') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+

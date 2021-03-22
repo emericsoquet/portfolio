@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@800&display=swap');
+
+#bg_test {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1b1c;
+  height: 800px;
+}
+
+/* CSS FOR ALL ELEMENTS */
+
+#acid_general {
+  padding-top: 40px;
+  margin: auto;
+  color: white;
+  font-family: open sans, sans-serif;
+  width:600px;
+
+}
+
+/* CONCERNING TITLE AND ICON */
+
+#acid_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+#acid_personal_icon {
+  width: 100px;
+  border: #555 7px outset;
+  box-shadow:  #DD2876 10px 7px 0px; 
+  border-radius: 20px 0px 0px 0px;
+}
+
+#acid_title_txt {
+  margin-left:10px;
+  color: #fff;
+  font-size: 50px;
+  text-shadow: 3px 1px 0px violet;
+  font-family: raleway, sans-serif;
+  text-transform: uppercase;
+  letter-spacing:6px;
+  padding:10px 30px 10px 50px;
+  border-radius: 0 0 8px 0;
+  background: linear-gradient(90deg, rgba(221,40,118,1) 11%, rgba(115,69,201,1) 71%);
+  border-bottom: solid #282828 4px;
+  border-right: #383838 2px solid;
+  text-align:right;
+  width:380px;
+}
+      
+
+#acid_title_dashed {
+  height:12px;
+  border-bottom: gray 5px dashed;
+  margin-left:20%;
+}
+
+
+
+/* CONCERNING YOUR TEXT & THE BUTTONS */
+
+#acid_body {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:start;
+  width:95%;
+}
+
+#acid_txt {
+  width:400px;
+  text-align:justify;
+  padding-top:10px;
+  margin-left:10px;
+  letter-spacing:0px;
+  font-size:14px;
+  text-indent:0;
+  line-height:22px;
+}
+
+#acid_txt p:nth-child(1) {
+  text-indent:40px;
+}
+
+.acid_speech {
+  color: #c4b0e8;
+  font-size:15px;
+  font-family:raleway, sans-serif;
+  text-indent:0;
+  text-align:justify;
+  padding:20px 0 20px 40px;
+}
+
+#acid_column_opt {
+  display:flex;
+  flex-direction:column;
+}
+
+#acid_button_a {
+  margin-top:20px;
+  background:#cc3399;
+  border: outset 3px #a3297a;
+  background: center / 80% no-repeat url('https://i.imgur.com/W4euyC2.png') rgba(204, 51, 153, 1);
+}
+
+#acid_button_b {
+  margin-top:40px;
+  border: outset 3px #a3297a;
+  background: center / 90% no-repeat url('https://i.imgur.com/mTD6XUN.png') rgba(204, 51, 153, 1);
+}
+
+#acid_column_opt button {
+  height:80px;
+  width:80px;
+  filter: grayscale(100%);
+  transition: filter 300ms ease-in-out, transform 300ms ease-in-out;
+  font-size:40px;
+  color:white;
+}
+
+#acid_column_opt button:focus, #acid_column_opt button:hover {
+  outline:0;
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+
+#acid_column_opt button:hover {
+  cursor:crosshair;
+}
+
+#acid_column_opt a {
+  color:white;
+  text-decoration: none;
+ 
+}
+
+#acid_credits {
+  font-size:8px;
+  text-transform:uppercase;
+  text-align:center;
+  margin-top:20px;
+  color:gray;
+}
+
+#acid_credits span {
+  text-decoration:underline;
+}
+
+/* CONCERNING LAST DASHED LINE */
+
+#acid_second_border {
+  display: flex;
+  flex-direction: row;
+}
+
+#acid_second_border p {
+  font-size: 50px;
+  margin-top: 0px;
+  color:gray;
+  animation: flower_rotate 3000ms linear infinite;
+}
+
+@keyframes flower_rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#acid_last_dashes {
+  border-top: gray 5px dashed;
+  width: 380px;
+  margin-top: 33px;
+  margin-left: 20px;
+}
+
+/* CONCERNING INFOS */
+
+#acid_infos {
+  width:400px;
+  display: flex;
+  margin-top: -80px;
+  margin-left:54px;
+}
+
+#acid_infos div {
+  display:flex;
+  margin-right:20px;
+  align-items: center;
+}
+
+#acid_infos div p:first-child {
+  padding: 10px 10px;
+  text-transform:uppercase;
+  font-family: raleway;
+  font-size:12px;
+  background-color: rgba(115,69,201,1);
+  margin-right: 10px;
+}
+
+#acid_infos div p:nth-child(2) {
+  font-size:12px;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
