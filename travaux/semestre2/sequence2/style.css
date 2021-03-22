@@ -1,0 +1,162 @@
+body {
+    color:white;
+    margin:0;
+    padding:0;
+    background-color:#282828;
+}
+
+/* MENU */
+
+#top_page {
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    height:80px;
+    background-color:#282828;
+}
+
+#menu {
+    width:95%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-right:auto;
+    margin-left:auto;
+    
+}
+
+#menu p {
+    width:20%;
+    font-size:40px;
+    font-family:'Playfair Display', serif;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+#menu ul {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    width:60%;
+    font-family:'Open Sans', sans-serif;
+    margin-top:25px;
+}
+
+#menu li {
+    list-style-type:none;
+}
+
+#menu li a {
+    color:white;
+    text-decoration:none;
+}
+
+#menu li a:visited {
+    color:white;
+    text-decoration:none;
+}
+
+/* BACKGROUNDS */
+
+#z1 {
+    background:url(img/umbrellas_2.jpg) fixed no-repeat center;
+}
+
+#z2 {
+    background:url(img/lion_2.jpg) fixed no-repeat center;
+    z-index:100;
+}
+
+#z3 {
+    background:url(img/dahlia_2.jpg) fixed no-repeat center;
+
+}
+
+#z4 {
+    background:url(img/hot_air_balloon_2.jpg) fixed no-repeat center;
+}
+
+.rubrique_gauche {
+    height:1000px;
+    width:100%;
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content:space-between;
+    align-items:center;
+    background-size: cover;
+}
+
+.rubrique_droite {
+    height:1000px;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    background-size: cover;
+}
+
+/* SOUS MENUS */
+
+.sous_rubrique {
+    background-color: rgba(40, 40, 40, 0.6);
+    height:400px;
+    width:30%;
+    overflow:auto;
+    
+}
+
+#sc1 {
+    margin-left:60%;
+}
+
+#sc3 {
+    margin-right:10%;
+    background-color: rgba(40, 40, 40, 0.6);
+    height:400px;
+    width:30%;
+    overflow:auto;
+
+}
+
+#sc2, #sc4 {
+    margin-right:60%;
+}
+
+.sous_rubrique p, #sc3 p {
+    line-height:35px;
+    font-size:20px;
+    font-family: 'open sans', sans-serif;
+    width:90%;
+    margin:auto;
+    text-align:justify;
+    clear:both;
+}
+
+h1 {
+    font-family:'Playfair Display', sans-serif;
+    text-transform: uppercase;
+}
+
+#accueil, #competences {
+    margin-left:5%;
+
+}
+
+#galerie, #contact {
+    float:right;
+    margin-right:5%;
+}
+
+#img_bonus {
+    background: url(img/bee_bonus.png) no-repeat fixed 50%;
+    background-size:20%;
+    background-position:;
+    height:1000px;
+    width:60%;
+    float:left;
+}
+
+

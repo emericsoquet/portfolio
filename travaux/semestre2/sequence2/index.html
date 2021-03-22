@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Effet parallaxe</title>
+
+    <!-- FEUILLES DE STYLE-->
+    <link href="style.css" rel="stylesheet" />
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+    <div id="top_page">
+        <div id="menu">
+            <p>BOB DOE</p>
+            <ul>
+                <li><a href="#z1">Accueil</a></li>
+                <li><a href="#z2">Galerie</a></li>
+                <li><a href="#z3">Compétences</a></li>
+                <li><a href="#z4">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="z1" class="rubrique_droite">
+        <div id="sc1" class="sous_rubrique">
+            <h1 id="accueil">Accueil</h1>
+            <p>Auxerunt haec vulgi sordidioris audaciam, quod cum ingravesceret penuria commeatuum, famis et furoris inpulsu Eubuli cuiusdam inter suos clari domum ambitiosam ignibus subditis inflammavit rectoremque ut sibi iudicio imperiali addictum calcibus incessens et pugnis conculcans seminecem laniatu miserando discerpsit. Post cuius lacrimosum interitum in unius exitio quisque imaginem periculi sui considerans documento recenti similia formidabat.</p>
+        </div>
+    </div>
+
+    <div id="z2" class="rubrique_gauche">
+        <div id="sc2" class="sous_rubrique">
+            <h1 id="galerie">Galerie</h1>
+            <p>Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum. Non sequitur condominium facile et geranium incognito. Epsum factorial non deposit quid pro quo hic escorol. Marquee selectus non provisio incongruous feline nolo contendre Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum.</p>
+        </div>
+    </div>
+
+    <div id="z3" class="rubrique_droite">
+        <div id="img_bonus"></div>
+        <div id="sc3">
+            <h1 id="competences">Compétences</h1>
+            <p>Et quia Montius inter dilancinantium manus spiritum efflaturus Epigonum et Eusebium nec professionem nec dignitatem ostendens aliquotiens increpabat, qui sint hi magna quaerebatur industria, et nequid intepesceret, Epigonus e Lycia philosophus ducitur et Eusebius ab Emissa Pittacas cognomento, concitatus orator, cum quaestor non hos sed tribunos fabricarum insimulasset promittentes armorum si novas res agitari conperissent.</p>
+        </div>
+    </div>
+
+    <div id="z4" class="rubrique_gauche">
+        
+        <div id="sc4" class="sous_rubrique">
+            <h1 id="contact">Contact</h1>
+            <p>Hac ita persuasione reducti intra moenia bellatores obseratis undique portarum aditibus, propugnaculis insistebant et pinnis, congesta undique saxa telaque habentes in promptu, ut si quis se proripuisset interius, multitudine missilium sterneretur et lapidum.</p>
+        </div>
+    </div>
+
+
+
+    <!-- INSERTION DES SCRIPTS-->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.localScroll.min.js"></script>
+    <script src="js/jquery.parallax-1.1.3.js"></script>
+
+    <script type="text/javascript">
+
+     $(document).ready(function(){
+
+        $.localScroll();
+        $('#z1').parallax("50%", 0.3 );
+        $('#z2').parallax("50%", 0.3 );
+        $('#z3').parallax("50%", 0.3 );
+        $('#z4').parallax("50%", 0.3 );
+        $('#img_bonus').parallax("30%", 1.5);
+    }
+    );
+    </script>
+</body>
+</html>
